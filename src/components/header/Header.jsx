@@ -149,7 +149,16 @@ const Header = () => {
                     title="Կապ"
                   >
                     <NavDropdown.Item href="contact/contacts">
-                      Նամակի ձև Մեր հասցեն Կոնտակտներ Թեժ գիծ
+                      Նամակի ձև
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="contact/contacts">
+                      Մեր հասցեն
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="contact/contacts">
+                      Կոնտակտներ
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="contact/contacts">
+                      Թեժ գիծ
                     </NavDropdown.Item>
                   </NavDropdown>
                 </Nav>
