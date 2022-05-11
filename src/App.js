@@ -25,20 +25,17 @@ import PressAboutUs from "./components/pages/PressAboutUs";
 import { VideoGallery } from "./components/pages/VideoGallery";
 import Contacts from "./components/pages/Contacts";
 import Main from "./components/main/Main";
-// import Languages from "./components/header/Languages";
+import Loading from "./Loading";
 
-function App() {
+const App = () => {
   return (
     <>
+      <Loading />
       <Suspense fallback={null}>
         <Router>
-          {/* <Languages /> */}
           <Header />
           <Routes>
-            {/* <Route path="/" element={<Slider />} /> */}
             <Route path="/" element={<Main />} />
-          </Routes>
-          <Routes>
             <Route path="/about/history" element={<About />} />
             <Route path="/about/our-capabilities" element={<Abilities />} />
             <Route path="/about/our-priorities" element={<Priorities />} />
@@ -66,25 +63,27 @@ function App() {
             />
             <Route path="/results/beneficiaries" element={<Beneficiaries />} />
             <Route
-              path="/custom/procurement-under-the-programs"
+              path="/procurement/procurement-under-the-programs"
               element={<ProgramsProcurement />}
             />
             <Route
-              path="/custom/procurement-for-the-office-needs"
+              path="/procurement/procurement-for-the-office-needs"
               element={<OfficeNeeds />}
             />
-            <Route path="/custom/announcements" element={<Announcements />} />
+            <Route
+              path="/procurement/announcements"
+              element={<Announcements />}
+            />
             <Route path="/news/news" element={<News />} />
             <Route path="/news/the-press-about-us" element={<PressAboutUs />} />
-            <Route path="/news/video-gallery" element={<VideoGallery />} />
+            <Route path="/news/media-gallery" element={<VideoGallery />} />
             <Route path="/contact/contacts" element={<Contacts />} />
           </Routes>
-          {/* <NewsPage /> */}
           <Footer />
         </Router>
       </Suspense>
     </>
   );
-}
+};
 
 export default App;

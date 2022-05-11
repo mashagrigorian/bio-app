@@ -57,7 +57,7 @@ form button {
   padding: 10px;
   transition-duration: 0.4s;
   text-decoration: none;
-  overflow: hidden;
+  /* overflow: hidden; */
   cursor: pointer;
   border-radius: 5px;
 }
