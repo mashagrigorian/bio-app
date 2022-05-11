@@ -1,4 +1,8 @@
 import React from "react";
+// import "./components/header/i18n";
+// axios.defaults.baseURL = "http://localhost:3000/";
+// axios.defaults.headers.common["Accept-Language"] =
+//   localStorage.getItem("lang") || "en";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
