@@ -2,16 +2,15 @@ import React from "react";
 import { FiFacebook, FiTwitter, FiInstagram } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
 
-import "./footer.css";
+// import "./footer.css";
 
-const Footer = () => {
+const ContactInfo = () => {
   const { t, i18n } = useTranslation();
 
   return (
     <div className="footer" id="login">
       <div className="footer-links">
         <div className="footer-links-contact">
-          <h1 className="footer-text">{t("contactWithUs")}</h1>
           <div className="icon">
             <i className="fa fa-location-dot"></i>
             <label htmlFor=""> {t("street")}</label>
@@ -33,12 +32,8 @@ const Footer = () => {
           </div>
         </div> */}
       </div>
-
-      <div className="footer-copyright">
-        <p className="p-opensans">{t("copyright")}</p>
-      </div>
     </div>
   );
 };
 
-export default Footer;
+export default ContactInfo;

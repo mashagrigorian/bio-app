@@ -7,7 +7,7 @@ import { Nav, NavDropdown } from "react-bootstrap";
 import Popover from "./Popover";
 import FeedIcon from "@mui/icons-material/Feed";
 
-function News() {
+const News = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   function handleClick(event) {
@@ -16,9 +16,9 @@ function News() {
     }
   }
 
-  function handleClose() {
+  const handleClose = () => {
     setAnchorEl(null);
-  }
+  };
 
   const { t, i18n } = useTranslation();
 
@@ -83,6 +83,6 @@ function News() {
       </Menu>
     </div>
   );
-}
+};
 
 export default News;

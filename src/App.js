@@ -25,12 +25,12 @@ import PressAboutUs from "./components/pages/PressAboutUs";
 import { VideoGallery } from "./components/pages/VideoGallery";
 import Contacts from "./components/pages/Contacts";
 import Main from "./components/main/Main";
-import Loading from "./Loading";
+// import Loading from "./Loading";
 
-const App = () => {
+function App() {
   return (
     <>
-      <Loading />
+      {/* <Loading /> */}
       <Suspense fallback={null}>
         <Router>
           <Header />
@@ -40,7 +40,6 @@ const App = () => {
             <Route path="/about/our-capabilities" element={<Abilities />} />
             <Route path="/about/our-priorities" element={<Priorities />} />
             <Route path="/about/our-team" element={<Team />} />
-
 
             <Route path="/partners" element={<Partners />} />
 
@@ -80,13 +79,13 @@ const App = () => {
             <Route path="/news/news" element={<News />} />
             <Route path="/news/the-press-about-us" element={<PressAboutUs />} />
             <Route path="/news/media-gallery" element={<VideoGallery />} />
-            <Route path="/contact/contacts" element={<Contacts />} />
+            <Route path="/contacts" element={<Contacts />} />
           </Routes>
           <Footer />
         </Router>
       </Suspense>
     </>
   );
-};
+}
 
 export default App;
