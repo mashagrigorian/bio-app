@@ -1,7 +1,7 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
+import Button from "@mui/material/Button";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
 import { useTranslation } from "react-i18next";
 import { Nav, NavDropdown } from "react-bootstrap";
 import LanguageIcon from "@mui/icons-material/Language";
@@ -25,15 +25,9 @@ function LanguageButton() {
 
   return (
     <div>
-      <IconButton onClick={handleClick}>
+      <IconButton onClick={handleClick} onMouseOver={handleClick}>
         <LanguageIcon />
       </IconButton>
-      <Button
-        aria-owns={anchorEl ? "simple-menu" : undefined}
-        aria-haspopup="true"
-        onClick={handleClick}
-        onMouseOver={handleClick}
-      ></Button>
       <Menu
         onClick={handleClose}
         PaperProps={{
@@ -53,7 +47,7 @@ function LanguageButton() {
               //   display: "block",
               position: "absolute",
               top: 0,
-              right: 80,
+              right: 10,
               width: 10,
               height: 10,
               bgcolor: "background.paper",
@@ -70,7 +64,6 @@ function LanguageButton() {
         onClose={handleClose}
         MenuListProps={{ onMouseLeave: handleClose }}
       >
-        <Popover />
         <MenuItem onClick={() => i18n.changeLanguage("arm")}>Armenian</MenuItem>
         <MenuItem onClick={() => i18n.changeLanguage("rus")}>Russian</MenuItem>
         <MenuItem onClick={() => i18n.changeLanguage("en")}>English</MenuItem>

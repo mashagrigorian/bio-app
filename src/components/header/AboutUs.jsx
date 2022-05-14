@@ -1,12 +1,13 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
+import Button from "@mui/material/Button";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
 import { useTranslation } from "react-i18next";
 import { Nav, NavDropdown } from "react-bootstrap";
 // import InfoIcon from "@mui/icons-material/Info";
 import HomeIcon from "@mui/icons-material/Home";
 import Popover from "./Popover";
+import Link from "@mui/material/Link";
 
 function AboutUs() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -82,19 +83,18 @@ function AboutUs() {
         </MenuItem>
         <MenuItem href="/about/our-priorities">{t("ourPriorities")}</MenuItem>
         <MenuItem href="/about/our-team">{t("ourTeam")}</MenuItem> */}
-        <Popover />
-        <NavDropdown.Item href="/about/history">
+        <MenuItem component={Link} href="/about/history">
           {t("history")}
-        </NavDropdown.Item>
-        <NavDropdown.Item href="/about/our-capabilities">
+        </MenuItem>
+        <MenuItem component={Link} href="/about/our-capabilities">
           {t("ourCapabilities")}
-        </NavDropdown.Item>
-        <NavDropdown.Item href="/about/our-priorities">
+        </MenuItem>
+        <MenuItem component={Link} href="/about/our-priorities">
           {t("ourPriorities")}
-        </NavDropdown.Item>
-        <NavDropdown.Item href="/about/our-team">
+        </MenuItem>
+        <MenuItem component={Link} href="/about/our-team">
           {t("ourTeam")}
-        </NavDropdown.Item>
+        </MenuItem>
       </Menu>
     </div>
   );

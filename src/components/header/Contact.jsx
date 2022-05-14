@@ -1,7 +1,7 @@
 // import React from "react";
-// import Button from "@material-ui/core/Button";
-// import Menu from "@material-ui/core/Menu";
-// import MenuItem from "@material-ui/core/MenuItem";
+// import Button from "@mui/material/Button";
+// import Menu from "@mui/material/Menu";
+// import MenuItem from "@mui/material/MenuItem";
 // import { useTranslation } from "react-i18next";
 // import { Nav, NavDropdown } from "react-bootstrap";
 // import Popover from "./Popover";
@@ -94,7 +94,7 @@
 // export default Contact;
 
 import React from "react";
-import Button from "@material-ui/core/Button";
+import Button from "@mui/material/Button";
 import { useTranslation } from "react-i18next";
 import ContactsIcon from "@mui/icons-material/Contacts";
 import { useNavigate } from "react-router-dom";

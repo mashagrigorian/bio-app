@@ -1,4 +1,4 @@
-import { Button, Popover, Typography } from "@material-ui/core";
+import { Button, Popover, Typography } from "@mui/material";
 import { useState } from "react";
 
 const App = () => {

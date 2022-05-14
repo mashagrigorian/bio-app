@@ -6,7 +6,7 @@ import { Nav, NavDropdown } from "react-bootstrap";
 import LanguageIcon from "@mui/icons-material/Language";
 import { IconButton, Menu, MenuItem } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import Button from "@material-ui/core/Button";
+import Button from "@mui/material/Button";
 
 import "./header.css";
 import AboutUs from "./AboutUs";
@@ -259,12 +259,12 @@ const Header = () => {
             </Menu>
           </div> */}
           <LanguageButton />
-          <button
-            className="navbar-items-icon"
-            onClick={() => setSidebar(!sidebar)}
-          >
-            {sidebar ? <CloseIcon /> : <MenuIcon />}
-          </button>
+          {/*<button*/}
+          {/*  className="navbar-items-icon"*/}
+          {/*  onClick={() => setSidebar(!sidebar)}*/}
+          {/*>*/}
+          {/*  {sidebar ? <CloseIcon /> : <MenuIcon />}*/}
+          {/*</button>*/}
         </div>
       </header>
     </>
