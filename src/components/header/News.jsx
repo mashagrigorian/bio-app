@@ -3,22 +3,23 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useTranslation } from "react-i18next";
-import { Nav, NavDropdown } from "react-bootstrap";
-import Popover from "./Popover";
+import Link from "@mui/material/Link";
 import FeedIcon from "@mui/icons-material/Feed";
 
 const News = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
-  function handleClick(event) {
+  const handleClick = (event) => {
     if (anchorEl !== event.currentTarget) {
       setAnchorEl(event.currentTarget);
     }
-  }
+  };
 
   const handleClose = () => {
     setAnchorEl(null);
   };
+  const open = Boolean(anchorEl);
+  const id = open ? "simple-popover" : undefined;
 
   const { t, i18n } = useTranslation();
 
@@ -52,7 +53,7 @@ const News = () => {
               display: "block",
               position: "absolute",
               top: 0,
-              right: 0,
+              right: 105,
               width: 10,
               height: 10,
               bgcolor: "background.paper",
@@ -72,14 +73,15 @@ const News = () => {
         title={t("news")}
         className="nav-parent-item"
       >
-        <Popover />
-        <NavDropdown.Item href="/news/news">{t("allNews")}</NavDropdown.Item>
-        <NavDropdown.Item href="/news/the-press-about-us">
+        <MenuItem component={Link} href="/news/news">
+          {t("allNews")}
+        </MenuItem>
+        <MenuItem component={Link} href="/news/the-press-about-us">
           {t("pressAboutUs")}
-        </NavDropdown.Item>
-        <NavDropdown.Item href="/news/media-gallery">
+        </MenuItem>
+        <MenuItem component={Link} href="/news/media-gallery">
           {t("mediaGallery")}
-        </NavDropdown.Item>
+        </MenuItem>
       </Menu>
     </div>
   );

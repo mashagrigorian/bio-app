@@ -3,24 +3,25 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useTranslation } from "react-i18next";
-import { Nav, NavDropdown } from "react-bootstrap";
-import Popover from "./Popover";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
+import Link from "@mui/material/Link";
 
-function OurAchievements() {
+const OurAchievements = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
-  function handleClick(event) {
+  const handleClick = (event) => {
     if (anchorEl !== event.currentTarget) {
       setAnchorEl(event.currentTarget);
     }
-  }
+  };
 
-  function handleClose() {
+  const handleClose = () => {
     setAnchorEl(null);
-  }
+  };
 
   const { t, i18n } = useTranslation();
+  const open = Boolean(anchorEl);
+  const id = open ? "simple-popover" : undefined;
 
   return (
     <div>
@@ -52,7 +53,7 @@ function OurAchievements() {
               display: "block",
               position: "absolute",
               top: 0,
-              right: 0,
+              right: 170,
               width: 10,
               height: 10,
               bgcolor: "background.paper",
@@ -72,22 +73,15 @@ function OurAchievements() {
         title={t("ourAchievements")}
         className="nav-parent-item"
       >
-        <Popover />
-        {/* <MenuItem href="/about/history">{t("history")}</MenuItem>
-        <MenuItem href="/about/our-capabilities">
-          {t("ourCapabilities")}
-        </MenuItem>
-        <MenuItem href="/about/our-priorities">{t("ourPriorities")}</MenuItem>
-        <MenuItem href="/about/our-team">{t("ourTeam")}</MenuItem> */}
-        <NavDropdown.Item href="/achievements/accreditations">
+        <MenuItem component={Link} href="/achievements/accreditations">
           {t("accreditations")}
-        </NavDropdown.Item>
-        <NavDropdown.Item href="/achievements/capacity-assessment">
+        </MenuItem>
+        <MenuItem component={Link} href="/achievements/capacity-assessment">
           {t("ourCapacities")}
-        </NavDropdown.Item>
+        </MenuItem>
       </Menu>
     </div>
   );
-}
+};
 
 export default OurAchievements;

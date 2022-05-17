@@ -10,7 +10,6 @@ const Languages = () => {
   return (
     <nav className="container">
       <div className="row">
-        {/* <div className="col-10"></div> */}
         <div className="col-2">
           <select
             className="custom-select"

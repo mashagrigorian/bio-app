@@ -1,8 +1,4 @@
 import React from "react";
-// import "./components/header/i18n";
-// axios.defaults.baseURL = "http://localhost:3000/";
-// axios.defaults.headers.common["Accept-Language"] =
-//   localStorage.getItem("lang") || "en";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
@@ -44,6 +40,13 @@ i18n.use(initReactI18next).init({
         contactWithUs: "Contact Us",
         street: "129 Armenakyan Street, Yerevan",
         copyright: "Copyright @ 2022 All rights reserved.",
+        contactName: "Name",
+        contactEmail: "Email address",
+        contactMessage: "Message",
+        placeholderName: "Your name",
+        placeholderEmail: "Your email address",
+        placeholderMessage: "Your message",
+        button: "Send",
       },
     },
     rus: {
@@ -79,6 +82,13 @@ i18n.use(initReactI18next).init({
         contactWithUs: "Связаться с нами",
         street: "улица Арменакяна 129, Ереван",
         copyright: "Copyright © 2022 Все права защищены.",
+        contactName: "Имя",
+        contactEmail: "Адрес электронной почты",
+        contactMessage: "Сообщение",
+        placeholderName: "Ваше имя",
+        placeholderEmail: "Ваш адрес электронной почты",
+        placeholderMessage: "Ваше сообщение",
+        button: "Отправить",
       },
     },
     arm: {
@@ -115,6 +125,13 @@ i18n.use(initReactI18next).init({
         street: "Արմենակյան 129, Երևան",
         copyright:
           "Հեղինակային իրավունք @2022 Բոլոր իրավունքները պաշտպանված են:",
+        contactName: "Անուն",
+        contactEmail: "Էլեկտրոնային հասցե",
+        contactMessage: "Հաղորդագրություն",
+        placeholderName: "Ձեր անունը",
+        placeholderEmail: "Ձեր էլ. փոստի հասցեն",
+        placeholderMessage: "Ձեր հաղորդագրությունը",
+        button: "Ուղարկել",
       },
     },
   },

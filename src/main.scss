@@ -1,0 +1,152 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: green;
+    // height: 100vh;
+    // width: 100%;
+    background-image: url("https://images.pexels.com/photos/15286/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+
+}
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    text-shadow: 0px 1px 3px rgba(0,0,0,0.6);
+}
+// p.sub-title {
+//     color: white;
+//     text-align: center;
+//     font-size: 1.5rem;
+//     text-shadow: 0px 1px 3px rgba(0,0,0,0.6);
+// }
+#contact-container {
+    width: 1200px;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 10px;
+    display: flex;    
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, .2);
+    -webkit-box-shadow: 0px 10px 33px 10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 33px 10px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 33px 10px rgba(0,0,0,0.75);
+    .contact-info {
+        background-color: #5904c2;
+        border-radius: 15px;
+        flex: 0 1 40%;
+        padding: 40px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        h4 {
+            font-size: 2rem;
+            font-weight: 500;
+            // margin-top: 0;
+            margin: 0;
+        }
+        p {
+            color: rgba(255, 255, 255, .7);
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+
+        }
+        .icon-text {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 2rem;
+            .fa{
+                flex: 0 0 20px;
+                font-size: 1.8rem;
+                margin-right: 2rem;
+                color: #05f7ff;
+
+            }
+            span {
+                font-size: 1.3rem;
+                font-weight: 300;
+                
+            }
+        }
+        .social-media{
+            display: flex;
+            width: 50%;
+            justify-content: space-between;
+            color: white;
+            .icon-circle {
+                flex: 0 0 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 40px;
+                border-radius: 50%;
+                transition: .3s all ease-in-out;
+                &:hover {
+                    background-color: #05f7ff;
+                }
+                .fa {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+    form {
+        padding: 40px;
+        width: 100%;
+        .col {
+            display: flex;
+            width: 100%;
+            flex: 0 0 100%;
+        }
+        .form-group {
+            display: flex;
+            justify-content: flex-start;        
+            flex-direction: column;
+            flex: 0 1 100%;
+            padding-right: 40px;
+            label {
+                font-size: .9rem;
+                color: black;
+                margin-bottom: 2rem;
+            }
+            input[type="text"], input[type="tel"], input[type="email"], textarea {
+                border: none;
+                cursor: pointer;
+                padding: 10px;
+                font-size: 1.5rem;
+                font-weight: 300;
+                color: black;
+                background: transparent;
+                border-bottom: 2px solid rgba(255, 255, 255, .4);
+                transition: all .3s ease-in-out;
+                margin-bottom: 2rem;
+                &:focus {
+                    border: none;
+                    outline: none;
+                    border-bottom: 2px solid #05f7ff;
+                }
+            }
+            &:nth-child(2) {
+                padding-right: 0;
+            }
+            &.solo {
+                padding: 0;
+            }
+            &.right {
+                align-items: flex-end;
+            }
+            button {
+                width: 200px;
+                height: 60px;
+                cursor: pointer;
+                background: black;
+                border: none;
+                text-transform: uppercase;
+                border-radius: 5px;
+            }
+        }
+    }
+}

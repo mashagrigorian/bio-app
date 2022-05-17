@@ -3,24 +3,25 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useTranslation } from "react-i18next";
-import { Nav, NavDropdown } from "react-bootstrap";
-import Popover from "./Popover";
 import BookmarkAddedIcon from "@mui/icons-material/BookmarkAdded";
+import Link from "@mui/material/Link";
 
-function Projects() {
+const Projects = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
-  function handleClick(event) {
+  const handleClick = (event) => {
     if (anchorEl !== event.currentTarget) {
       setAnchorEl(event.currentTarget);
     }
-  }
+  };
 
-  function handleClose() {
+  const handleClose = () => {
     setAnchorEl(null);
-  }
+  };
 
   const { t, i18n } = useTranslation();
+  const open = Boolean(anchorEl);
+  const id = open ? "simple-popover" : undefined;
 
   return (
     <div>
@@ -52,7 +53,7 @@ function Projects() {
               display: "block",
               position: "absolute",
               top: 0,
-              right: 0,
+              right: 170,
               width: 10,
               height: 10,
               bgcolor: "background.paper",
@@ -72,19 +73,18 @@ function Projects() {
         title={t("projects")}
         className="nav-parent-item"
       >
-        <Popover />
-        <NavDropdown.Item href="/projects/completed-projects">
+        <MenuItem component={Link} href="/projects/completed-projects">
           {t("implementedProjects")}
-        </NavDropdown.Item>
-        <NavDropdown.Item href="/projects/current-projects">
+        </MenuItem>
+        <MenuItem component={Link} href="/projects/current-projects">
           {t("currentProjects")}
-        </NavDropdown.Item>
-        <NavDropdown.Item href="/projects/planned-projects">
+        </MenuItem>
+        <MenuItem component={Link} href="/projects/planned-projects">
           {t("plannedProjects")}
-        </NavDropdown.Item>
+        </MenuItem>
       </Menu>
     </div>
   );
-}
+};
 
 export default Projects;

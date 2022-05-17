@@ -1,28 +1,27 @@
 import React from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 import { useTranslation } from "react-i18next";
-import { Nav, NavDropdown } from "react-bootstrap";
-import Link from "@mui/material/Link";
 import HandshakeSharpIcon from "@mui/icons-material/HandshakeSharp";
 import { useNavigate } from "react-router-dom";
 
-function OurPartners() {
+const OurPartners = () => {
   let navigate = useNavigate();
   const [anchorEl, setAnchorEl] = React.useState(null);
 
-  function handleClick(event) {
+  const handleClick = (event) => {
     if (anchorEl !== event.currentTarget) {
       setAnchorEl(event.currentTarget);
     }
-  }
+  };
 
-  function handleClose() {
+  const handleClose = () => {
     setAnchorEl(null);
-  }
+  };
 
   const { t, i18n } = useTranslation();
+  const open = Boolean(anchorEl);
+  const id = open ? "simple-popover" : undefined;
 
   return (
     <div>
@@ -95,6 +94,6 @@ function OurPartners() {
       </Menu>
     </div>
   );
-}
+};
 
 export default OurPartners;

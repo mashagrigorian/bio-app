@@ -3,32 +3,30 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useTranslation } from "react-i18next";
-import { Nav, NavDropdown } from "react-bootstrap";
-// import InfoIcon from "@mui/icons-material/Info";
 import HomeIcon from "@mui/icons-material/Home";
-import Popover from "./Popover";
 import Link from "@mui/material/Link";
 
-function AboutUs() {
+const AboutUs = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
-  function handleClick(event) {
+  const handleClick = (event) => {
     if (anchorEl !== event.currentTarget) {
       setAnchorEl(event.currentTarget);
     }
-  }
+  };
 
-  function handleClose() {
+  const handleClose = () => {
     setAnchorEl(null);
-  }
+  };
 
   const { t, i18n } = useTranslation();
+  const open = Boolean(anchorEl);
+  const id = open ? "simple-popover" : undefined;
 
   return (
     <div>
       {/* {" "}
       <InfoIcon /> */}
-
       <Button
         aria-owns={anchorEl ? "about-us" : undefined}
         aria-haspopup="true"
@@ -57,7 +55,7 @@ function AboutUs() {
               display: "block",
               position: "absolute",
               top: 0,
-              right: 0,
+              right: 90,
               width: 10,
               height: 10,
               bgcolor: "background.paper",
@@ -77,12 +75,6 @@ function AboutUs() {
         title={t("aboutUsLabel")}
         className="nav-parent-item"
       >
-        {/* <MenuItem href="/about/history">{t("history")}</MenuItem>
-        <MenuItem href="/about/our-capabilities">
-          {t("ourCapabilities")}
-        </MenuItem>
-        <MenuItem href="/about/our-priorities">{t("ourPriorities")}</MenuItem>
-        <MenuItem href="/about/our-team">{t("ourTeam")}</MenuItem> */}
         <MenuItem component={Link} href="/about/history">
           {t("history")}
         </MenuItem>
@@ -98,6 +90,6 @@ function AboutUs() {
       </Menu>
     </div>
   );
-}
+};
 
 export default AboutUs;

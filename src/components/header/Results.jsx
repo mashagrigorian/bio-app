@@ -1,25 +1,27 @@
 import React from "react";
-import Button from '@mui/material/Button';
+import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import { useTranslation } from "react-i18next";
-import { Nav, NavDropdown } from "react-bootstrap";
-import Popover from "./Popover";
 import FileDownloadDoneIcon from "@mui/icons-material/FileDownloadDone";
+import { MenuItem } from "@mui/material";
+import Link from "@mui/material/Link";
 
-function Results() {
+const Results = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
-  function handleClick(event) {
+  const handleClick = (event) => {
     if (anchorEl !== event.currentTarget) {
       setAnchorEl(event.currentTarget);
     }
-  }
+  };
 
-  function handleClose() {
+  const handleClose = () => {
     setAnchorEl(null);
-  }
+  };
 
   const { t, i18n } = useTranslation();
+  const open = Boolean(anchorEl);
+  const id = open ? "simple-popover" : undefined;
 
   return (
     <div>
@@ -51,7 +53,7 @@ function Results() {
               display: "block",
               position: "absolute",
               top: 0,
-              right: 0,
+              right: 125,
               width: 10,
               height: 10,
               bgcolor: "background.paper",
@@ -71,13 +73,12 @@ function Results() {
         title={t("results")}
         className="nav-parent-item"
       >
-        <Popover />
-        <NavDropdown.Item href="/results/beneficiaries">
+        <MenuItem component={Link} href="/results/beneficiaries">
           {t("projectStakeholders")}
-        </NavDropdown.Item>
+        </MenuItem>
       </Menu>
     </div>
   );
-}
+};
 
 export default Results;

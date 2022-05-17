@@ -4,7 +4,7 @@ import "./slider.css";
 import ButtonSlider from "./ButtonSlider";
 import dataSlider from "./dataSlider";
 
-export default function Slider() {
+const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(1);
 
   const nextSlide = () => {
@@ -53,4 +53,6 @@ export default function Slider() {
       </div>
     </div>
   );
-}
+};
+
+export default Slider;

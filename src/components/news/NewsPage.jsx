@@ -14,7 +14,6 @@ const NewsPage = () => {
   const [searchInput, setSearchInput] = useState("");
 
   const handlePageChange = (event) => {
-    // console.log(event);
     setCurrentPage(event.selected);
   };
 

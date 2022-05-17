@@ -1,25 +1,24 @@
 import React from "react";
-import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useTranslation } from "react-i18next";
-import { Nav, NavDropdown } from "react-bootstrap";
 import LanguageIcon from "@mui/icons-material/Language";
 import { IconButton } from "@mui/material";
-import Popover from "./Popover";
 
-function LanguageButton() {
+const LanguageButton = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
-  function handleClick(event) {
+  const handleClick = (event) => {
     if (anchorEl !== event.currentTarget) {
       setAnchorEl(event.currentTarget);
     }
-  }
+  };
+  const open = Boolean(anchorEl);
+  const id = open ? "simple-popover" : undefined;
 
-  function handleClose() {
+  const handleClose = () => {
     setAnchorEl(null);
-  }
+  };
 
   const { t, i18n } = useTranslation();
 
@@ -70,6 +69,6 @@ function LanguageButton() {
       </Menu>
     </div>
   );
-}
+};
 
 export default LanguageButton;

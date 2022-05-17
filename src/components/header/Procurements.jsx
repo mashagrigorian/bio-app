@@ -3,24 +3,25 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useTranslation } from "react-i18next";
-import { Nav, NavDropdown } from "react-bootstrap";
-import Popover from "./Popover";
 import PaidIcon from "@mui/icons-material/Paid";
+import Link from "@mui/material/Link";
 
-function Procurements() {
+const Procurements = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
-  function handleClick(event) {
+  const handleClick = (event) => {
     if (anchorEl !== event.currentTarget) {
       setAnchorEl(event.currentTarget);
     }
-  }
+  };
 
-  function handleClose() {
+  const handleClose = () => {
     setAnchorEl(null);
-  }
+  };
 
   const { t, i18n } = useTranslation();
+  const open = Boolean(anchorEl);
+  const id = open ? "simple-popover" : undefined;
 
   return (
     <div>
@@ -39,7 +40,7 @@ function Procurements() {
           elevation: 0,
           sx: {
             overflow: "visible",
-            // filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
+            filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
             mt: 2,
             "& .MuiAvatar-root": {
               width: 32,
@@ -52,10 +53,10 @@ function Procurements() {
               display: "block",
               position: "absolute",
               top: 0,
-              right: 0,
+              right: 130,
               width: 10,
               height: 10,
-              // bgcolor: "background.paper",
+              bgcolor: "background.paper",
               transform: "translateY(-50%) rotate(45deg)",
               zIndex: 0,
             },
@@ -72,19 +73,24 @@ function Procurements() {
         title={t("procurements")}
         className="nav-parent-item"
       >
-        <Popover />
-        <NavDropdown.Item href="/procurement/procurement-under-the-programs">
+        <MenuItem
+          component={Link}
+          href="/procurement/procurement-under-the-programs"
+        >
           {t("procurementForProjects")}
-        </NavDropdown.Item>
-        <NavDropdown.Item href="/procurement/procurement-for-the-office-needs">
+        </MenuItem>
+        <MenuItem
+          component={Link}
+          href="/procurement/procurement-for-the-office-needs"
+        >
           {t("officeProcurement")}
-        </NavDropdown.Item>
-        <NavDropdown.Item href="/procurement/announcements">
+        </MenuItem>
+        <MenuItem component={Link} href="/procurement/announcements">
           {t("announcements")}
-        </NavDropdown.Item>
+        </MenuItem>
       </Menu>
     </div>
   );
-}
+};
 
 export default Procurements;
