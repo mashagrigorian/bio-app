@@ -47,6 +47,8 @@ i18n.use(initReactI18next).init({
         placeholderEmail: "Your email address",
         placeholderMessage: "Your message",
         button: "Send",
+        pText: "Fill up the form and then click send",
+        title: "Contact Information",
       },
     },
     rus: {
@@ -89,6 +91,8 @@ i18n.use(initReactI18next).init({
         placeholderEmail: "Ваш адрес электронной почты",
         placeholderMessage: "Ваше сообщение",
         button: "Отправить",
+        pText: "Заполните форму и нажмите отправить",
+        title: "Контактная информация",
       },
     },
     arm: {
@@ -132,6 +136,8 @@ i18n.use(initReactI18next).init({
         placeholderEmail: "Ձեր էլ. փոստի հասցեն",
         placeholderMessage: "Ձեր հաղորդագրությունը",
         button: "Ուղարկել",
+        pText: "Լրացրեք տվյալները և սեղմեք ուղարկել",
+        title: "Կոնտակտային տվյալներ",
       },
     },
   },

@@ -1,12 +1,11 @@
 import React, { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./contacts.css";
-import ContactInfo from "./ContactInfo";
 import emailsJs from "@emailjs/browser";
-import Map from "../Map";
-import Hotline from "./Hotline";
+//import ContactInfo from "./ContactInfo";
+//import Map from "../Map";
+//import Hotline from "./Hotline";
 import MainContact from "../../MainContact";
-import "../../main.scss";
 
 const Contacts = () => {
   const { t, i18n } = useTranslation();
@@ -62,7 +61,7 @@ const Contacts = () => {
                   name="senderName"
                   value={senderName}
                   onChange={handleName}
-                  y
+                  
                   required
                   placeholder={t("placeholderName")}
                 />

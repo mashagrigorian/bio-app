@@ -1,14 +1,56 @@
+import React, { useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
+import emailsJs from "@emailjs/browser";
+import { FiFacebook, FiLinkedin, FiYoutube } from "react-icons/fi";
+import "./main.scss";
+
 const MainContact = () => {
+  const { t, i18n } = useTranslation();
+  const [senderName, setSenderName] = useState("");
+  const [senderEmail, setSenderEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const form = useRef();
+
+  const handleName = (e) => {
+    setSenderName(e.target.value);
+  };
+  const handleEmail = (e) => {
+    setSenderEmail(e.target.value);
+  };
+  const handleMessage = (e) => {
+    setMessage(e.target.value);
+  };
+
+  const sendMail = (e) => {
+    e.preventDefault();
+
+    emailsJs
+      .sendForm(
+        "service_noipr0n",
+        "template_m5sgrtc",
+        form.current,
+        "nkkLtA7GvAAfB3FQb"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   return (
     <>
       {/* <h1>Create App</h1> */}
       <link rel="icon" />
-      <h1>Contact Us</h1>
-      <p className="sub-title">lorem ipsum</p>
+      <h1>{t("contactWithUs")}</h1>
+      {/* <p className="sub-title">lorem ipsum</p> */}
+
       <div id="contact-container">
         <div className="contact-info">
-          <h4>Contact Information</h4>
-          <p>Fill up the form and then click send</p>
+          <h4>{t("title")}</h4>
+          <p>{t("pText")}</p>
           <div className="icon-text">
             <i class="fa fa-phone" aria-hidden="true"></i>
             <span>+374 10 651-631</span>
@@ -19,42 +61,91 @@ const MainContact = () => {
           </div>
           <div className="icon-text">
             <i class="fa fa-map-marker" aria-hidden="true"></i>
-            <span>129 Armenakyan Street, Yerevan</span>
+            <span>{t("street")}</span>
           </div>
           <div className="social-media">
-            <a href="#" className="icon-circle">
+            <a href="https://www.facebook.com/epiu.am/" target="_blank">
+              <FiFacebook />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/epiu-state-agency-441a21155/"
+              target="_blank"
+            >
+              <FiLinkedin />
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UCQ62HVkKIOiqa4GtSEn6QYw"
+              target="_blank"
+            >
+              <FiYoutube />
+            </a>
+            {/* <a
+              href="https://www.facebook.com/epiu.am/"
+              target="_blank"
+              className="icon-circle"
+            >
               <i class="fa fa-facebook" aria-hidden="true"></i>
             </a>
-            <a href="#" className="icon-circle">
+            <a
+              href="https://www.youtube.com/channel/UCQ62HVkKIOiqa4GtSEn6QYw"
+              target="_blank"
+              className="icon-circle"
+            >
               <i class="fa fa-youtube" aria-hidden="true"></i>
             </a>
-            <a href="#" className="icon-circle">
+            <a
+              href="https://www.linkedin.com/in/epiu-state-agency-441a21155/"
+              target="_blank"
+              className="icon-circle"
+            >
               <i class="fa fa-linkedin" aria-hidden="true"></i>
-            </a>
+            </a> */}
           </div>
         </div>
-        <form>
+        <form ref={form} onSubmit={sendMail}>
           <div className="col">
             <div className="form-group">
-              <label>First Name</label>
-              <input type="text" />
+              <label>{t("contactName")}</label>
+              <input
+                type="text"
+                name="senderName"
+                value={senderName}
+                onChange={handleName}
+                required
+              />
             </div>
-          </div>
-          <div className="col">
             <div className="form-group">
-              <label>Email</label>
-              <input type="email" />
+              <label>{t("contactEmail")}</label>
+              <input
+                type="email"
+                name="senderEmail"
+                value={senderEmail}
+                onChange={handleEmail}
+                required
+              />
+            </div>{" "}
+            <div className="col">
+              <div className="form-group solo">
+                <label>{t("contactMessage")}</label>
+                <textarea
+                  name="message"
+                  value={message}
+                  onChange={handleMessage}
+                  required
+                ></textarea>
+              </div>
             </div>
-          </div>
-          <div className="col">
-            <div className="form-group solo">
-              <label>Message</label>
-              <textarea></textarea>
-            </div>
-          </div>
-          <div className="col">
-            <div className="form-group solo right">
-              <button className="primary">Send Message</button>
+            <div className="col">
+              <div className="form-group solo right">
+                <button
+                  type="submit"
+                  id="fcf-button"
+                  className="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block"
+                  // className="primary"
+                >
+                  {t("button")}
+                </button>
+              </div>
             </div>
           </div>
         </form>
