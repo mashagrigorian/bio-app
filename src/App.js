@@ -28,9 +28,18 @@ import { VideoGallery } from "./components/pages/VideoGallery";
 import Contacts from "./components/pages/Contacts";
 import Main from "./components/main/Main";
 import RingLoader from "react-spinners/RingLoader";
+import { createContext } from "react";
+import ReactSwitch from "react-switch";
+
+export const ThemeContext = createContext(null);
 
 function App() {
   const [loading, setLoading] = useState(false);
+  const [theme, setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    setTheme((currentTheme) => (currentTheme === "light" ? "dark" : "light"));
+  };
 
   useEffect(() => {
     setLoading(true);
@@ -41,69 +50,86 @@ function App() {
 
   return (
     <>
-      <div className="loading">
-        {loading ? (
-          <RingLoader size={60} color={"#123abc"} loading={loading} />
-        ) : (
-          <Suspense fallback={null}>
-            <Router>
-              <Header />
-              <Routes>
-                <Route path="/" element={<Main />} />
-                <Route path="/about/history" element={<About />} />
-                <Route path="/about/our-capabilities" element={<Abilities />} />
-                <Route path="/about/our-priorities" element={<Priorities />} />
-                <Route path="/about/our-team" element={<Team />} />
-                <Route path="/partners" element={<Partners />} />
-                <Route
-                  path="/achievements/accreditations"
-                  element={<Accreditations />}
-                />
-                <Route
-                  path="/achievements/capacity-assessment"
-                  element={<CapacityAssessment />}
-                />
-                <Route
-                  path="/projects/completed-projects"
-                  element={<CompletedProjects />}
-                />
-                <Route
-                  path="/projects/current-projects"
-                  element={<CurrentProjects />}
-                />
-                <Route
-                  path="/projects/planned-projects"
-                  element={<PlannedProjects />}
-                />
-                <Route
-                  path="/results/beneficiaries"
-                  element={<Beneficiaries />}
-                />
-                <Route
-                  path="/procurement/procurement-under-the-programs"
-                  element={<ProgramsProcurement />}
-                />
-                <Route
-                  path="/procurement/procurement-for-the-office-needs"
-                  element={<OfficeNeeds />}
-                />
-                <Route
-                  path="/procurement/announcements"
-                  element={<Announcements />}
-                />
-                <Route path="/news/news" element={<News />} />
-                <Route
-                  path="/news/the-press-about-us"
-                  element={<PressAboutUs />}
-                />
-                <Route path="/news/media-gallery" element={<VideoGallery />} />
-                <Route path="/contacts" element={<Contacts />} />
-              </Routes>
-              <Footer />
-            </Router>
-          </Suspense>
-        )}
-      </div>
+      <ThemeContext.Provider value={{ theme, toggleTheme }}>
+        <div className="App" id={theme}>
+          <div className="switch">
+            <label>{theme === "light" ? "Light Mode" : "Dark Mode"}</label>
+            <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
+          </div>
+          <div className="loading">
+            {loading ? (
+              <RingLoader size={60} color={"#123abc"} loading={loading} />
+            ) : (
+              <Suspense fallback={null}>
+                <Router>
+                  <Header />
+                  <Routes>
+                    <Route path="/" element={<Main />} />
+                    <Route path="/about/history" element={<About />} />
+                    <Route
+                      path="/about/our-capabilities"
+                      element={<Abilities />}
+                    />
+                    <Route
+                      path="/about/our-priorities"
+                      element={<Priorities />}
+                    />
+                    <Route path="/about/our-team" element={<Team />} />
+                    <Route path="/partners" element={<Partners />} />
+                    <Route
+                      path="/achievements/accreditations"
+                      element={<Accreditations />}
+                    />
+                    <Route
+                      path="/achievements/capacity-assessment"
+                      element={<CapacityAssessment />}
+                    />
+                    <Route
+                      path="/projects/completed-projects"
+                      element={<CompletedProjects />}
+                    />
+                    <Route
+                      path="/projects/current-projects"
+                      element={<CurrentProjects />}
+                    />
+                    <Route
+                      path="/projects/planned-projects"
+                      element={<PlannedProjects />}
+                    />
+                    <Route
+                      path="/results/beneficiaries"
+                      element={<Beneficiaries />}
+                    />
+                    <Route
+                      path="/procurement/procurement-under-the-programs"
+                      element={<ProgramsProcurement />}
+                    />
+                    <Route
+                      path="/procurement/procurement-for-the-office-needs"
+                      element={<OfficeNeeds />}
+                    />
+                    <Route
+                      path="/procurement/announcements"
+                      element={<Announcements />}
+                    />
+                    <Route path="/news/news" element={<News />} />
+                    <Route
+                      path="/news/the-press-about-us"
+                      element={<PressAboutUs />}
+                    />
+                    <Route
+                      path="/news/media-gallery"
+                      element={<VideoGallery />}
+                    />
+                    <Route path="/contacts" element={<Contacts />} />
+                  </Routes>
+                  <Footer />
+                </Router>
+              </Suspense>
+            )}
+          </div>
+        </div>
+      </ThemeContext.Provider>
     </>
   );
 }

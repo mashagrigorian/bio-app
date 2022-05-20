@@ -42,11 +42,8 @@ const MainContact = () => {
   };
   return (
     <>
-      {/* <h1>Create App</h1> */}
       <link rel="icon" />
-      <h1>{t("contactWithUs")}</h1>
-      {/* <p className="sub-title">lorem ipsum</p> */}
-
+      <h1 className="titleText">{t("contactWithUs")}</h1>
       <div id="contact-container">
         <div className="contact-info">
           <h4>{t("title")}</h4>
@@ -64,16 +61,22 @@ const MainContact = () => {
             <span>{t("street")}</span>
           </div>
           <div className="social-media">
-            <a href="https://www.facebook.com/epiu.am/" target="_blank">
+            <a
+              className="icon-circle"
+              href="https://www.facebook.com/epiu.am/"
+              target="_blank"
+            >
               <FiFacebook />
             </a>
             <a
+              className="icon-circle"
               href="https://www.linkedin.com/in/epiu-state-agency-441a21155/"
               target="_blank"
             >
               <FiLinkedin />
             </a>
             <a
+              className="icon-circle"
               href="https://www.youtube.com/channel/UCQ62HVkKIOiqa4GtSEn6QYw"
               target="_blank"
             >
