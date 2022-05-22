@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import emailsJs from "@emailjs/browser";
 import { FiFacebook, FiLinkedin, FiYoutube } from "react-icons/fi";
 import "./main.scss";
+import { useForm } from "react-hook-form";
 
 const MainContact = () => {
   const { t, i18n } = useTranslation();
@@ -10,6 +11,9 @@ const MainContact = () => {
   const [senderEmail, setSenderEmail] = useState("");
   const [message, setMessage] = useState("");
   const form = useRef();
+  const { register, handleSubmit } = useForm();
+
+  const onSubmit = (data) => console.log(data);
 
   const handleName = (e) => {
     setSenderName(e.target.value);
@@ -127,6 +131,9 @@ const MainContact = () => {
                 required
               />
             </div>{" "}
+            <form className="file">
+              <input {...register("value_name")} type="file" name="picture" />
+            </form>
             <div className="col">
               <div className="form-group solo">
                 <label>{t("contactMessage")}</label>

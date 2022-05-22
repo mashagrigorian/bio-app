@@ -5,6 +5,10 @@ h1 {
     text-shadow: 0px 1px 3px rgba(0,0,0,0.6);
 }
 
+.file {
+    justify-content:flex-start;
+}
+
 #contact-container { 
     margin: auto;
     background-image: linear-gradient( yellow, green);

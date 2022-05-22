@@ -47,7 +47,8 @@ i18n.use(initReactI18next).init({
         placeholderEmail: "Your email address",
         placeholderMessage: "Your message",
         button: "Send",
-        pText: "Fill up the form and then click send",
+        pText:
+          "The hotline is available every working day from 09:00 to 18:00.",
         title: "Contact Information",
       },
     },
@@ -91,7 +92,7 @@ i18n.use(initReactI18next).init({
         placeholderEmail: "Ваш адрес электронной почты",
         placeholderMessage: "Ваше сообщение",
         button: "Отправить",
-        pText: "Заполните форму и нажмите отправить",
+        pText: "Горячая линия работает каждый рабочий день с 09:00 до 18:00.",
         title: "Контактная информация",
       },
     },
@@ -136,7 +137,8 @@ i18n.use(initReactI18next).init({
         placeholderEmail: "Ձեր էլ. փոստի հասցեն",
         placeholderMessage: "Ձեր հաղորդագրությունը",
         button: "Ուղարկել",
-        pText: "Լրացրեք տվյալները և սեղմեք ուղարկել",
+        pText:
+          "Թեժ գիծը հասանելի է յուրաքանչյուր աշխատանքային օր՝ ժամը 09։00-18։00:",
         title: "Կոնտակտային տվյալներ",
       },
     },
