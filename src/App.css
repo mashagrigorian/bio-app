@@ -5,6 +5,36 @@
   box-sizing: border-box;
 }
 
+.priorities {
+  width: 50%;   
+  margin: auto;
+}
+
+.about {
+  max-width: 50%;
+  margin: auto;
+}
+
+img {
+  border: 1px solid #ddd;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.our-abilities-images {
+  height: auto;
+ 
+  width: 200px;
+  clip-path: circle();
+}
+
+.abilities {
+  margin: auto;
+  max-width: 50%;
+}
+
 #light {
   background-color: #f3ebf6;
 }
