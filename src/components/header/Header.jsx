@@ -18,6 +18,7 @@ import Procurements from "./Procurements";
 import News from "./News";
 import Contact from "./Contact";
 import LanguageButton from "./LanguageButton";
+import ThemeSwitcher from "../common/ThemeSwitcher";
 
 const Header = () => {
   const [sidebar, setSidebar] = useState(false);
@@ -61,6 +62,8 @@ const Header = () => {
             </div>
           </ul>
           <LanguageButton />
+
+          <ThemeSwitcher/>
         </div>
       </header>
     </>
