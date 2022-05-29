@@ -16,16 +16,13 @@
 }
 
 img {
-  /*border: 1px solid #ddd;*/
+  height: 35vh;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-
+  clip-path: ellipse(); 
 }
 
 .our-abilities-images {
-  height: auto;
- 
+  height: 100%;
   width: 200px;
   clip-path: circle();
 }

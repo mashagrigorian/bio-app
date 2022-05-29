@@ -63,7 +63,7 @@ const Header = () => {
           </ul>
           <LanguageButton />
 
-          <ThemeSwitcher/>
+          <ThemeSwitcher />
         </div>
       </header>
     </>
