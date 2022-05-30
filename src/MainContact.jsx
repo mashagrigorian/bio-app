@@ -53,15 +53,15 @@ const MainContact = () => {
           <h4>{t("title")}</h4>
           <p>{t("pText")}</p>
           <div className="icon-text">
-            <i class="fa fa-phone" aria-hidden="true"></i>
+            <i className="fa fa-phone" aria-hidden="true"></i>
             <span>+374 10 651-631</span>
           </div>
           <div className="icon-text">
-            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <i classname="fa fa-envelope" aria-hidden="true"></i>
             <span>info@cep.am antifraud@epiu.am</span>
           </div>
           <div className="icon-text">
-            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <i className="fa fa-map-marker" aria-hidden="true"></i>
             <span>{t("street")}</span>
           </div>
           <div className="social-media">

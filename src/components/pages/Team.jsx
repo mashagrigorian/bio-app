@@ -201,27 +201,27 @@ const getData = (t) => [
       {
         name: t("teamName4Member1"),
         position: t("teamName4Member1Position"),
-        img: images.JannaDadiyan,
+        image: images.JannaDadiyan,
       },
       {
         name: t("teamName4Member2"),
         position: t("teamName4Member2Position"),
-        img: images.AniTadevosyan,
+        image: images.AniTadevosyan,
       },
       {
         name: t("teamName4Member3"),
         position: t("teamName4Member2Position"),
-        img: images.IrmaYuzbashyan,
+        image: images.IrmaYuzbashyan,
       },
       {
         name: t("teamName4Member4"),
         position: t("teamName4Member3Position"),
-        img: images.HovhannesKarakhanyan,
+        image: images.HovhannesKarakhanyan,
       },
       {
         name: t("teamName4Member5"),
         position: t("teamName4Member3Position"),
-        img: images.MikayelVardanyan,
+        image: images.MikayelVardanyan,
       },
     ],
   },
@@ -230,19 +230,19 @@ const getData = (t) => [
     members: [
       {
         name: t("expert1"),
-        img: images.AlbertArutunian,
+        image: images.AlbertArutunian,
       },
       {
         name: t("expert2"),
-        img: images.MisakHovakimyan,
+        image: images.MisakHovakimyan,
       },
       {
         name: t("expert3"),
-        img: images.LianaNersisyan,
+        image: images.LianaNersisyan,
       },
       {
         name: t("expert4"),
-        img: images.KarineMovsisyan,
+        image: images.KarineMovsisyan,
       },
     ],
   },
