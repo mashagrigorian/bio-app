@@ -46,68 +46,6 @@ const Contacts = () => {
 
   return (
     <>
-      {/* <form ref={form} onSubmit={sendMail}>
-        <div className="fcf-body">
-          <div id="fcf-form">
-            <h3>{t("letterExample")}</h3>
-
-            <div className="fcf-form-group">
-              <label htmlFor="Name" className="fcf-label">
-                {t("contactName")}
-              </label>
-              <div className="fcf-input-group">
-                <input
-                  type="text"
-                  name="senderName"
-                  value={senderName}
-                  onChange={handleName}
-                  
-                  required
-                  placeholder={t("placeholderName")}
-                />
-              </div>
-            </div>
-            <div className="fcf-form-group">
-              <label htmlFor="Email" className="fcf-label">
-                {t("contactEmail")}
-              </label>
-              <div className="fcf-input-group">
-                <input
-                  type="email"
-                  name="senderEmail"
-                  value={senderEmail}
-                  onChange={handleEmail}
-                  required
-                  placeholder={t("placeholderEmail")}
-                />
-              </div>{" "}
-            </div>
-            <div className="fcf-form-group">
-              <label htmlFor="Message" className="fcf-label">
-                {t("contactMessage")}
-              </label>
-              <div className="fcf-input-group">
-                <textarea
-                  name="message"
-                  value={message}
-                  onChange={handleMessage}
-                  required
-                  placeholder={t("placeholderMessage")}
-                ></textarea>
-              </div>
-            </div>
-            <div className="fcf-form-group">
-              <button
-                type="submit"
-                id="fcf-button"
-                className="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block"
-              >
-                {t("button")}
-              </button>
-            </div>
-          </div>
-        </div>
-      </form> */}
       <MainContact />
     </>
   );

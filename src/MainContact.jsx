@@ -86,27 +86,6 @@ const MainContact = () => {
             >
               <FiYoutube />
             </a>
-            {/* <a
-              href="https://www.facebook.com/epiu.am/"
-              target="_blank"
-              className="icon-circle"
-            >
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-            </a>
-            <a
-              href="https://www.youtube.com/channel/UCQ62HVkKIOiqa4GtSEn6QYw"
-              target="_blank"
-              className="icon-circle"
-            >
-              <i class="fa fa-youtube" aria-hidden="true"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/epiu-state-agency-441a21155/"
-              target="_blank"
-              className="icon-circle"
-            >
-              <i class="fa fa-linkedin" aria-hidden="true"></i>
-            </a> */}
           </div>
         </div>
         <form ref={form} onSubmit={sendMail}>
@@ -151,7 +130,6 @@ const MainContact = () => {
                   type="submit"
                   id="fcf-button"
                   className="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block"
-                  // className="primary"
                 >
                   {t("button")}
                 </button>
