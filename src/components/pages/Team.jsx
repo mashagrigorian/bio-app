@@ -11,8 +11,8 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
-import Box from "@mui/material/Box";
 import images from "./teamPhotos";
+import "./team.css";
 
 const Team = () => {
   const { t, i18n } = useTranslation();

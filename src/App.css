@@ -15,11 +15,6 @@
   margin: auto;
 }
 
-img {
-  height: 35vh;
-  display: block;
-  clip-path: ellipse(); 
-}
 
 .our-abilities-images {
   height: 100%;

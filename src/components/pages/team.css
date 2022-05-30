@@ -1,0 +1,6 @@
+img {
+    height: 35vh;
+    display: block;
+    clip-path: ellipse();  
+  }
+  
