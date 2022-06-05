@@ -23,7 +23,7 @@ const images = {
   MikayelVardanyan: require("./team/MikayelVardanyan.jpg"),
   AlbertArutunian: require("./team/AlbertArutunian.jpg"),
   MisakHovakimyan: require("./team/MisakHovakimyan.jpg"),
-  LianaNersisyan: require("./team/LianaNersisyan.jpg"),
+    LianaNersisyan: require("./team/LianaNersisyan.jpg"),
   KarineMovsisyan: require("./team/KarineMovsisyan.jpg"),
 };
 

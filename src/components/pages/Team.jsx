@@ -83,7 +83,10 @@ const Team = () => {
                         justifyItems: "center",
                       }}
                     >
-                      <img src={memberInfo.img} alt="" />
+                      <Avatar
+                          src={memberInfo.img}
+                          sx={{ width: 250, height: 250 }}
+                      />
                       <div>{memberInfo.name}</div>
                       <div>{memberInfo.position}</div>
                     </div>
@@ -201,27 +204,27 @@ const getData = (t) => [
       {
         name: t("teamName4Member1"),
         position: t("teamName4Member1Position"),
-        image: images.JannaDadiyan,
+        img: images.JannaDadiyan,
       },
       {
         name: t("teamName4Member2"),
         position: t("teamName4Member2Position"),
-        image: images.AniTadevosyan,
+        img: images.AniTadevosyan,
       },
       {
         name: t("teamName4Member3"),
         position: t("teamName4Member2Position"),
-        image: images.IrmaYuzbashyan,
+        img: images.IrmaYuzbashyan,
       },
       {
         name: t("teamName4Member4"),
         position: t("teamName4Member3Position"),
-        image: images.HovhannesKarakhanyan,
+        img: images.HovhannesKarakhanyan,
       },
       {
         name: t("teamName4Member5"),
         position: t("teamName4Member3Position"),
-        image: images.MikayelVardanyan,
+        img: images.MikayelVardanyan,
       },
     ],
   },
@@ -230,19 +233,19 @@ const getData = (t) => [
     members: [
       {
         name: t("expert1"),
-        image: images.AlbertArutunian,
+        img: images.AlbertArutunian,
       },
       {
         name: t("expert2"),
-        image: images.MisakHovakimyan,
+        img: images.MisakHovakimyan,
       },
       {
         name: t("expert3"),
-        image: images.LianaNersisyan,
+        img: images.LianaNersisyan,
       },
       {
         name: t("expert4"),
-        image: images.KarineMovsisyan,
+        img: images.KarineMovsisyan,
       },
     ],
   },
