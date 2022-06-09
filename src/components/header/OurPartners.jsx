@@ -2,7 +2,6 @@ import React from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import { useTranslation } from "react-i18next";
-import HandshakeSharpIcon from "@mui/icons-material/HandshakeSharp";
 import { useNavigate } from "react-router-dom";
 
 const OurPartners = () => {
@@ -31,7 +30,6 @@ const OurPartners = () => {
         onClick={() => navigate("/partners")}
         onMouseOver={handleClick}
       >
-        <HandshakeSharpIcon style={{ color: "#556b2f" }} />
         {t("ourPartners")}
       </Button>
       <Menu

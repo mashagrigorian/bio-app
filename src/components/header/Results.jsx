@@ -2,7 +2,6 @@ import React from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import { useTranslation } from "react-i18next";
-import FileDownloadDoneIcon from "@mui/icons-material/FileDownloadDone";
 import { MenuItem } from "@mui/material";
 import Link from "@mui/material/Link";
 
@@ -31,7 +30,6 @@ const Results = () => {
         onClick={handleClick}
         onMouseOver={handleClick}
       >
-        <FileDownloadDoneIcon style={{ color: "#2e8b57" }} />
         {t("results")}
       </Button>
       <Menu
@@ -53,7 +51,7 @@ const Results = () => {
               display: "block",
               position: "absolute",
               top: 0,
-              right: 125,
+              right: 65,
               width: 10,
               height: 10,
               bgcolor: "background.paper",

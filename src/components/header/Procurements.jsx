@@ -3,7 +3,6 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useTranslation } from "react-i18next";
-import PaidIcon from "@mui/icons-material/Paid";
 import Link from "@mui/material/Link";
 
 const Procurements = () => {
@@ -31,7 +30,6 @@ const Procurements = () => {
         onClick={handleClick}
         onMouseOver={handleClick}
       >
-        <PaidIcon style={{ color: "#9acd32" }} />
         {t("procurements")}
       </Button>
       <Menu
@@ -53,7 +51,7 @@ const Procurements = () => {
               display: "block",
               position: "absolute",
               top: 0,
-              right: 130,
+              right: 40,
               width: 10,
               height: 10,
               bgcolor: "background.paper",
@@ -73,7 +71,7 @@ const Procurements = () => {
         title={t("procurements")}
         className="nav-parent-item"
       >
-        <MenuItem
+        {/* <MenuItem
           component={Link}
           href="/procurement/procurement-under-the-programs"
         >
@@ -84,7 +82,7 @@ const Procurements = () => {
           href="/procurement/procurement-for-the-office-needs"
         >
           {t("officeProcurement")}
-        </MenuItem>
+        </MenuItem> */}
         <MenuItem component={Link} href="/procurement/announcements">
           {t("announcements")}
         </MenuItem>

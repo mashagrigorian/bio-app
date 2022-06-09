@@ -16,8 +16,6 @@
     "results": "Deliverables",
     "projectStakeholders": "Project Stakeholders",
     "procurements": "Procurement",
-    "procurementForProjects": "Procurement for Projects",
-    "officeProcurement": "Procurement for EPIU",
     "announcements": "Announcements",
     "news": "Newsroom",
     "allNews": "News",
@@ -93,6 +91,58 @@
     "expert1": "Albert Arutiunian",
     "expert2": "Misak Hovakimyan",
     "expert3": "Liana Nersisyan",
-    "expert4": "Karine Movsisyan"
-  }
+    "expert4": "Karine Movsisyan",
+    "ourHistory": {
+      "p": [
+        "\"Environmental Project Implementation Unit\" State Agency of the Ministry of Environment of the Republic of Armenia (abbreviated as \"EPIU\" SA of MoE RA)  is an organization without the status of juridical person within the structure of the MoE.",
+        "The founder of the State Agency is the Republic of Armenia represented by the Government of the Republic of Armenia. \"EPIU\" SA was established in 2010 according to the No. 1191-N decision of the Government of the Republic of Armenia, on the basis of the previously operating \"Center for Environmental Programs\" SNCO, which was the legal successor of the \"Natural Resources Management and Poverty Reduction Project Implementation Unit\" State Agency.",
+        {
+          "a": {
+            "@href": "https://www.epiu.am/wp-content/uploads/2017/12/kanonadrutyun.pdf",
+            "#text": "Charter"
+          },
+          "#text": [
+            "In the course of its activity, the State Agency, guided by the laws, other legal acts of the Republic of Armenia and the loan or grant agreement signed between the relevant international or foreign organization and its",
+            ", has implemented and is implementing about three dozen programs practically throughout the territory of the Republic."
+          ]
+        }
+      ]
+    },
+    "outCapabilities": "The overall goal of the activity of the 'Environmental Project Implementation Unit' State Agency of the Ministry of Environment of the Republic of Armenia is to ensure the effective implementation of programs in the environmental field of the Republic of Armenia. The main areas of activity are projects and programs approved by the Government of the Republic of Armenia, developed at the expense of funds provided to the Republic of Armenia by Territorial administration bodies, the State budget of the Republic of Armenia, as well as foreign states and international creditor and grant organizations in the environmental field, including:",
+    "mineral-resources": "Preservation of Mineral resources",
+    "land-resources": "Preservation of Land resources",
+    "water-resources": "Preservation of Water resources",
+    "atmosphere": "Preservation of the Atmosphere ",
+    "biodiversity": "Biodiversity Preservation",
+    "protected-areas": "Preservation of Protected areas",
+    "natural-resources": "Natural resources Management",
+    "environment": "Preservation of the Environment",
+    "abilities": "The capacities of the “Environmental Project Implementation Unit” SA are:",
+    "point-one": "Implementation of state projects, international readiness and investment projects",
+    "point-two": "Implementation of procurement procedures for goods, works, services",
+    "point-three": "Financial management",
+    "point-four": "Document management",
+    "point-five": "International cooperation",
+    "point-six": "Project, concept note design",
+    "point-seven": "Monitoring and Evaluation",
+    "our-priorities": {
+      "p": [
+        "In carrying out its activities, the EPIU is guided by the principles of honesty, impartiality, zero tolerance for fraud and corruption, and gender equality.",
+        "When performing its functions, the State Agency is guided by a clear environmental and social policy, which is aimed at preventing, mitigating or reducing adverse environmental and social impacts and is designed to ensure that \"EPIU\" does not implement projects/programs that harm the environment, public health or vulnerable communities.",
+        "The environmental and social policy adopted by the State Agency assumes that all proposed projects/programs should:",
+        "(a) ensure access to fair and equal benefits,",
+        "(b) provide fair and equitable access to benefits in a manner that is inclusive and does not impede access to basic health services, clean water and sanitation, energy, education, housing, safe and decent working conditions, and land rights",
+        "(c) avoid imposing any disproportionate adverse impacts on marginalized and vulnerable groups including children, women and girls, the elderly, indigenous people, tribal groups, displaced people, refugees, people living with disabilities, and people living with HIV/AIDS",
+        "(d) meet the core labor standards as identified by the domestic and international documents ratified by the Republic of Armenia",
+        "(e) be designed and implemented in a way that avoids or minimizes the need for involuntary resettlement. When limited involuntary resettlement is unavoidable, due process should be observed so that displaced persons shall be informed of their rights, consulted on their options, and offered technically, economically, and socially feasible resettlement alternatives or fair and adequate compensation",
+        "(f) not support projects/programmes that would involve unjustified conversion or degradation of critical natural habitats, including those that are (1) legally protected; (2) officially proposed for protection; (3) recognized by authoritative sources for their high conservation value, including as critical habitat; or (4) recognized as protected by traditional or indigenous local communities",
+        "(g) be designed and implemented in a way that avoids any significant or unjustified reduction or loss of biological diversity or the introduction of known invasive species",
+        "(h) not result in any significant or unjustified increase in greenhouse gas emissions or other drivers of climate change",
+        "(i) be designed and implemented in a way that meets applicable international standards for maximizing energy efficiency and minimizing material resource use, the production of wastes, and the release of pollutants",
+        "(j) be designed and implemented in a way that avoids potentially significant negative impacts on public health",
+        "(k) be designed and implemented in a way that avoids the alteration, damage, or removal of any physical cultural resources, cultural sites, and sites with unique natural values recognized as such at the community, national or international level",
+        "(l) be designed and implemented in a way that promotes soil conservation and avoids degradation or conversion of productive lands or land that provides valuable ecosystem services"
+      ]
+    }
+    }
 }

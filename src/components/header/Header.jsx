@@ -1,14 +1,10 @@
-import React, { useState } from "react";
-import CloseIcon from "@mui/icons-material/Close";
-import MenuIcon from "@mui/icons-material/Menu";
-import "bootstrap/dist/css/bootstrap.css";
-import { Nav, NavDropdown } from "react-bootstrap";
-import LanguageIcon from "@mui/icons-material/Language";
-import { IconButton, Menu, MenuItem } from "@mui/material";
-import { useTranslation } from "react-i18next";
-import Button from "@mui/material/Button";
-
-import "./header.css";
+import * as React from "react";
+import PropTypes from "prop-types";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import CssBaseline from "@mui/material/CssBaseline";
+import useScrollTrigger from "@mui/material/useScrollTrigger";
 import AboutUs from "./AboutUs";
 import OurPartners from "./OurPartners";
 import OurAchievements from "./OurAchievements";
@@ -18,55 +14,74 @@ import Procurements from "./Procurements";
 import News from "./News";
 import Contact from "./Contact";
 import LanguageButton from "./LanguageButton";
-import ThemeSwitcher from "../common/ThemeSwitcher";
+import "./header.css";
 
-const Header = () => {
-  const [sidebar, setSidebar] = useState(false);
-  const [anchorEl, setAnchorEl] = useState(null);
+function ElevationScroll(props) {
+  const { children, window } = props;
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 0,
+    target: window ? window() : undefined,
+  });
 
-  const handleClick = (event) => {
-    if (anchorEl !== event.currentTarget) {
-      setAnchorEl(event.currentTarget);
-    }
-  };
+  return React.cloneElement(children, {
+    elevation: trigger ? 4 : 0,
+  });
+}
 
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+ElevationScroll.propTypes = {
+  children: PropTypes.element.isRequired,
+  window: PropTypes.func,
+};
 
-  const { t, i18n } = useTranslation();
+const useStyles = {
+  logo: {
+    maxWidth: 160,
+  },
+};
+
+const Header = (props) => {
   return (
-    <>
-      <header className="header">
-        <div className="container flex">
-          <div className="logo">
-            <a href="/">
-              <img src="/assets/logo.png" alt="" />
-            </a>
-          </div>
-          <ul
-            className={sidebar ? "nav-links-sidebar" : "nav-links"}
-            onClick={() => setSidebar(false)}
-          >
-            <div className="App">
-              <Nav>
-                <AboutUs />
-                <OurPartners />
-                <OurAchievements />
-                <Projects />
-                <Results />
-                <Procurements />
-                <News />
-                <Contact />
-              </Nav>
+    <React.Fragment>
+      <CssBaseline />
+      <ElevationScroll {...props}>
+        <AppBar style={{ background: "white", textIndent: "50px" }}>
+          <Toolbar>
+            <div className="logo">
+              <a href="/">
+                <img src="/assets/logo.png" alt="" />
+              </a>
             </div>
-          </ul>
-          <LanguageButton />
-
-          <ThemeSwitcher />
-        </div>
-      </header>
-    </>
+            <Typography variant="h6" component="div">
+              <AboutUs />
+            </Typography>
+            <Typography variant="h6" component="div">
+              <OurPartners />
+            </Typography>
+            <Typography variant="h6" component="div">
+              <OurAchievements />
+            </Typography>
+            <Typography variant="h6" component="div">
+              <Projects />
+            </Typography>
+            <Typography variant="h6" component="div">
+              <Results />
+            </Typography>
+            <Typography variant="h6" component="div">
+              <Procurements />
+            </Typography>
+            <Typography variant="h6" component="div">
+              <News />
+            </Typography>
+            <Typography variant="h6" component="div">
+              <Contact />
+            </Typography>
+            <LanguageButton />
+          </Toolbar>
+        </AppBar>
+      </ElevationScroll>
+      <Toolbar />
+    </React.Fragment>
   );
 };
 

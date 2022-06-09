@@ -3,7 +3,6 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useTranslation } from "react-i18next";
-import HomeIcon from "@mui/icons-material/Home";
 import Link from "@mui/material/Link";
 
 const AboutUs = () => {
@@ -25,15 +24,12 @@ const AboutUs = () => {
 
   return (
     <div>
-      {/* {" "}
-      <InfoIcon /> */}
       <Button
         aria-owns={anchorEl ? "about-us" : undefined}
         aria-haspopup="true"
         onClick={handleClick}
         onMouseOver={handleClick}
       >
-        <HomeIcon style={{ color: "#006400" }} />
         {t("aboutUsLabel")}
       </Button>
       <Menu
@@ -45,7 +41,7 @@ const AboutUs = () => {
             filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
             mt: 2,
             "& .MuiAvatar-root": {
-              width: 32,
+              width: 62,
               height: 32,
               ml: -0.5,
               mr: 1,
@@ -55,7 +51,7 @@ const AboutUs = () => {
               display: "block",
               position: "absolute",
               top: 0,
-              right: 90,
+              right: 50,
               width: 10,
               height: 10,
               bgcolor: "background.paper",

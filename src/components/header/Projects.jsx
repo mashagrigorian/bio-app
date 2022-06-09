@@ -3,7 +3,6 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useTranslation } from "react-i18next";
-import BookmarkAddedIcon from "@mui/icons-material/BookmarkAdded";
 import Link from "@mui/material/Link";
 
 const Projects = () => {
@@ -31,7 +30,6 @@ const Projects = () => {
         onClick={handleClick}
         onMouseOver={handleClick}
       >
-        <BookmarkAddedIcon style={{ color: "#808000" }} />
         {t("projects")}
       </Button>
       <Menu
@@ -53,7 +51,7 @@ const Projects = () => {
               display: "block",
               position: "absolute",
               top: 0,
-              right: 170,
+              right: 40,
               width: 10,
               height: 10,
               bgcolor: "background.paper",

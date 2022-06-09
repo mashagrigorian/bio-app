@@ -4,7 +4,6 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useTranslation } from "react-i18next";
 import Link from "@mui/material/Link";
-import FeedIcon from "@mui/icons-material/Feed";
 
 const News = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -31,7 +30,6 @@ const News = () => {
         onClick={handleClick}
         onMouseOver={handleClick}
       >
-        <FeedIcon style={{ color: "#90ee90" }} />
         {t("news")}
       </Button>
       <Menu
@@ -53,7 +51,7 @@ const News = () => {
               display: "block",
               position: "absolute",
               top: 0,
-              right: 105,
+              right: 75,
               width: 10,
               height: 10,
               bgcolor: "background.paper",

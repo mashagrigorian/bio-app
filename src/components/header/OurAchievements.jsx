@@ -3,7 +3,6 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useTranslation } from "react-i18next";
-import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import Link from "@mui/material/Link";
 
 const OurAchievements = () => {
@@ -31,7 +30,6 @@ const OurAchievements = () => {
         onClick={handleClick}
         onMouseOver={handleClick}
       >
-        <AutoAwesomeIcon style={{ color: "#008000" }} />
         {t("ourAchievements")}
       </Button>
       <Menu
@@ -53,7 +51,7 @@ const OurAchievements = () => {
               display: "block",
               position: "absolute",
               top: 0,
-              right: 170,
+              right: 90,
               width: 10,
               height: 10,
               bgcolor: "background.paper",

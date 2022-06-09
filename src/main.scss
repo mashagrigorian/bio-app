@@ -11,8 +11,7 @@ h1 {
 
 #contact-container { 
     margin: auto;
-   // background-image: linear-gradient( 109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1% );
-   background-image: linear-gradient(to right, #8360c3, #2ebf91);
+   background-image: linear-gradient( 109.6deg, rgba(156,252,248,1) 11.2%, rgb(142, 151, 233) 90.1% );
    width: 1200px;
     justify-content: center;
     align-items: center;
@@ -29,7 +28,7 @@ h1 {
        // background-color: #5904c2;
     //    background-color: rgb(27, 119, 27);
         border-radius: 15px;
-        background-image: linear-gradient(to right, #8360c3, #2ebf91);
+        background-image: linear-gradient( 109.6deg, rgb(112, 184, 180) 11.2%, rgb(142, 151, 233) 90.1% );
         flex: 0 1 40%;
         padding: 40px;
         color: white;
@@ -125,8 +124,8 @@ h1 {
                 border: none;
                 text-transform: uppercase;
                 border-radius: 5px;
-                background-image: linear-gradient( 109.6deg, rgba(156,252,248,1) 1.2%, rgba(110,123,251,1) );
-            }
+                //background-image: linear-gradient(to right, #9b7dd1, #5bcfab);        
+                background-image: linear-gradient( 109.6deg, rgba(156,252,248,1) 11.2%, rgb(142, 151, 233) 90.1% );}
         }
      }
 }

@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "@mui/material/Button";
 import { useTranslation } from "react-i18next";
-import ContactsIcon from "@mui/icons-material/Contacts";
 import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
@@ -28,7 +27,6 @@ const Contact = () => {
         onClick={() => navigate("/contacts")}
         onMouseOver={handleClick}
       >
-        <ContactsIcon style={{ color: "#00fa9a" }} />
         {t("contact")}
       </Button>
     </div>
