@@ -32,7 +32,7 @@ const Team = () => {
               sx={{ width: 250, height: 250 }}
             />
             <Typography align="center">
-              <span>
+              <span className="name">
                 <b>{t("ourTeamHead")} </b>
               </span>
               <br />
@@ -47,7 +47,7 @@ const Team = () => {
               sx={{ width: 250, height: 250 }}
             />
             <Typography align="center">
-              <span>
+              <span className="name">
                 <b>{t("ourTeamHead2")}</b>
               </span>
               <br />
@@ -91,7 +91,7 @@ const Team = () => {
                         src={memberInfo.img}
                         sx={{ width: 250, height: 250 }}
                       />
-                      <span>{memberInfo.name} </span>
+                      <span className="name">{memberInfo.name} </span>
                       <div>{memberInfo.position}</div>
                     </div>
                   );
