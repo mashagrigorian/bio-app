@@ -92,22 +92,7 @@
     "expert2": "Misak Hovakimyan",
     "expert3": "Liana Nersisyan",
     "expert4": "Karine Movsisyan",
-    "ourHistory": {
-      "p": [
-        "\"Environmental Project Implementation Unit\" State Agency of the Ministry of Environment of the Republic of Armenia (abbreviated as \"EPIU\" SA of MoE RA)  is an organization without the status of juridical person within the structure of the MoE.",
-        "The founder of the State Agency is the Republic of Armenia represented by the Government of the Republic of Armenia. \"EPIU\" SA was established in 2010 according to the No. 1191-N decision of the Government of the Republic of Armenia, on the basis of the previously operating \"Center for Environmental Programs\" SNCO, which was the legal successor of the \"Natural Resources Management and Poverty Reduction Project Implementation Unit\" State Agency.",
-        {
-          "a": {
-            "@href": "https://www.epiu.am/wp-content/uploads/2017/12/kanonadrutyun.pdf",
-            "#text": "Charter"
-          },
-          "#text": [
-            "In the course of its activity, the State Agency, guided by the laws, other legal acts of the Republic of Armenia and the loan or grant agreement signed between the relevant international or foreign organization and its",
-            ", has implemented and is implementing about three dozen programs practically throughout the territory of the Republic."
-          ]
-        }
-      ]
-    },
+    "ourHistory": "<p>&quot;Environmental Project Implementation Unit&quot; State Agency of the Ministry of Environment of the Republic of Armenia (abbreviated as &quot;EPIU&quot; SA of MoE RA) &nbsp;is an organization without the status of juridical person within the structure of the MoE.</p>\n<p><br></p>\n<p>The founder of the State Agency is the Republic of Armenia represented by the Government of the Republic of Armenia. &quot;EPIU&quot; SA was established in 2010 according to the No. 1191-N decision of the Government of the Republic of Armenia, on the basis of the previously operating &quot;Center for Environmental Programs&quot; SNCO, which was the legal successor of the &quot;Natural Resources Management and Poverty Reduction Project Implementation Unit&quot; State Agency.</p>\n<p><br></p>\n<p>In the course of its activity, the State Agency, guided by the laws, other legal acts of the Republic of Armenia and the loan or grant agreement signed between the relevant international or foreign organization and its <a href=\"https://www.epiu.am/wp-content/uploads/2017/12/kanonadrutyun.pdf\">Charter</a>, has implemented and is implementing about three dozen programs practically throughout the territory of the Republic.</p>",
     "outCapabilities": "The overall goal of the activity of the 'Environmental Project Implementation Unit' State Agency of the Ministry of Environment of the Republic of Armenia is to ensure the effective implementation of programs in the environmental field of the Republic of Armenia. The main areas of activity are projects and programs approved by the Government of the Republic of Armenia, developed at the expense of funds provided to the Republic of Armenia by Territorial administration bodies, the State budget of the Republic of Armenia, as well as foreign states and international creditor and grant organizations in the environmental field, including:",
     "mineral-resources": "Preservation of Mineral resources",
     "land-resources": "Preservation of Land resources",
