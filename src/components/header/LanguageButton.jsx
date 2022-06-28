@@ -1,73 +1,84 @@
-import React from "react";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import LanguageIcon from "@mui/icons-material/Language";
-import { IconButton } from "@mui/material";
+import { IconButton, List, ListItem } from "@mui/material";
+import { Box } from "@mui/system";
+import languages from "./Languages";
 
-const LanguageButton = () => {
-  const [anchorEl, setAnchorEl] = React.useState(null);
+const LanguageButton = ({ isDrawerReady }) => {
+  const [anchorEl, setAnchorEl] = useState(false);
 
-  const handleClick = (event) => {
-    if (anchorEl !== event.currentTarget) {
-      setAnchorEl(event.currentTarget);
-    }
+  const handleOpen = () => {
+    setAnchorEl(true);
   };
   const open = Boolean(anchorEl);
-  const id = open ? "simple-popover" : undefined;
 
   const handleClose = () => {
-    setAnchorEl(null);
+    setAnchorEl(false);
   };
 
   const { t, i18n } = useTranslation();
-
   return (
-    <div>
-      <IconButton onClick={handleClick} onMouseOver={handleClick}>
+    <Box
+      sx={{ display: "flex", flexDirection: "row" }}
+      onMouseEnter={handleOpen}
+      onMouseLeave={handleClose}
+    >
+      <IconButton>
         <LanguageIcon />
       </IconButton>
-      <Menu
-        onClick={handleClose}
-        PaperProps={{
-          elevation: 0,
-          sx: {
-            overflow: "visible",
-            filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
-            mt: 2,
-            "& .MuiAvatar-root": {
-              width: 32,
-              height: 32,
-              ml: -0.5,
-              mr: 1,
+      {open && (
+        <List
+          sx={[
+            {
+              overflow: "visible",
+              filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "flex-start",
+              width: "100%",
+              color: "rgb(60, 168, 71)",
+              "&:before": {
+                content: '""',
+                position: "absolute",
+                top: 0,
+                right: 10,
+                width: 10,
+                height: 10,
+                bgcolor: "background.paper",
+                transform: "translateY(-50%) rotate(45deg)",
+                zIndex: 0,
+              },
             },
-            "&:before": {
-              content: '""',
-              //   display: "block",
+            !isDrawerReady && {
               position: "absolute",
-              top: 0,
-              right: 10,
-              width: 10,
-              height: 10,
-              bgcolor: "background.paper",
-              transform: "translateY(-50%) rotate(45deg)",
-              zIndex: 0,
+              top: 40,
+              width: "100px",
+              right: 30,
+              color: "rgb(60, 168, 71)",
+              backgroundColor: "white",
             },
-          },
-        }}
-        transformOrigin={{ horizontal: "right", vertical: "top" }}
-        anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
-        id="simple-menu"
-        anchorEl={anchorEl}
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-        MenuListProps={{ onMouseLeave: handleClose }}
-      >
-        <MenuItem onClick={() => i18n.changeLanguage("arm")}>Armenian</MenuItem>
-        <MenuItem onClick={() => i18n.changeLanguage("rus")}>Russian</MenuItem>
-        <MenuItem onClick={() => i18n.changeLanguage("en")}>English</MenuItem>
-      </Menu>
-    </div>
+          ]}
+        >
+          {languages.map((item, index) => {
+            return (
+              <ListItem
+                key={item.lang}
+                sx={{
+                  ":hover": {
+                    cursor: "pointer",
+                    fontWeight: "bold",
+                  },
+                }}
+                onClick={() => i18n.changeLanguage(item.lang)}
+              >
+                {item.label}
+              </ListItem>
+            );
+          })}
+        </List>
+      )}
+    </Box>
   );
 };
 

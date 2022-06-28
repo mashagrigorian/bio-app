@@ -1,21 +1,25 @@
-import * as React from "react";
+import React, { useCallback, useState } from "react";
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import CssBaseline from "@mui/material/CssBaseline";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
-import AboutUs from "./AboutUs";
-import OurPartners from "./OurPartners";
-import OurAchievements from "./OurAchievements";
-import Projects from "./Projects";
-import Results from "./Results";
-import Procurements from "./Procurements";
-import News from "./News";
-import Contact from "./Contact";
 import LanguageButton from "./LanguageButton";
 import "./header.css";
-
+import {
+  Box,
+  createTheme,
+  Divider,
+  Fade,
+  Grid,
+  Hidden,
+  IconButton,
+  SwipeableDrawer,
+  ThemeProvider,
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import NavLinks from "./NavLinks";
+import NavigationData from "./Navigation.js";
+import { ArrowRight } from "@mui/icons-material";
 function ElevationScroll(props) {
   const { children, window } = props;
   const trigger = useScrollTrigger({
@@ -40,48 +44,123 @@ const useStyles = {
   },
 };
 
+const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1252,
+      xl: 1536,
+    },
+  },
+});
 const Header = (props) => {
+  const [expanded, setExpanded] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  const expandHeight = useCallback((bool) => {
+    setExpanded(bool);
+  }, []);
+  const openDrawer = useCallback((bool) => {
+    setOpen(true);
+  }, []);
+  const closeDrawer = useCallback((bool) => {
+    setOpen(false);
+  }, []);
+
   return (
-    <React.Fragment>
-      <CssBaseline />
-      <ElevationScroll {...props}>
-        <AppBar style={{ background: "white", textIndent: "50px" }}>
-          <Toolbar>
-            <div className="logo">
-              <a href="/">
-                <img src="/assets/logo.png" alt="" />
-              </a>
-            </div>
-            <Typography variant="h6" component="div">
-              <AboutUs />
-            </Typography>
-            <Typography variant="h6" component="div">
-              <OurPartners />
-            </Typography>
-            <Typography variant="h6" component="div">
-              <OurAchievements />
-            </Typography>
-            <Typography variant="h6" component="div">
-              <Projects />
-            </Typography>
-            <Typography variant="h6" component="div">
-              <Results />
-            </Typography>
-            <Typography variant="h6" component="div">
-              <Procurements />
-            </Typography>
-            <Typography variant="h6" component="div">
-              <News />
-            </Typography>
-            <Typography variant="h6" component="div">
-              <Contact />
-            </Typography>
-            <LanguageButton />
-          </Toolbar>
-        </AppBar>
-      </ElevationScroll>
-      <Toolbar />
-    </React.Fragment>
+    <ThemeProvider theme={theme}>
+      <AppBar
+        sx={[
+          {
+            background: "white",
+            minHeight: { lg: "40px" },
+          },
+          expanded && {
+            height: { lg: "17%" },
+          },
+        ]}
+      >
+        <Toolbar>
+          <Grid
+            sx={{ minHeight: "inherit" }}
+            container
+            justifyContent={"space-between"}
+          >
+            <Grid item>
+              <div className="logo">
+                <a href="/">
+                  <img src="/assets/logo.png" alt="" />
+                </a>
+              </div>
+            </Grid>
+            <Hidden lgDown>
+              <Grid item sx={{ pt: 1 }}>
+                <Grid container>
+                  {NavigationData.map((item, index) => {
+                    return (
+                      <NavLinks
+                        key={index}
+                        expand={expandHeight}
+                        title={item.title}
+                        links={item.links}
+                        type={item.type}
+                      />
+                    );
+                  })}
+                </Grid>
+              </Grid>
+              <Grid item>
+                <Box sx={{ display: "flex", justifyContent: "flex-start" }}>
+                  <LanguageButton isDrawerReady={open} />
+                </Box>
+              </Grid>
+            </Hidden>
+
+            <Hidden lgUp>
+              <IconButton onClick={openDrawer}>
+                <MenuIcon />
+              </IconButton>
+            </Hidden>
+          </Grid>
+        </Toolbar>
+        <SwipeableDrawer
+          open={open}
+          anchor="right
+        "
+          onOpen={openDrawer}
+          onClose={closeDrawer}
+        >
+          <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+            <Box sx={{ display: "flex", justifyContent: "flex-start" }}>
+              <LanguageButton isDrawerReady={open} />
+            </Box>
+            <IconButton onClick={closeDrawer}>
+              <ArrowRight />
+            </IconButton>
+          </Box>
+          <Divider />
+          <Box sx={{ display: "flex", flexDirection: "column" }}>
+            {NavigationData.map((item, index) => {
+              return (
+                <>
+                  <NavLinks
+                    key={index}
+                    expand={expandHeight}
+                    title={item.title}
+                    links={item.links}
+                    type={item.type}
+                    isDrawerReady={open}
+                  />
+                  <Divider />
+                </>
+              );
+            })}
+          </Box>
+        </SwipeableDrawer>
+      </AppBar>
+    </ThemeProvider>
   );
 };
 

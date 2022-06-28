@@ -31,12 +31,12 @@ export const ThemeContext = createContext(null);
 function App() {
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
+  // useEffect(() => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 2000);
+  // }, []);
 
   return (
     <>
@@ -57,68 +57,83 @@ function App() {
           ) : (
             <Suspense fallback={null}>
               <Router>
-                <Header />
-                <Routes>
-                  <Route path="/" element={<Main />} />
-                  <Route path="/about/history" element={<About />} />
-                  <Route
-                    path="/about/our-capabilities"
-                    element={<Abilities />}
-                  />
-                  <Route
-                    path="/about/our-priorities"
-                    element={<Priorities />}
-                  />
-                  <Route path="/about/our-team" element={<Team />} />
-                  <Route path="/partners" element={<Partners />} />
-                  <Route
-                    path="/achievements/accreditations"
-                    element={<Accreditations />}
-                  />
-                  <Route
-                    path="/achievements/capacity-assessment"
-                    element={<CapacityAssessment />}
-                  />
-                  <Route
-                    path="/projects/completed-projects"
-                    element={<CompletedProjects />}
-                  />
-                  <Route
-                    path="/projects/current-projects"
-                    element={<CurrentProjects />}
-                  />
-                  <Route
-                    path="/projects/planned-projects"
-                    element={<PlannedProjects />}
-                  />
-                  <Route
-                    path="/results/beneficiaries"
-                    element={<Beneficiaries />}
-                  />
-                  <Route
-                    path="/procurement/procurement-under-the-programs"
-                    element={<ProgramsProcurement />}
-                  />
-                  <Route
-                    path="/procurement/procurement-for-the-office-needs"
-                    element={<OfficeNeeds />}
-                  />
-                  <Route
-                    path="/procurement/announcements"
-                    element={<Announcements />}
-                  />
-                  <Route path="/news/news" element={<News />} />
-                  <Route
-                    path="/news/the-press-about-us"
-                    element={<PressAboutUs />}
-                  />
-                  <Route
-                    path="/news/media-gallery"
-                    element={<VideoGallery />}
-                  />
-                  <Route path="/contacts" element={<Contacts />} />
-                </Routes>
-                <Footer />
+                <div
+                  style={{
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
+                  <div>
+                    <Header />
+                  </div>
+
+                  <div style={{ marginTop: "5%" }}>
+                    <Routes>
+                      <Route path="/" element={<Main />} />
+                      <Route path="/about/history" element={<About />} />
+                      <Route
+                        path="/about/our-capabilities"
+                        element={<Abilities />}
+                      />
+                      <Route
+                        path="/about/our-priorities"
+                        element={<Priorities />}
+                      />
+                      <Route path="/about/our-team" element={<Team />} />
+                      <Route path="/partners" element={<Partners />} />
+                      <Route
+                        path="/achievements/accreditations"
+                        element={<Accreditations />}
+                      />
+                      <Route
+                        path="/achievements/capacity-assessment"
+                        element={<CapacityAssessment />}
+                      />
+                      <Route
+                        path="/projects/completed-projects"
+                        element={<CompletedProjects />}
+                      />
+                      <Route
+                        path="/projects/current-projects"
+                        element={<CurrentProjects />}
+                      />
+                      <Route
+                        path="/projects/planned-projects"
+                        element={<PlannedProjects />}
+                      />
+                      <Route
+                        path="/results/beneficiaries"
+                        element={<Beneficiaries />}
+                      />
+                      <Route
+                        path="/procurement/procurement-under-the-programs"
+                        element={<ProgramsProcurement />}
+                      />
+                      <Route
+                        path="/procurement/procurement-for-the-office-needs"
+                        element={<OfficeNeeds />}
+                      />
+                      <Route
+                        path="/procurement/announcements"
+                        element={<Announcements />}
+                      />
+                      <Route path="/news/news" element={<News />} />
+                      <Route
+                        path="/news/the-press-about-us"
+                        element={<PressAboutUs />}
+                      />
+                      <Route
+                        path="/news/media-gallery"
+                        element={<VideoGallery />}
+                      />
+                      <Route path="/contacts" element={<Contacts />} />
+                    </Routes>
+                  </div>
+                  <div style={{ marginTop: "auto" }}>
+                    <Footer />
+                  </div>
+                </div>
               </Router>
             </Suspense>
           )}
