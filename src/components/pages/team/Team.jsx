@@ -13,6 +13,7 @@ import Stack from "@mui/material/Stack";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import images from "./teamPhotos";
 import "./team.css";
+// import "./HeadInfo";
 
 const Team = () => {
   const { t, i18n } = useTranslation();
@@ -38,7 +39,9 @@ const Team = () => {
               <br />
               {t("headPosition")}
               <br />
-              View Bio <AddCircleOutlineIcon style={{ color: "#006400" }} />
+              {/* <HeadInfo /> */}
+              View Bio
+              <AddCircleOutlineIcon style={{ color: "#006400" }} />
             </Typography>
           </Typography>
           <Typography>
@@ -53,7 +56,9 @@ const Team = () => {
               <br />
               {t("headPosition2")}
               <br />
-              View Bio <AddCircleOutlineIcon style={{ color: "#006400" }} />
+              {/* <HeadInfo /> */}
+              View Bio
+              <AddCircleOutlineIcon style={{ color: "#006400" }} />
             </Typography>
           </Typography>
         </Stack>

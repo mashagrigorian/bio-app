@@ -1,6 +1,6 @@
 import React, { createContext, Suspense, useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import "./main.scss";
+import "./components/pages/contacts/main.scss";
 
 import "./App.css";
 import Header from "./components/header/Header";
@@ -9,8 +9,8 @@ import About from "./components/pages/About";
 import Abilities from "./components/pages/Abilities";
 import Priorities from "./components/pages/Priorities";
 import Team from "./components/pages/team/Team";
-import Partners from "./components/pages/Partners";
-import Accreditations from "./components/pages/Accreditations";
+import Partners from "./components/pages/partners/Partners";
+import Accreditations from "./components/pages/ourAchievements/Accreditations";
 import CapacityAssessment from "./components/pages/CapacityAssessment";
 import CompletedProjects from "./components/pages/CompletedProjects";
 import CurrentProjects from "./components/pages/CurrentProjects";
@@ -22,7 +22,7 @@ import Announcements from "./components/pages/Announcements";
 import News from "./components/pages/News";
 import PressAboutUs from "./components/pages/PressAboutUs";
 import { VideoGallery } from "./components/pages/VideoGallery";
-import Contacts from "./components/pages/Contacts";
+import Contacts from "./components/pages/contacts/Contacts";
 import Main from "./components/main/Main";
 import RingLoader from "react-spinners/RingLoader";
 import { Experimental_CssVarsProvider as CssVarsProvider } from "@mui/material/styles";

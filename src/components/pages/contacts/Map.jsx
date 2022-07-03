@@ -7,11 +7,16 @@ class MapContainer extends Component {
     return (
       <>
         {/* <h3>{t("ourAddress")}</h3> */}
-        <h5>
-          Մեր հասցեն ՝ Հայաստանի Հանրապետություն, ք․ Երևան, 0047, փող․ Ա․
-          Արմենակյան 129{" "}
-        </h5>
-        <Map
+        <iframe
+          style={{ width: "100%", height: "600px" }}
+          id="gmap_canvas"
+          src="https://maps.google.com/maps?q=129%20Armenakyan%20Street,%20Yerevan&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          frameborder="0"
+          scrolling="no"
+          marginheight="0"
+          marginwidth="0"
+        ></iframe>
+        {/* <Map
           google={this.props.google}
           style={{ width: "30%", height: "30%" }}
           zoom={10}
@@ -19,12 +24,12 @@ class MapContainer extends Component {
             lat: 49.19531,
             lng: -122.86467,
           }}
-        />
+        /> */}
       </>
     );
   }
 }
 
 export default GoogleApiWrapper({
-  apiKey: "AIzaSyDwncsn8sBeNaenEpg1WIvo26tlPpQLClU",
+  apiKey: "AIzaSyCcMy0pyCtU_V1Xq0aqGJYurT9ovci2j7g",
 })(MapContainer);

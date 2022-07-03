@@ -3,9 +3,9 @@ import { useTranslation } from "react-i18next";
 import "./contacts.css";
 import emailsJs from "@emailjs/browser";
 //import ContactInfo from "./ContactInfo";
-//import Map from "../Map";
+import Map from "./Map";
 //import Hotline from "./Hotline";
-import MainContact from "../../MainContact";
+import MainContact from "./MainContact";
 
 const Contacts = () => {
   const { t, i18n } = useTranslation();
@@ -47,6 +47,7 @@ const Contacts = () => {
   return (
     <>
       <MainContact />
+      <Map />
     </>
   );
 };

@@ -11,12 +11,12 @@ export default [
   },
   {
     type: "single",
-    title: "ourAchievements",
+    title: "ourPartners",
     links: [{ href: "/partners", label: "ourPartners" }],
   },
   {
     type: "multiple",
-    title: "ourPartners",
+    title: "ourAchievements",
     links: [
       { href: "/achievements/accreditations", label: "accreditations" },
       { href: "/achievements/capacity-assessment", label: "ourCapacities" },
