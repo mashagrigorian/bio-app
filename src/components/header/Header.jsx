@@ -20,6 +20,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import NavLinks from "./NavLinks";
 import NavigationData from "./Navigation.js";
 import { ArrowRight } from "@mui/icons-material";
+
 function ElevationScroll(props) {
   const { children, window } = props;
   const trigger = useScrollTrigger({
@@ -78,7 +79,7 @@ const Header = (props) => {
             minHeight: { lg: "40px" },
           },
           expanded && {
-            height: { lg: "17%" },
+            height: { lg: "150px" },
           },
         ]}
       >

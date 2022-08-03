@@ -77,7 +77,7 @@ const NavLinks = ({
                   position: "absolute",
                   top: 25,
                   left: 7,
-                  minWidth: "120px",
+                  minWidth: "300px",
                   color: "rgb(60, 168, 71)",
                 },
               ]}
