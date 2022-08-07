@@ -97,7 +97,7 @@ const Partners = () => {
             <div className={styles.text}>
               <h2>
                 <a href="https://www.thegef.org/">
-                  <b> {t("globalEnv")}</b>
+                  <b> {t("globalEnviromentFacility")}</b>
                 </a>
               </h2>
             </div>
@@ -112,7 +112,7 @@ const Partners = () => {
           <div className={styles.text}>
             <h2>
               <a href="https://www.unep.org/">
-                <b> {t("unep")}</b>
+                <b> {t("unitedNationsEnvProg")}</b>
               </a>
             </h2>
           </div>
@@ -126,7 +126,7 @@ const Partners = () => {
           <div className={styles.text}>
             <h2>
               <a href="https://www.undp.org/">
-                <b> {t("undp")}</b>
+                <b> {t("unitedNationsDevProg")}</b>
               </a>
             </h2>
           </div>
@@ -140,7 +140,7 @@ const Partners = () => {
           <div className={styles.text}>
             <h2>
               <a href="https://www.unido.org/">
-                <b> {t("unido")}</b>
+                <b> {t("unitedNationsInduDevOrg")}</b>
               </a>
             </h2>
           </div>
@@ -172,7 +172,7 @@ const Partners = () => {
           <div className={styles.text}>
             <h2>
               <a href="https://www.osce.org/">
-                <b> {t("osce")}</b>
+                <b> {t("orgForSec")}</b>
               </a>
             </h2>
           </div>
@@ -191,7 +191,7 @@ const Partners = () => {
           <div className={styles.text}>
             <h2>
               <a href="https://www.greenclimate.fund/">
-                <b> {t("climateChange")}</b>
+                <b> {t("climChangeInfCenter")}</b>
               </a>
             </h2>
           </div>
