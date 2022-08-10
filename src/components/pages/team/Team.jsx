@@ -13,7 +13,7 @@ import Stack from "@mui/material/Stack";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import images from "./teamPhotos";
 import "./team.css";
-import HeadInfoPopover ./HeadInfoPopoverdInfoPopover";
+import HeadInfoPopover from "./HeadInfoPopover";
 
 const Team = () => {
   const { t, i18n } = useTranslation();
