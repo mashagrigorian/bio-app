@@ -13,7 +13,7 @@ import Stack from "@mui/material/Stack";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import images from "./teamPhotos";
 import "./team.css";
-import PopupInfo from "./PopupInfo";
+import HeadInfoPopover ./HeadInfoPopoverdInfoPopover";
 
 const Team = () => {
   const { t, i18n } = useTranslation();
@@ -47,7 +47,7 @@ const Team = () => {
                   gap: "5px",
                 }}
               >
-                <PopupInfo />
+                <HeadInfoPopover />
               </div>
             </Typography>
           </Typography>
@@ -71,7 +71,7 @@ const Team = () => {
                   gap: "5px",
                 }}
               >
-                <PopupInfo />
+                <HeadInfoPopover />
               </div>
             </Typography>
           </Typography>
