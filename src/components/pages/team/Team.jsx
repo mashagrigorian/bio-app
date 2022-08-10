@@ -47,7 +47,6 @@ const Team = () => {
                   gap: "5px",
                 }}
               >
-                View Bio
                 <PopupInfo />
               </div>
             </Typography>
@@ -72,7 +71,6 @@ const Team = () => {
                   gap: "5px",
                 }}
               >
-                View Bio
                 <PopupInfo />
               </div>
             </Typography>
