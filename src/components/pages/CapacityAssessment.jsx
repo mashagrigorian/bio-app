@@ -1,7 +1,7 @@
 import React from "react";
 
 const CapacityAssessment = () => {
-  return <div>Մեր կարողությունների գնահատումը</div>;
+  return <div></div>;
 };
 
 export default CapacityAssessment;

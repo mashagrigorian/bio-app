@@ -126,7 +126,7 @@ const Team = () => {
 
 const getData = (t) => [
   {
-    label: t("teamName"),
+    label: <b>{t("teamName")}</b>,
     members: [
       {
         name: <b>{t("member1")}</b>,
@@ -156,7 +156,7 @@ const getData = (t) => [
     ],
   },
   {
-    label: t("teamName2"),
+    label: <b>{t("teamName2")}</b>,
     members: [
       {
         name: <b>{t("teamName2Member1")}</b>,
@@ -196,7 +196,7 @@ const getData = (t) => [
     ],
   },
   {
-    label: t("teamName3"),
+    label: <b>{t("teamName3")}</b>,
     members: [
       {
         name: <b>{t("teamName3Member1")}</b>,
@@ -222,7 +222,7 @@ const getData = (t) => [
     ],
   },
   {
-    label: t("teamName4"),
+    label: <b>{t("teamName4")}</b>,
     members: [
       {
         name: <b>{t("teamName4Member1")}</b>,
@@ -252,7 +252,7 @@ const getData = (t) => [
     ],
   },
   {
-    label: t("experts"),
+    label: <b>{t("experts")}</b>,
     members: [
       {
         name: <b>{t("expert1")}</b>,

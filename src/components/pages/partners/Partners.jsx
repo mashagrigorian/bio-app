@@ -52,149 +52,100 @@ const Partners = () => {
     <div className={styles.content}>
       <div className="partners-info">
         <div className={styles.container}>
-          <div>
-            <img
-              className={styles.image}
-              src={logos.adaptionFond}
-              alt="adaptionFondLogo"
-            />
-          </div>
-          <div className={styles.text}>
-            <h2>
+          <ul>
+            <li>
               <a href="https://www.adaptation-fund.org/ ">
+                <img
+                  className={styles.image}
+                  src={logos.adaptionFond}
+                  alt="adaptionFondLogo"
+                />
                 <b> {t("adaptionFund")}</b>
               </a>
-            </h2>
-          </div>
-        </div>
-      </div>
-      <div className="partners-info">
-        <div className={styles.container}>
-          <div>
-            <img
-              className={styles.image}
-              src={logos.greenClimate}
-              alt="greenClimate"
-            />
-          </div>
-          <div className={styles.text}>
-            <h2>
+            </li>
+          </ul>
+          <ul>
+            <li>
               <a href="https://www.greenclimate.fund/">
+                <img
+                  className={styles.image}
+                  src={logos.greenClimate}
+                  alt="greenClimate"
+                />
                 <b> {t("greenClimate")}</b>
               </a>
-            </h2>
-          </div>
-        </div>
-        <div className="partners-info">
-          <div className={styles.container}>
-            <div>
-              <img
-                className={styles.image}
-                src={logos.globalEnv}
-                alt="globalEnv"
-              />
-            </div>
-            <div className={styles.text}>
-              <h2>
-                <a href="https://www.thegef.org/">
-                  <b> {t("globalEnviromentFacility")}</b>
-                </a>
-              </h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="partners-info">
-        <div className={styles.container}>
-          <div>
-            <img className={styles.image} src={logos.unep} alt="unep" />
-          </div>
-          <div className={styles.text}>
-            <h2>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              {" "}
+              <a href="https://www.thegef.org/">
+                <img
+                  className={styles.image}
+                  src={logos.globalEnv}
+                  alt="globalEnv"
+                />
+                <b> {t("globalEnviromentFacility")}</b>
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <li>
               <a href="https://www.unep.org/">
+                <img className={styles.image} src={logos.unep} alt="unep" />
                 <b> {t("unitedNationsEnvProg")}</b>
               </a>
-            </h2>
-          </div>
-        </div>
-      </div>
-      <div className="partners-info">
-        <div className={styles.container}>
-          <div>
-            <img className={styles.image} src={logos.undp} alt="undp" />
-          </div>
-          <div className={styles.text}>
-            <h2>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              {" "}
               <a href="https://www.undp.org/">
+                <img className={styles.image} src={logos.undp} alt="undp" />
                 <b> {t("unitedNationsDevProg")}</b>
               </a>
-            </h2>
-          </div>
-        </div>
-      </div>
-      <div className="partners-info">
-        <div className={styles.container}>
-          <div>
-            <img className={styles.image} src={logos.unido} alt="unido" />
-          </div>
-          <div className={styles.text}>
-            <h2>
+            </li>
+          </ul>
+          <ul>
+            <li>
               <a href="https://www.unido.org/">
+                <img className={styles.image} src={logos.unido} alt="unido" />
                 <b> {t("unitedNationsInduDevOrg")}</b>
               </a>
-            </h2>
-          </div>
-        </div>
-      </div>
-      <div className="partners-info">
-        <div className={styles.container}>
-          <div>
-            <img
-              className={styles.image}
-              src={logos.theWorldBank}
-              alt="theWorldBank"
-            />
-          </div>
-          <div className={styles.text}>
-            <h2>
+            </li>
+          </ul>{" "}
+          <ul>
+            <li>
               <a href="https://www.worldbank.org/en/home">
+                <img
+                  className={styles.image}
+                  src={logos.theWorldBank}
+                  alt="theWorldBank"
+                />
                 <b> {t("theWorldBank")}</b>
               </a>
-            </h2>
-          </div>
-        </div>
-      </div>
-      <div className="partners-info">
-        <div className={styles.container}>
-          <div>
-            <img className={styles.image} src={logos.osce} alt="osce" />
-          </div>
-          <div className={styles.text}>
-            <h2>
+            </li>
+          </ul>
+          <ul>
+            <li>
               <a href="https://www.osce.org/">
+                <img className={styles.image} src={logos.osce} alt="osce" />
                 <b> {t("orgForSec")}</b>
               </a>
-            </h2>
-          </div>
-        </div>
-      </div>
-
-      <div className="partners-info">
-        <div className={styles.container}>
-          <div>
-            <img
-              className={styles.image}
-              src={logos.climateChange}
-              alt="climateChange"
-            />
-          </div>
-          <div className={styles.text}>
-            <h2>
-              <a href="https://www.greenclimate.fund/">
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="http://www.nature-ic.am/">
+                <img
+                  className={styles.image}
+                  src={logos.climateChange}
+                  alt="climateChange"
+                />
                 <b> {t("climChangeInfCenter")}</b>
               </a>
-            </h2>
-          </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

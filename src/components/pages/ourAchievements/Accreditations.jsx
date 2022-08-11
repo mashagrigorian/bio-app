@@ -1,6 +1,6 @@
 import React from "react";
-import adaptionFundLogo from "./logos/adaptationFundLogo.png";
-import greenClimateLogo from "./logos/greenClimateFundLogo.png";
+import adaptionFundLogo from "./logos/adaptionFond.png";
+import greenClimateLogo from "./logos/greenClimate.png";
 import "./accreditations.css";
 import {
   Accordion,
@@ -21,34 +21,24 @@ const Accreditations = () => {
         <Typography align="center">
           <span className="name">
             <b>
-              <Accordion>
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel1a-content"
-                  id="panel1a-header"
-                >
-                  <Typography>
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: t("accreditationsGreenClimate", {
-                          interpolation: { escapeValue: false },
-                        }),
-                      }}
-                    ></div>
-                  </Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography>
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: t("aboutGreenClimate", {
-                          interpolation: { escapeValue: false },
-                        }),
-                      }}
-                    ></div>
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
+              <Typography>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: t("accreditationsGreenClimate", {
+                      interpolation: { escapeValue: false },
+                    }),
+                  }}
+                ></div>
+              </Typography>
+              <Typography>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: t("aboutGreenClimate", {
+                      interpolation: { escapeValue: false },
+                    }),
+                  }}
+                ></div>
+              </Typography>
             </b>
           </span>
         </Typography>
@@ -58,34 +48,24 @@ const Accreditations = () => {
         <Typography align="center">
           <span className="name">
             <b>
-              <Accordion>
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel2a-content"
-                  id="panel2a-header"
-                >
-                  <Typography>
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: t("accreditationsAdaptationFund", {
-                          interpolation: { escapeValue: false },
-                        }),
-                      }}
-                    ></div>
-                  </Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography>
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: t("aboutAdaptionFund", {
-                          interpolation: { escapeValue: false },
-                        }),
-                      }}
-                    ></div>
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
+              <Typography>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: t("accreditationsAdaptationFund", {
+                      interpolation: { escapeValue: false },
+                    }),
+                  }}
+                ></div>
+              </Typography>
+              <Typography>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: t("aboutAdaptionFund", {
+                      interpolation: { escapeValue: false },
+                    }),
+                  }}
+                ></div>
+              </Typography>
             </b>
           </span>
         </Typography>

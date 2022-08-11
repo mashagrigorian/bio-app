@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Container } from "@mui/material";
+import "./abilities.css";
 
 const Abilities = () => {
   const { t, i18n } = useTranslation();
@@ -25,6 +26,7 @@ const Abilities = () => {
                 alignItems: "center",
                 justifyItems: "center",
                 gap: "10px",
+                width: "100%",
               }}
             >
               <li>

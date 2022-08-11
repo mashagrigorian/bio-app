@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Lato&display=swap);
 
+* {
+    text-align: justify;
+  }
+
 body {
     background-color: #f7f7f7;
     font-family: "Lato" sans-serif;
@@ -35,6 +39,7 @@ form button {
     border-radius: 5px;
     font-size: 18px;
     background-color: #ccc;
+    text-align: justify;
 }
 
 .news-container {
