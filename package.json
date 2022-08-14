@@ -20,6 +20,7 @@
     "emailjs": "^4.0.0",
     "google-maps": "^4.3.3",
     "google-maps-react": "^2.0.6",
+    "gsap": "^3.10.4",
     "html-to-text": "^8.2.0",
     "i18next": "^21.8.0",
     "i18next-browser-languagedetector": "^6.1.4",

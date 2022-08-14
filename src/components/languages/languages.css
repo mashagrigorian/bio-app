@@ -1,8 +1,4 @@
-* {
-    text-align: justify;
-  }
-  
-  select-option {
+ select-option {
     background-color: aquamarine;
     display: flex;
     text-align: right;

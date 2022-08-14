@@ -10,6 +10,5 @@
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-items: center;
-  gap: 30px;  
-  text-align: justify;  
+  gap: 30px;
 }
