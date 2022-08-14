@@ -1,14 +1,3 @@
-.logo-styles-1 {
-    margin-right: auto;
-    height: 0px;    
-    text-align: center;
-    width: 850px;
-    font-size: 85px;    
-}
-
-.logo-styles-2 {
-      text-align: center;
-      margin-left: auto;
-      width: 850px;
-      margin-top: 50px;
+.logo-style {
+        height: 100px;
 }

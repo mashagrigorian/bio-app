@@ -7,8 +7,8 @@ const Priorities = () => {
   const { t, i18n } = useTranslation();
 
   return (
-    <Container>
-      <div
+    <Container >
+      <div style={{textAlign:"justify"}}
         dangerouslySetInnerHTML={{
           __html: t("our-priorities", {
             interpolation: { escapeValue: false },
