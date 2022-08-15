@@ -5,7 +5,7 @@ import "./components/pages/contacts/main.scss";
 import "./App.css";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
-import About from "./components/pages/About";
+import About from "./components/pages/about/About";
 import Abilities from "./components/pages/capabilities/Abilities";
 import Priorities from "./components/pages/priorities/Priorities";
 import Team from "./components/pages/team/Team";

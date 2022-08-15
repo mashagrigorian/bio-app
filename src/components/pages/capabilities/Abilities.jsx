@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Container } from "@mui/material";
+import { Container, Paper } from "@mui/material";
 import "./abilities.css";
 
 const Abilities = () => {
@@ -8,7 +8,7 @@ const Abilities = () => {
 
   return (
     <>
-      <Container>
+      <Container component={Paper} elevation={5} style={{ padding: 25 }}>
         <div className="abilities">
           <div
             dangerouslySetInnerHTML={{

@@ -6,6 +6,7 @@ import {
   AccordionSummary,
   Container,
   Typography,
+  Paper,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Avatar from "@mui/material/Avatar";
@@ -19,7 +20,7 @@ const Team = () => {
   const { t, i18n } = useTranslation();
 
   return (
-    <Container>
+    <Container component={Paper} elevation={5} style={{ padding: 25 }}>
       <div>
         <Stack
           direction="row"
