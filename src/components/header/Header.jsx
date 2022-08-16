@@ -9,7 +9,6 @@ import {
   Box,
   createTheme,
   Divider,
-  Fade,
   Grid,
   Hidden,
   IconButton,
@@ -21,7 +20,7 @@ import NavLinks from "./NavLinks";
 import NavigationData from "./Navigation.js";
 import { ArrowRight } from "@mui/icons-material";
 
-function ElevationScroll(props) {
+const ElevationScroll = (props) => {
   const { children, window } = props;
   const trigger = useScrollTrigger({
     disableHysteresis: true,
@@ -32,7 +31,7 @@ function ElevationScroll(props) {
   return React.cloneElement(children, {
     elevation: trigger ? 4 : 0,
   });
-}
+};
 
 ElevationScroll.propTypes = {
   children: PropTypes.element.isRequired,
@@ -56,6 +55,7 @@ const theme = createTheme({
     },
   },
 });
+
 const Header = (props) => {
   const [expanded, setExpanded] = useState(false);
   const [open, setOpen] = useState(false);
