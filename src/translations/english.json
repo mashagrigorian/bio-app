@@ -40,7 +40,7 @@
     "title"                        : "Contact Information",
     "ourTeamHead"                  : "Armen Yesoyan",
     "headPosition"                 : "Acting Director",
-    "viewBio"                      : "View BIO",
+  
     "ourTeamHead2"                 : "Armen Khojoyan",
     "headPosition2"                : "Acting Deputy Director",
     "teamName"                     : "Administrative and service staff",
@@ -146,6 +146,34 @@
     "implemented-project-27"       : "INVENTORY OF FISH AND CRAYFISH STOCKS IN LAKE SEVAN AND ITS CATCHMENT BASIN",
     "implemented-project-28"       : "ENCOURAGING THE OPERATION OF ELECTRIC VEHICLES AND IMPROVING INFRASTRUCTURE IN THE CITY OF YEREVAN",
     "implemented-project-29"       : "RESTORATION AND PRESERVATION OF THE GENE POOL OF OLD TRADITIONAL CROPS, IN PARTICULAR, VARIETIES DERIVED FROM CULTIVATION IN THE REPUBLIC OF ARMENIA",
-    "implemented-project-30"       : "III NATIONAL PROJECT FOR SUSTAINABLE CAPACITY BUILDING FOR EFFECTIVE PARTICIPATION IN THE BIODIVERSITY CLEARING HOUSE"
+    "implemented-project-30"       : "III NATIONAL PROJECT FOR SUSTAINABLE CAPACITY BUILDING FOR EFFECTIVE PARTICIPATION IN THE BIODIVERSITY CLEARING HOUSE",
+    "greenFinance": "Collection of information on the best international practices for the implementation of transactions under the formula “implementation of environmental programs in exchange for the assignment of external debt” and the development of concepts of relevant projects.",
+    "wasteManagement1": "Definition and development of the preliminary framework of cooperation with SIDA (Swedish International Development Cooperation Organization) through the mediation of the Swedish Embassy in Armenia in the field of waste management and mining.",
+    "wasteManagement2": "Development of the concept note of integrated household waste management in the Vardakar community in order to present it to the United Nations Industrial Development Organization's consideration.",
+    "wasteManagement3": "Collection of information on standardization marks in order to develop an appropriate environmental program.",
+    "wasteManagement4": "Development of a waste management project's concept note to be implemented jointly with the Environmental Projects Management Agency of the Ministry of Environment of the Republic of Lithuania (APVA).",
+    "transport1": "Collection of necessary information based on preliminary concepts approved by the World Bank within the framework of the program “Greener Transport Connectivity for Eastern Partnership Countries” (creation of a public transport and charging infrastructure system in Yerevan).",
+    "transport2": "Creation of a modern system of bus stops and parking lots: modernization of traffic conditions through the use of environmental tools.",
+    "electricMobility1": "Installation of charging stations for electric vehicles in ground and underground parking lots of government departments.",
+    "electricMobility2": "Negotiating with private organizations operating in transport field in order to install charging stations for EVs in Yerevan and specification of installation sites with Yerevan municipality and other municipalities.",
+    "greenBonds": "Research on the development of the concept of development of green bonds and green economy.",
+    "greenRecovery": "Development of the concept of the project for the creation and improvement of green territories in the communities of the Republic of Armenia.",
+    "greenManagement": "Research on the Green Manager Institute and the possibilities of its application in Armenia.",
+    "biodiversityPlannedProject": "Participation in the development of the final package of the project application “Restoration of the biodiversity landscape of local fruit and nut species in urban and suburban communities of Armenia in order to improve environmental and ecosystem services, ensure food safety, diversify income sources and mitigate climate change”, submitted within the framework of the funding volumes provided by the Global Environment Facility (GEF-8).",
+    "adaption": "Mitigation of climate change in the arid zone (Vayots Dzor region) of the Republic of Armenia and strengthening adaptation opportunities.",
+    "ecoEducation1": "Strengthening the capacities of eco-clubs aiming their sustainable development.",
+    "ecoEducation2": "Scaling up the capacities of the State Museum of Nature of Armenia through the introduction of modern interactive halls.",
+    "titleGreenFinance": "GREEN FINANCE",
+    "titleWasteManagement": "WASTE MANAGEMENT",
+    "titleTransport": "TRANSPORT",
+    "titleElectricMobility": "ELECTRIC MOBILITY",
+    "titleGreenBonds": "GREEN BONDS",
+    "titleGreenRecovery": "GREEN RECOVERY",
+    "titleGreenManagement": "GREEN MANAGEMENT",
+    "titleBiodiversity": "BIODIVERSITY",
+    "titleAdaption": "ADAPTATION AND MITIGATION",
+    "titleEcoEducation": "ECO EDUCATION"
+    
+
   }
 }

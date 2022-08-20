@@ -4,6 +4,6 @@
 
 
 div {
-        
-     text-align: justify;
+        justify-content: space-around;
+        text-align: justify;
 }
