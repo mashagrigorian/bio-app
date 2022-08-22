@@ -8,7 +8,12 @@ class MapContainer extends Component {
       <>
         {/* <h3>{t("ourAddress")}</h3> */}
         <iframe
-          style={{ width: "100%", height: "600px" }}
+          style={{
+            width: "80%",
+            height: "600px",
+            marginLeft: "100px",
+            marginTop: "20px",
+          }}
           id="gmap_canvas"
           src="https://maps.google.com/maps?q=129%20Armenakyan%20Street,%20Yerevan&t=&z=15&ie=UTF8&iwloc=&output=embed"
           frameborder="0"

@@ -26,6 +26,12 @@ import Contacts from "./components/pages/contacts/Contacts";
 import Main from "./components/main/Main";
 import RingLoader from "react-spinners/RingLoader";
 import { Experimental_CssVarsProvider as CssVarsProvider } from "@mui/material/styles";
+import Project1 from "./components/pages/projects/currentProjects/Project1";
+import Project2 from "./components/pages/projects/currentProjects/Project2";
+import Project3 from "./components/pages/projects/currentProjects/Project3";
+import Project4 from "./components/pages/projects/currentProjects/Project4";
+import Project5 from "./components/pages/projects/currentProjects/Project5";
+import Project6 from "./components/pages/projects/currentProjects/Project6";
 export const ThemeContext = createContext(null);
 
 function App() {
@@ -97,6 +103,30 @@ function App() {
                       <Route
                         path="/projects/current-projects"
                         element={<CurrentProjects />}
+                      />
+                      <Route
+                        path="/projects/current-projects/project1"
+                        element={<Project1 />}
+                      />
+                      <Route
+                        path="/projects/current-projects/project2"
+                        element={<Project2 />}
+                      />
+                      <Route
+                        path="/projects/current-projects/project3"
+                        element={<Project3 />}
+                      />
+                      <Route
+                        path="/projects/current-projects/project4"
+                        element={<Project4 />}
+                      />
+                      <Route
+                        path="/projects/current-projects/project5"
+                        element={<Project5 />}
+                      />
+                      <Route
+                        path="/projects/current-projects/project6"
+                        element={<Project6 />}
                       />
                       <Route
                         path="/projects/planned-projects"

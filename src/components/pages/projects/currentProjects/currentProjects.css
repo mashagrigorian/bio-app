@@ -28,7 +28,7 @@
      font-size: 12px;
      color: white;
      position: absolute;
-     bottom: 500px;
+     bottom: 470px;
      left: 50px;  
      height: 3em;
      overflow: hidden;
@@ -39,7 +39,7 @@
   font-size: 10px;
   color: white;
   position: absolute;
-  top: 100px;
+  top: 130px;
   left: 40px;  
   height: 3em;
   overflow: hidden;
@@ -50,7 +50,7 @@
   font-size: 10px;
   color: white;
   position: absolute;
-  top: 100px;
+  top: 130px;
   left: 200px;  
   height: 3em;
   overflow: hidden;
@@ -61,8 +61,8 @@
      font-size: 12px;
      color: white;
      position: absolute;
-     bottom: 200px;
-     left: 70px;  
+     bottom: 470px;
+     left: 680px;  
      height: 3em;
      overflow: hidden;
      width: 300px;
@@ -72,8 +72,8 @@
   font-size: 9px;
   color: white;
   position: absolute;
-  top: 410px;
-  left: 200px;  
+  top: 130px;
+  left: 800px;  
   height: 3em;
   overflow: hidden;
   width: 300px;
@@ -83,8 +83,8 @@
   font-size: 10px;
   color: white;
   position: absolute;
-  top: 410px;
-  left: 40px;  
+  top: 130px;
+  left: 640px;  
   height: 3em;
   overflow: hidden;
   width: 200px;
@@ -95,8 +95,8 @@
   font-size: 12px;
   color: white;
   position: absolute;
-  top: 950px;
-  left: 70px;  
+  top: 370px;
+  left: 1280px;  
   height: 3em;
   overflow: hidden;
   width: 300px;
@@ -106,8 +106,8 @@
   font-size: 10px;
   color: white;
   position: absolute;
-  top: 710px;
-  left: 200px;  
+  top: 130px;
+  left: 1400px;  
   height: 3em;
   overflow: hidden;
   width: 300px;
@@ -117,8 +117,8 @@
   font-size: 10px;
   color: white;
   position: absolute;
-  top: 710px;
-  left: 40px;  
+  top: 130px;
+  left: 1240px;  
   height: 3em;
   overflow: hidden;
   width: 190px;
@@ -128,7 +128,7 @@
   font-size: 12px;
   color: white;
   position: absolute;
-  top: 1250px;
+  top: 700px;
   left: 20px;  
   height: 3em;
   overflow: hidden;
@@ -139,7 +139,7 @@
   font-size: 12px;
   color: white;
   position: absolute;
-  top: 1020px;
+  top: 460px;
   left: 250px;  
   height: 3em;
   overflow: hidden;
@@ -150,8 +150,8 @@
   font-size: 12px;
   color: white;
   position: absolute;
-  top: 1020px;
-  left: 5px;  
+  top: 470px;
+  left: 30px;  
   height: 3em;
   overflow: hidden;
   width: 190px;
@@ -161,8 +161,8 @@
   font-size: 12px;
   color: white;
   position: absolute;
-  top: 1570px;
-  left: 20px;  
+  top: 700px;
+  left: 650px;
   height: 3em;
   overflow: hidden;
   width: 300px;
@@ -172,8 +172,8 @@
   font-size: 12px;
   color: white;
   position: absolute;
-  top: 1320px;
-  left: 270px;  
+  top: 460px;
+  left: 900px;  
   height: 3em;
   overflow: hidden;
   width: 250px;
@@ -183,8 +183,8 @@
   font-size: 12px;
   color: white;
   position: absolute;
-  top: 1320px;
-  left: 5px;  
+  top: 460px;
+  left: 610px;  
   height: 3em;
   overflow: hidden;
   width: 250px;
@@ -194,8 +194,8 @@
   font-size: 12px;
   color: white;
   position: absolute;
-  top: 1870px;
-  left: 20px;  
+  top: 700px;
+  left: 1230px;  
   height: 3em;
   overflow: hidden;
   width: 300px;
@@ -205,8 +205,8 @@
   font-size: 12px;
   color: white;
   position: absolute;
-  top: 1630px;
-  left: 270px;  
+  top: 460px;
+  left: 1480px;  
   height: 3em;
   overflow: hidden;
   width: 250px;
@@ -216,8 +216,8 @@
   font-size: 12px;
   color: white;
   position: absolute;
-  top: 1630px;
-  left: 5px;  
+  top: 460px;
+  left: 1200px;  
   height: 3em;
   overflow: hidden;
   width: 250px;

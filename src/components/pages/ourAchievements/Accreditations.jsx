@@ -17,6 +17,7 @@ const Accreditations = () => {
           gridTemplateRows: "1fr 1fr",
           justifyItems: "center",
           alignItems: "baseline",
+          textAlign: "justify",
         }}
       >
         <div className="logo-style">
