@@ -8,32 +8,54 @@ const Project1 = () => {
   return (
     <Container>
       <div>
-        {t("currentProject1")}
+        <b>{t("currentProject1")}</b>
+
         <br />
         <br />
-        <h3>{t("tags")}</h3>
-        <h3>{t("project1tag")}</h3>
+        <h4>{t("tags")}</h4>
+        {/* {t("project1tag")} */}
+        <div
+          dangerouslySetInnerHTML={{
+            __html: t("project1tag", {
+              interpolation: { escapeValue: false },
+            }),
+          }}
+        />
         <br />
-        <h3>{t("funding")}</h3>
-        <h3>{t("funding1")}</h3>
         <br />
-        <h3>{t("budget")}</h3>
-        <h3>{t("budget1")}</h3>
+        <h4>{t("funding")}</h4>
+        {t("funding1")}
         <br />
-        <h3>{t("dates")}</h3>
-        <h3>{t("dates1")}</h3>
         <br />
-        <h3>{t("areas")}</h3>
-        <h3>{t("areas1")}</h3>
+        <h4>{t("budget")}</h4>
+        {t("budget1")}
         <br />
-        <h3>{t("objective")}</h3>
-        <h3>{t("objective1")}</h3>
         <br />
-        <h3>{t("projectActivities")}</h3>
-        <h3>{t("projectActivities1")}</h3>
+        <h4>{t("dates")}</h4>
+        {t("dates1")}
         <br />
-        <h3>{t("documents")}</h3>
-        <h3>{t("documentsDescription")}</h3>
+        <br />
+        <h4>{t("areas")}</h4>
+        {t("areas1")}
+        <br />
+        <br />
+        <h4>{t("objective")}</h4>
+        {t("objective1")}
+        <br />
+        <br />
+        <h4>{t("projectActivities")}</h4>
+        {/* {t("projectActivities1")} */}
+        <div
+          dangerouslySetInnerHTML={{
+            __html: t("projectActivities1", {
+              interpolation: { escapeValue: false },
+            }),
+          }}
+        />
+        <br />
+        <br />
+        <h4>{t("documents")}</h4>
+        {t("documentsDescription")}
       </div>
     </Container>
   );

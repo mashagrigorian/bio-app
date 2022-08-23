@@ -47,7 +47,7 @@ const MainContact = () => {
   return (
     <>
       <link rel="icon" />
-      <h1 className="titleText">{t("contactWithUs")}</h1>
+      <h2 className="titleText">{t("contactWithUs")}</h2>
       <div id="contact-container">
         <div className="contact-info">
           <h4>{t("title")}</h4>
