@@ -1,8 +1,4 @@
-import { Paper } from "@mui/material";
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
-import Box from "@material-ui/core/Box";
-import Link from "@material-ui/core/Link";
+import {Box, Container, Grid, Paper} from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { FiFacebook, FiLinkedin, FiYoutube } from "react-icons/fi";
 import greenClimate from "./../pages/partners/partnersLogo/greenClimate.png";
