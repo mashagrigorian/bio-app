@@ -43,7 +43,7 @@
     "uuid": "^8.3.2",
     "web-vitals": "^2.1.4"
   },
-  "peerDependencies": {npm
+  "peerDependencies": {
     "react": "~0.14.8 || ^15.0.0 || ^16.0.0",
     "react-dom": "~0.14.8 || ^15.0.0 || ^16.0.0"
   },
