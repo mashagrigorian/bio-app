@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import styles from "./partners.module.css";
 import logos from "./PartnerLogos";
 import gsap from "gsap";
+import { Divider, Grid } from "@mui/material";
 
 const Partners = () => {
   const { t, i18n } = useTranslation();
@@ -81,11 +82,6 @@ const Partners = () => {
       href: "https://www.osce.org/",
       key: "orgForSec",
     },
-
-    {
-      href: "http://www.nature-ic.am/",
-      key: "climateChange",
-    },
   ];
 
   return (
@@ -107,6 +103,19 @@ const Partners = () => {
             );
           })}
         </div>
+        <Grid
+          item
+          xs={2}
+          container
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Divider
+            orientation="vertical"
+            style={{ height: "100%", width: "1px" }}
+          />
+        </Grid>
       </div>
     </div>
   );

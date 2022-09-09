@@ -1,6 +1,5 @@
 const logos = {
   adaptionFund: require("./partnersLogo/adaptionFund.png"),
-  climateChange: require("./partnersLogo/climateChange.png"),
   globalEnvironmentFacility: require("./partnersLogo/globalEnv.png"),
   greenClimate: require("./partnersLogo/greenClimate.png"),
   orgForSec: require("./partnersLogo/osce.jpg"),

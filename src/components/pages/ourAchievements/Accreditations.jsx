@@ -22,10 +22,20 @@ const Accreditations = () => {
         }}
       >
         <div className="logo-style">
-          <img src={greenClimateLogo} />
+          <a
+            target="_blank"
+            href="https://www.greenclimate.fund/countries/armenia"
+          >
+            <img src={greenClimateLogo} />
+          </a>
         </div>
         <div className="logo-style">
-          <img src={adaptionFundLogo} />
+          <a
+            target="_blank"
+            href="https://www.adaptation-fund.org/ie/environmental-project-implementation-unit-epiu/"
+          >
+            <img src={adaptionFundLogo} />
+          </a>
         </div>
         <div>
           <div
