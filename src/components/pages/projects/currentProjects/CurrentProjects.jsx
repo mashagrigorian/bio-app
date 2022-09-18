@@ -16,8 +16,8 @@ const CurrentProjects = () => {
           <a href="./current-projects/project1" target="_blank">
             <img src={projects.project1} alt="background" className="photo" />{" "}
           </a>
-          <h1 className="header">{t("project1tag")}</h1>{" "}
-          <h1 className="top-right">{t("currentProject1")}</h1>
+          <h1 className="tag">{t("project1tag")}</h1>{" "}
+          <h1 className="description">{t("currentProject1")}</h1>
           <h1 className="funding">{t("funding1")}</h1>
         </picture>
       </article>
@@ -28,8 +28,8 @@ const CurrentProjects = () => {
           <a href="./current-projects/project2" target="_blank">
             <img src={projects.project2} alt="background" className="photo" />
           </a>
-          <h1 className="tag">{t("project2tag")}</h1>
-          <h1 className="description">{t("currentProject2")}</h1>
+          <h1 className="tag2">{t("project2tag")}</h1>
+          <h1 className="description2">{t("currentProject2")}</h1>
           <h1 className="funding2">{t("funding2")}</h1>
         </picture>
       </article>

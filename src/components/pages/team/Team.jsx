@@ -112,7 +112,7 @@ const Team = () => {
                         sx={{ width: 250, height: 250 }}
                       />
                       <span className="name">{memberInfo.name} </span>
-                      <div>{memberInfo.position}</div>
+                      <div className="position">{memberInfo.position}</div>
                     </div>
                   );
                 })}

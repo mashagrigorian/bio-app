@@ -3,7 +3,7 @@ import adaptionFundLogo from "./logos/adaptionFond.png";
 import greenClimateLogo from "./logos/greenClimate.png";
 import "./accreditations.css";
 import { useTranslation } from "react-i18next";
-import { Container } from "@mui/material";
+import { Container, Divider, Grid } from "@mui/material";
 
 const Accreditations = () => {
   const { t, i18n } = useTranslation();
@@ -17,8 +17,6 @@ const Accreditations = () => {
           gridTemplateRows: "1fr 1fr",
           justifyItems: "center",
           textAlign: "center",
-          // alignItems: "baseline",
-          // textAlign: "justify",
         }}
       >
         <div className="logo-style">
@@ -37,6 +35,7 @@ const Accreditations = () => {
             <img src={adaptionFundLogo} />
           </a>
         </div>
+
         <div>
           <div
             dangerouslySetInnerHTML={{
@@ -45,7 +44,19 @@ const Accreditations = () => {
               }),
             }}
           />
-
+          <Grid
+            item
+            container
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+            display="flex"
+          >
+            <Divider
+              orientation="vertical"
+              style={{ height: "100%", width: "1px" }}
+            />
+          </Grid>
           <div
             dangerouslySetInnerHTML={{
               __html: t("aboutGreenClimate", {
@@ -54,7 +65,6 @@ const Accreditations = () => {
             }}
           />
         </div>
-
         <div>
           <div
             dangerouslySetInnerHTML={{

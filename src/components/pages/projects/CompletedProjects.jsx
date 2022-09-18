@@ -21,7 +21,9 @@ export default function CompletedProjects() {
         {projects.map((projectName) => {
           return (
             <Container>
-              <Typography>{t(projectName)}</Typography>
+              <Accordion key={projectName}>
+                <Typography>{t(projectName)}</Typography>
+              </Accordion>
             </Container>
           );
         })}

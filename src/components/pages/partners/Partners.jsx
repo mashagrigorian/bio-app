@@ -105,16 +105,41 @@ const Partners = () => {
         </div>
         <Grid
           item
-          xs={2}
           container
           direction="row"
           justifyContent="center"
           alignItems="center"
+          display="flex"
         >
           <Divider
             orientation="vertical"
             style={{ height: "100%", width: "1px" }}
           />
+        </Grid>
+        <Grid
+          item
+          xs={2}
+          container
+          direction="row"
+          justifyContent="right"
+          alignItems="center"
+        >
+          {/* <Divider
+            orientation="vertical"
+            flexItem
+            className="liner"
+            textAlign="right"
+            color="red"
+          >
+            VERTICAL
+          </Divider>{" "} */}
+          {/* <Divider
+            orientation="vertical"
+            flexItem
+            textAlign="right"
+            orientation="horizontal"
+            style={{ height: "100%", width: "10px" }}
+          /> */}
         </Grid>
       </div>
     </div>
