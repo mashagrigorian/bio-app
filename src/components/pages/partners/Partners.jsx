@@ -123,24 +123,7 @@ const Partners = () => {
           direction="row"
           justifyContent="right"
           alignItems="center"
-        >
-          {/* <Divider
-            orientation="vertical"
-            flexItem
-            className="liner"
-            textAlign="right"
-            color="red"
-          >
-            VERTICAL
-          </Divider>{" "} */}
-          {/* <Divider
-            orientation="vertical"
-            flexItem
-            textAlign="right"
-            orientation="horizontal"
-            style={{ height: "100%", width: "10px" }}
-          /> */}
-        </Grid>
+        ></Grid>
       </div>
     </div>
   );

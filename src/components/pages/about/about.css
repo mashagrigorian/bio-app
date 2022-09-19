@@ -2,9 +2,13 @@
     text-align: justify;
 }
 
-img {
+/* img {
     width: 1150px;
 }
+
+.image {
+    width: 100%;
+} */
 
 
 @media screen and (max-width : 768px) {    
