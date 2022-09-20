@@ -30,6 +30,12 @@ const Team = () => {
         >
           <Typography>
             <Avatar
+              // style={{
+              //   verticalAlign: "middle",
+              //   width: "300px",
+              //   height: "300px",
+              //   borderRadius: "50%",
+              // }}
               src={images.ArmenYesoyan}
               sx={{ width: 250, height: 250 }}
             />
