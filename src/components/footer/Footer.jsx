@@ -34,7 +34,7 @@ const Footer = () => {
                             </a>
                         </div>
                     </Grid>
-                    <Grid item xs={4} md={40}>
+                    <Grid item xs={4} md={4}>
                         <Box>
                             <i className="fa fa-location-dot"></i>
                             {t("street")}
@@ -49,8 +49,8 @@ const Footer = () => {
                             className="social-media"
                             style={{
                                 display: "flex",
-                                width: "30%",
-                                justifyContent: "space-around",
+                                width: "50%",
+                                justifyContent: "space-between",
                                 fontSize: "1.3rem",
                             }}
                         >
