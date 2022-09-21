@@ -1,7 +1,4 @@
-import { Paper } from "@mui/material";
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
-import Box from "@material-ui/core/Box";
+import { Box, Container, Grid, Paper } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { FiFacebook, FiLinkedin, FiYoutube } from "react-icons/fi";
 
@@ -37,7 +34,7 @@ const Footer = () => {
               </a>
             </div>
           </Grid>
-          <Grid item xs={4} md={40}>
+          <Grid item xs={4} md={4}>
             <Box>
               <i className="fa fa-location-dot"></i>
               {t("street")}
@@ -52,8 +49,8 @@ const Footer = () => {
               className="social-media"
               style={{
                 display: "flex",
-                width: "30%",
-                justifyContent: "space-around",
+                width: "50%",
+                justifyContent: "space-between",
                 fontSize: "1.3rem",
               }}
             >

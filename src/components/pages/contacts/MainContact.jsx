@@ -4,6 +4,9 @@ import emailsJs from "@emailjs/browser";
 import { FiFacebook, FiLinkedin, FiYoutube } from "react-icons/fi";
 import "./main.scss";
 import { useForm } from "react-hook-form";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 const MainContact = () => {
   const { t, i18n } = useTranslation();
@@ -48,21 +51,37 @@ const MainContact = () => {
     <>
       <link rel="icon" />
       <h2 className="titleText">{t("contactWithUs")}</h2>
+      <br />
       <div id="contact-container">
         <div className="contact-info">
           <h4>{t("title")}</h4>
           <p>{t("pText")}</p>
           <div className="icon-text">
-            <i className="fa fa-phone" aria-hidden="true"></i>
-            <span>+374 10 651-631</span>
+            <i className="fa fa-phone"></i>
+            <span>
+              <LocalPhoneIcon />
+              +374 10 651-631
+            </span>
           </div>
           <div className="icon-text">
-            <i classname="fa fa-envelope" aria-hidden="true"></i>
-            <span>info@cep.am antifraud@epiu.am</span>
+            <i className="fa fa-envelope"></i>
+            <span>
+              <MailOutlineIcon />
+              info@cep.am
+            </span>
           </div>
           <div className="icon-text">
-            <i className="fa fa-map-marker" aria-hidden="true"></i>
-            <span>{t("street")}</span>
+            <span>
+              <MailOutlineIcon />
+              antifraud@epiu.am
+            </span>
+          </div>
+          <div className="icon-text">
+            <i className="fa fa-map-marker"></i>
+            <span>
+              <LocationOnIcon />
+              {t("street")}
+            </span>
           </div>
           <div className="social-media">
             <a
