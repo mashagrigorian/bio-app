@@ -1,6 +1,9 @@
 import { Box, Container, Grid, Paper } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { FiFacebook, FiLinkedin, FiYoutube } from "react-icons/fi";
+import { Box, Container, Grid, Paper } from "@mui/material";
+import { useTranslation } from "react-i18next";
+import { FiFacebook, FiLinkedin, FiYoutube } from "react-icons/fi";
 
 const Footer = () => {
   const { t, i18n } = useTranslation();
