@@ -6,12 +6,7 @@ const Footer = () => {
   const { t, i18n } = useTranslation();
 
   return (
-    <Box
-      px={{ xs: 3, sm: 10 }}
-      py={{ xs: 5, sm: 10 }}
-      bgcolor="text.secondary"
-      color="white"
-    >
+    <Box px={{ xs: 3, sm: 10 }} py={{ xs: 5, sm: 10 }}>
       <Container
         width="100%"
         z-index="1"

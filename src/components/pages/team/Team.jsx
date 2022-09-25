@@ -11,9 +11,7 @@ import {
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
-import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import images from "./teamPhotos";
-import "./team.css";
 import HeadInfoPopover from "./HeadInfoPopover";
 
 const Team = () => {
@@ -21,7 +19,7 @@ const Team = () => {
 
   return (
     <Container component={Paper} elevation={5} style={{ padding: 25 }}>
-      <div>
+      <div style={{ textAlign: "justify" }}>
         <Stack
           direction="row"
           justifyContent="space-around"
@@ -30,17 +28,11 @@ const Team = () => {
         >
           <Typography>
             <Avatar
-              // style={{
-              //   verticalAlign: "middle",
-              //   width: "300px",
-              //   height: "300px",
-              //   borderRadius: "50%",
-              // }}
               src={images.ArmenYesoyan}
               sx={{ width: 250, height: 250 }}
             />
             <Typography align="center">
-              <span className="name">
+              <span className="name" style={{ fontSize: "20px" }}>
                 <b>{t("ourTeamHead")} </b>
               </span>
               <br />
@@ -52,6 +44,7 @@ const Team = () => {
                   alignItems: "center",
                   justifyContent: "center",
                   gap: "5px",
+                  textAlign: "justify",
                 }}
               >
                 <HeadInfoPopover />
@@ -64,7 +57,7 @@ const Team = () => {
               sx={{ width: 250, height: 250 }}
             />
             <Typography align="center">
-              <span className="name">
+              <span className="name" style={{ fontSize: "20px" }}>
                 <b>{t("ourTeamHead2")}</b>
               </span>
               <br />
@@ -76,6 +69,7 @@ const Team = () => {
                   alignItems: "center",
                   justifyContent: "center",
                   gap: "5px",
+                  textAlign: "justify",
                 }}
               >
                 <HeadInfoPopover />
@@ -117,8 +111,12 @@ const Team = () => {
                         src={memberInfo.img}
                         sx={{ width: 250, height: 250 }}
                       />
-                      <span className="name">{memberInfo.name} </span>
-                      <div className="position">{memberInfo.position}</div>
+                      <span className="name" style={{ fontSize: "20px" }}>
+                        {memberInfo.name}{" "}
+                      </span>
+                      <div className="position" style={{ textAlign: "center" }}>
+                        {memberInfo.position}
+                      </div>
                     </div>
                   );
                 })}

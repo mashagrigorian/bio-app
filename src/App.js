@@ -1,6 +1,5 @@
 import React, { createContext, Suspense, useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import "./components/pages/contacts/main.scss";
 
 import "./App.css";
 import Header from "./components/header/Header";
@@ -32,6 +31,7 @@ import Project3 from "./components/pages/projects/currentProjects/Project3";
 import Project4 from "./components/pages/projects/currentProjects/Project4";
 import Project5 from "./components/pages/projects/currentProjects/Project5";
 import Project6 from "./components/pages/projects/currentProjects/Project6";
+
 export const ThemeContext = createContext(null);
 
 function App() {

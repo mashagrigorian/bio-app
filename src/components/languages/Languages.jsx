@@ -15,6 +15,11 @@ const Languages = () => {
             className="custom-select"
             onChange={handleChange}
             value={language}
+            style={{
+              backgroundColor: aquamarine,
+              display: flex,
+              textAlign: justify,
+            }}
           >
             <option value="en">English</option>
             <option value="am">Armenian</option>

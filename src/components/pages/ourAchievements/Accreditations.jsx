@@ -1,7 +1,6 @@
 import React from "react";
 import adaptionFundLogo from "./logos/adaptionFond.png";
 import greenClimateLogo from "./logos/greenClimate.png";
-import "./accreditations.css";
 import { useTranslation } from "react-i18next";
 import { Container, Divider, Grid } from "@mui/material";
 
@@ -19,7 +18,14 @@ const Accreditations = () => {
           textAlign: "center",
         }}
       >
-        <div className="logo-style">
+        <div
+          className="logo-style"
+          style={{
+            display: "block",
+            maxWWidth: "700px",
+            maxHeight: "200px",
+          }}
+        >
           <a
             target="_blank"
             href="https://www.greenclimate.fund/countries/armenia"

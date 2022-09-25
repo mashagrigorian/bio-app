@@ -1,7 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Container, Paper } from "@mui/material";
-import "./abilities.css";
 
 const Abilities = () => {
   const { t, i18n } = useTranslation();
@@ -9,7 +8,17 @@ const Abilities = () => {
   return (
     <>
       <Container component={Paper} elevation={5} style={{ padding: 25 }}>
-        <div className="abilities">
+        <div
+          className="abilities"
+          style={{
+            height: "500vh",
+            width: "100%",
+            display: "contents",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <div
             dangerouslySetInnerHTML={{
               __html: t("outCapabilities", {

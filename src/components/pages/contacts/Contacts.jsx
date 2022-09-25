@@ -1,10 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import "./contacts.css";
 import emailsJs from "@emailjs/browser";
-//import ContactInfo from "./ContactInfo";
 import Map from "./Map";
-//import Hotline from "./Hotline";
 import MainContact from "./MainContact";
 
 const Contacts = () => {

@@ -1,16 +1,41 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Container, Paper } from "@mui/material";
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles((theme) => ({
+  logoLg: {
+    display: "none",
+    [theme.breakpoints.up("sm")]: {
+      display: "block",
+    },
+  },
+  logoSm: {
+    display: "block",
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    },
+  },
+}));
 
 const About = () => {
   const { t, i18n } = useTranslation();
+  const classes = useStyles();
   return (
-    <Container component={Paper} elevation={5} style={{ padding: 25 }}>
+    <Container
+      className={classes.logoLg}
+      component={Paper}
+      elevation={5}
+      style={{ padding: 25 }}
+    >
       <img
         src="https://cdn.unenvironment.org/s3fs-public/styles/article_billboard_image/public/2019-08/countryside-2326787_1920.jpg?itok=45Cf7I6D"
         style={{ width: 1150 }}
       />
       <div
+        style={{
+          textAlign: "justify",
+        }}
         dangerouslySetInnerHTML={{
           __html: t("ourHistory", { interpolation: { escapeValue: false } }),
         }}

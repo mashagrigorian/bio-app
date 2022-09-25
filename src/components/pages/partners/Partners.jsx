@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import styles from "./partners.module.css";
 import logos from "./PartnerLogos";
 import gsap from "gsap";
 import { Divider, Grid } from "@mui/material";
@@ -14,29 +13,6 @@ const Partners = () => {
 
     gsap
       .timeline({ defaults: { duration: 3 } })
-
-      // .add("one")
-      // .to(divs[0], { y: 300, x: 0, opacity: 0.05 }, "one")
-      // .to(divs[1], { y: -350, x: 0, opacity: 0.05 }, "one")
-      // .to(divs[2], { y: -450, x: 0, opacity: 1 }, "one")
-      // .to(divs[3], { y: -500, x: 0, opacity: 1 }, "one")
-      // .to(divs[4], { y: -540, x: 0, opacity: 1 }, "one")
-      // .to(divs[5], { y: -570, x: 0, opacity: 1.05 }, "one")
-      // .to(divs[6], { y: -600, x: 0, opacity: 1.05 }, "one")
-      // .to(divs[7], { y: -620, x: 0, opacity: 2 }, "one")
-      // .to(divs[8], { y: -650, x: 0, opacity: 2 }, "one");
-
-      // .add("two")
-      // .to(divs[0], { y: 300, x: 100, opacity: 1 }, "two")
-      // .to(divs[1], { y: 300, x: 0, opacity: 0.05 }, "two")
-      // .to(divs[2], { y: -600, x: 100, opacity: 0.05 }, "two")
-      // .to(divs[3], { y: -620, x: 0, opacity: 0.05 }, "two")
-      // .to(divs[4], { y: -500, x: 100, opacity: 0.07 }, "two")
-      // .to(divs[5], { y: -520, x: 100, opacity: 0.07 }, "two")
-      // .to(divs[6], { y: -200, x: 0, opacity: 0.07 }, "two")
-      // .to(divs[7], { y: -650, x: 100, opacity: 1.02 }, "two")
-      // .to(divs[8], { y: -680, x: 0, opacity: 1.02 }, "two");
-
       .add("three")
       .to(divs[0], { y: 0, x: 100, opacity: 1 }, "three")
       .to(divs[1], { y: 0, x: 0, opacity: 0.05 }, "three")
@@ -85,17 +61,45 @@ const Partners = () => {
   ];
 
   return (
-    <div className={styles.content}>
+    <div className="content">
       <div className="partners-info">
-        <div className={styles.container}>
+        <div
+          className="container"
+          style={{
+            margin: "50px 0",
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            alignItems: "center",
+            justifyItems: "center",
+            gap: "25px",
+            height: "600px",
+          }}
+        >
           {partnersInfo.map((info) => {
             return (
               <div key={info.key}>
-                <a href={info.href} className={styles.partnerInfoWrapper}>
+                <a
+                  href={info.href}
+                  className="partnerInfoWrapper"
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    textDecoration: "none",
+                    color: "black",
+                  }}
+                >
                   <img
-                    className={styles.image}
+                    className="image"
                     src={logos[info.key]}
                     alt={t(info.key)}
+                    style={{
+                      display: "block",
+                      maxWidth: "200px",
+                      maxHeight: "70px",
+                      width: "auto",
+                      height: "auto",
+                    }}
                   />
                   <b> {t(info.key)}</b>
                 </a>

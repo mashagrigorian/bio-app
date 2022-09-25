@@ -4,7 +4,6 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import LanguageButton from "./LanguageButton";
-import "./header.css";
 import {
   Box,
   createTheme,
@@ -41,6 +40,10 @@ ElevationScroll.propTypes = {
 const useStyles = {
   logo: {
     maxWidth: 160,
+    width: "50px",
+    height: "50px",
+    left: "5%",
+    top: "3px",
   },
 };
 
@@ -77,6 +80,8 @@ const Header = (props) => {
           {
             background: "white",
             minHeight: { lg: "40px" },
+            padding: "10px 0",
+            fontSize: "15px",
           },
           expanded && {
             height: { lg: "150px" },
@@ -92,7 +97,16 @@ const Header = (props) => {
             <Grid item>
               <div className="logo">
                 <a href="/">
-                  <img src="/assets/logo.png" alt="" />
+                  <img
+                    src="/assets/logo.png"
+                    alt=""
+                    style={{
+                      width: "50px",
+                      height: "50px",
+                      left: "5%",
+                      top: "3px",
+                    }}
+                  />
                 </a>
               </div>
             </Grid>

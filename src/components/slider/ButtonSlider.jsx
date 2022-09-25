@@ -12,7 +12,14 @@ const ButtonSlider = ({ direction, moveSlide }) => {
         direction === "next" ? "button-slide next" : "button-slide prev"
       }
     >
-      <img src={direction === "next" ? rightArrow : leftArrow} />
+      <img
+        src={direction === "next" ? rightArrow : leftArrow}
+        style={{
+          width: "25px",
+          height: "25px",
+          pointerEvents: "none",
+        }}
+      />
     </button>
   );
 };
