@@ -10,7 +10,7 @@ const PlannedProjects = () => {
   const { t, i18n } = useTranslation();
 
   return (
-    <Container>
+    <Container style={{ padding: 25, marginTop: 40 }}>
       <Box sx={{ width: "100%", maxWidth: "100%" }}>
         <Typography variant="h6" gutterBottom>
           <div className="title">{t("titleGreenFinance")}</div>

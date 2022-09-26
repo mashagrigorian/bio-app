@@ -13,12 +13,39 @@ import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import images from "./teamPhotos";
 import HeadInfoPopover from "./HeadInfoPopover";
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles((theme) => ({
+  logoLg: {
+    display: "none",
+    [theme.breakpoints.up("sm")]: {
+      display: "block",
+    },
+  },
+  logoSm: {
+    display: "block",
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    },
+  },
+}));
 
 const Team = () => {
   const { t, i18n } = useTranslation();
+  const classes = useStyles();
 
   return (
-    <Container component={Paper} elevation={5} style={{ padding: 25 }}>
+    <Container
+      className={classes.logoSm}
+      component={Paper}
+      elevation={5}
+      style={{
+        padding: 5,
+        marginTop: 30,
+        justifyItems: "center",
+        textAlign: "center",
+      }}
+    >
       <div style={{ textAlign: "justify" }}>
         <Stack
           direction="row"

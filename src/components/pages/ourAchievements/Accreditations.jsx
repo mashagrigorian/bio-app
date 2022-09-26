@@ -22,8 +22,7 @@ const Accreditations = () => {
           className="logo-style"
           style={{
             display: "block",
-            maxWWidth: "700px",
-            maxHeight: "200px",
+            marginTop: "80px",
           }}
         >
           <a
@@ -33,7 +32,15 @@ const Accreditations = () => {
             <img src={greenClimateLogo} />
           </a>
         </div>
-        <div className="logo-style">
+        <div
+          className="logo-style"
+          style={{
+            display: "block",
+            marginTop: "100px",
+            // maxWWidth: "100px",
+            // maxHeight: "100px",
+          }}
+        >
           <a
             target="_blank"
             href="https://www.adaptation-fund.org/ie/environmental-project-implementation-unit-epiu/"
@@ -52,11 +59,12 @@ const Accreditations = () => {
           />
           <Grid
             item
-            container
-            direction="row"
-            justifyContent="center"
-            alignItems="center"
-            display="flex"
+            sx={{ pt: 1 }}
+            // container
+            // direction="row"
+            // justifyContent="center"
+            // alignItems="center"
+            // display="flex"
           >
             <Divider
               orientation="vertical"

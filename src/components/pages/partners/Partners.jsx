@@ -9,20 +9,20 @@ const Partners = () => {
 
   useEffect(() => {
     const divs = document.querySelectorAll(".partners-info");
-    gsap.set(divs[1], { x: 100, opacity: 1 });
+    // gsap.set(divs[1], { x: 100, opacity: 1 });
 
-    gsap
-      .timeline({ defaults: { duration: 3 } })
-      .add("three")
-      .to(divs[0], { y: 0, x: 100, opacity: 1 }, "three")
-      .to(divs[1], { y: 0, x: 0, opacity: 0.05 }, "three")
-      .to(divs[2], { y: 0, x: 100, opacity: 0.05 }, "three")
-      .to(divs[3], { y: 0, x: 0, opacity: 0.05 }, "three")
-      .to(divs[4], { y: 0, x: 100, opacity: 0.07 }, "three")
-      .to(divs[5], { y: 0, x: 100, opacity: 0.07 }, "three")
-      .to(divs[6], { y: 0, x: 0, opacity: 0.07 }, "three")
-      .to(divs[7], { y: 0, x: 100, opacity: 1.02 }, "three")
-      .to(divs[8], { y: 0, x: 0, opacity: 1.02 }, "three");
+    // gsap
+    //   .timeline({ defaults: { duration: 3 } })
+    //   .add("three")
+    //   .to(divs[0], { y: 0, x: 200, opacity: 1 }, "three")
+    //   .to(divs[1], { y: 0, x: 0, opacity: 0.05 }, "three")
+    //   .to(divs[2], { y: 0, x: 200, opacity: 0.05 }, "three")
+    //   .to(divs[3], { y: 0, x: 0, opacity: 0.05 }, "three")
+    //   .to(divs[4], { y: 0, x: 200, opacity: 0.07 }, "three")
+    //   .to(divs[5], { y: 0, x: 200, opacity: 0.07 }, "three")
+    //   .to(divs[6], { y: 0, x: 0, opacity: 0.07 }, "three")
+    //   .to(divs[7], { y: 0, x: 200, opacity: 1.02 }, "three")
+    //   .to(divs[8], { y: 0, x: 0, opacity: 1.02 }, "three");
   });
 
   const partnersInfo = [
@@ -107,27 +107,31 @@ const Partners = () => {
             );
           })}
         </div>
-        <Grid
-          item
-          container
-          direction="row"
-          justifyContent="center"
-          alignItems="center"
-          display="flex"
-        >
-          <Divider
-            orientation="vertical"
-            style={{ height: "100%", width: "1px" }}
-          />
+        <Grid container spacing={10}>
+          <Grid item xs={2} sm={10}>
+            <Grid
+              item
+              container
+              direction="row"
+              justifyContent="center"
+              alignItems="center"
+              display="flex"
+            >
+              <Divider
+                orientation="vertical"
+                style={{ height: "100%", width: "1px" }}
+              />
+            </Grid>
+            <Grid
+              item
+              xs={2}
+              container
+              direction="row"
+              justifyContent="right"
+              alignItems="center"
+            ></Grid>
+          </Grid>
         </Grid>
-        <Grid
-          item
-          xs={2}
-          container
-          direction="row"
-          justifyContent="right"
-          alignItems="center"
-        ></Grid>
       </div>
     </div>
   );

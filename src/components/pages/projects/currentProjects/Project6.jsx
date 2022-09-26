@@ -1,4 +1,4 @@
-import { Container } from "@mui/system";
+import { Container, Paper } from "@mui/material";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -6,7 +6,11 @@ const Project6 = () => {
   const { t, i18n } = useTranslation();
 
   return (
-    <Container>
+    <Container
+      component={Paper}
+      elevation={5}
+      style={{ padding: 25, marginTop: 40 }}
+    >
       <div>
         <b>{t("currentProject6")}</b>
         <br />
@@ -25,6 +29,10 @@ const Project6 = () => {
         <br />
         <h4>{t("dates")}</h4>
         {t("dates6")}
+        <br />
+        <br />
+        <h4>{t("startDate")}</h4>
+        {t("startDate6")}
         <br />
         <br />
         <h4>{t("areas")}</h4>

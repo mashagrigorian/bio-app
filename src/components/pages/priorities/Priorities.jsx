@@ -6,7 +6,11 @@ const Priorities = () => {
   const { t, i18n } = useTranslation();
 
   return (
-    <Container component={Paper} elevation={5} style={{ padding: 25 }}>
+    <Container
+      component={Paper}
+      elevation={5}
+      style={{ padding: 25, marginTop: 40 }}
+    >
       <div
         style={{
           textAlign: "justify",

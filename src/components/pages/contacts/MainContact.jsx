@@ -6,6 +6,23 @@ import { useForm } from "react-hook-form";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { Container } from "@mui/material";
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles((theme) => ({
+  logoLg: {
+    display: "none",
+    [theme.breakpoints.up("sm")]: {
+      display: "block",
+    },
+  },
+  logoSm: {
+    display: "block",
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    },
+  },
+}));
 
 const MainContact = () => {
   const { t, i18n } = useTranslation();
@@ -14,6 +31,7 @@ const MainContact = () => {
   const [message, setMessage] = useState("");
   const form = useRef();
   const { register, handleSubmit } = useForm();
+  const classes = useStyles();
 
   const onSubmit = (data) => console.log(data);
 
@@ -48,296 +66,243 @@ const MainContact = () => {
   };
   return (
     <>
-      <link rel="icon" />
-      <h2
-        className="titleText"
-        style={{ textAlign: "center", color: "black", fontSize: "2rem" }}
-      >
-        {t("contactWithUs")}
-      </h2>
-      <br />
-      <div
-        className="contact-container"
+      <Container
+        className={classes.logoSm}
+        elevation={5}
         style={{
-          margin: "auto",
-          background:
-            "linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%)",
-          width: "1200px",
-          justifyContent: "center",
-          alignItems: "center",
-          borderRadius: "15px",
-          overflow: "hidden",
-          padding: "10px",
-          display: "flex",
-          backdropFilter: "blur(15px)",
-          boxShadow: "5px 5px 5px 5px rgba(118, 108, 108, 0.507)",
+          padding: 5,
+          marginTop: 30,
         }}
       >
+        <link rel="icon" />
+        <h2
+          className="titleText"
+          style={{ textAlign: "center", color: "black", fontSize: "2rem" }}
+        >
+          {t("contactWithUs")}
+        </h2>
+        <br />
         <div
-          className="contact-info"
+          className="contact-container"
           style={{
-            borderRadius: "15px",
+            margin: "auto",
             background:
-              "linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%)",
-            flex: "0 1 40%",
-            padding: "40px",
-            color: "white",
+              "linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%)",
+            width: "1200px",
+            justifyContent: "center",
+            alignItems: "center",
+            borderRadius: "15px",
+            overflow: "hidden",
+            padding: "10px",
             display: "flex",
-            flexDirection: "column",
+            backdropFilter: "blur(15px)",
+            boxShadow: "5px 5px 5px 5px rgba(118, 108, 108, 0.507)",
           }}
         >
-          <h4
+          <div
+            className="contact-info"
             style={{
-              fontSize: "2rem",
-              fontWeight: "500",
-              margin: "0",
-            }}
-          >
-            {t("title")}
-          </h4>
-          <p
-            style={{
+              borderRadius: "15px",
+              background:
+                "linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%)",
+              flex: "0 1 40%",
+              padding: "40px",
               color: "white",
-              fontSize: "1.2rem",
-              fontWeight: "300",
-              marginBottom: "2rem",
-            }}
-          >
-            {t("pText")}
-          </p>
-          <div
-            className="icon-text"
-            style={{
               display: "flex",
-              justifyContent: "flex-start",
-              alignItems: "center",
-              marginBottom: "2rem",
+              flexDirection: "column",
             }}
           >
-            <i className="fa fa-phone"></i>
-            <span
+            <h4
               style={{
-                fontSize: "1.3rem",
-                fontWeight: "300",
-                textAlign: "justify",
+                fontSize: "2rem",
+                fontWeight: "500",
+                margin: "0",
               }}
             >
-              <LocalPhoneIcon />
-              +374 10 651-631
-            </span>
-          </div>
-          <div
-            className="icon-text"
-            style={{
-              display: "flex",
-              justifyContent: "flex-start",
-              alignItems: "center",
-              marginBottom: "2rem",
-            }}
-          >
-            <i className="fa fa-envelope"></i>
-            <span
+              {t("title")}
+            </h4>
+            <p
               style={{
-                fontSize: "1.3rem",
-                fontWeight: "300",
-                textAlign: "justify",
-              }}
-            >
-              <MailOutlineIcon />
-              info@cep.am
-            </span>
-          </div>
-          <div
-            className="icon-text"
-            style={{
-              display: "flex",
-              justifyContent: "flex-start",
-              alignItems: "center",
-              marginBottom: "2rem",
-            }}
-          >
-            <span
-              style={{
-                fontSize: "1.3rem",
-                fontWeight: "300",
-                textAlign: "justify",
-              }}
-            >
-              <MailOutlineIcon />
-              antifraud@epiu.am
-            </span>
-          </div>
-          <div
-            className="icon-text"
-            style={{
-              display: "flex",
-              justifyContent: "flex-start",
-              alignItems: "center",
-              marginBottom: "2rem",
-            }}
-          >
-            <i className="fa fa-map-marker"></i>
-            <span
-              style={{
-                fontSize: "1.3rem",
-                fontWeight: "300",
-                textAlign: "justify",
-              }}
-            >
-              <LocationOnIcon />
-              {t("street")}
-            </span>
-          </div>
-
-          <div
-            className="social-media"
-            style={{
-              display: "flex",
-              width: "50%",
-              justifyContent: "space-between",
-            }}
-          >
-            <a
-              className="icon-circle"
-              style={{
-                flex: "0 0 40px",
                 color: "white",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "40px",
-                borderRadius: "50%",
-                transition: ".3s all ease-in-out",
-                fontSize: "1.8rem",
+                fontSize: "1.2rem",
+                fontWeight: "300",
+                marginBottom: "2rem",
               }}
-              href="https://www.facebook.com/epiu.am/"
-              target="_blank"
             >
-              <FiFacebook />
-            </a>
-            <a
-              className="icon-circle"
-              style={{
-                flex: "0 0 40px",
-                color: "white",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "40px",
-                borderRadius: "50%",
-                transition: ".3s all ease-in-out",
-                fontSize: "1.8rem",
-              }}
-              href="https://www.linkedin.com/in/epiu-state-agency-441a21155/"
-              target="_blank"
-            >
-              <FiLinkedin />
-            </a>
-            <a
-              className="icon-circle"
-              style={{
-                flex: "0 0 40px",
-                color: "white",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "40px",
-                borderRadius: "50%",
-                transition: ".3s all ease-in-out",
-                fontSize: "1.8rem",
-              }}
-              href="https://www.youtube.com/channel/UCQ62HVkKIOiqa4GtSEn6QYw"
-              target="_blank"
-            >
-              <FiYoutube />
-            </a>
-          </div>
-        </div>
-        <form
-          ref={form}
-          onSubmit={sendMail}
-          style={{ padding: "40px", width: "100%" }}
-        >
-          <div className="col">
+              {t("pText")}
+            </p>
             <div
-              className="form-group"
+              className="icon-text"
               style={{
                 display: "flex",
                 justifyContent: "flex-start",
-                flexDirection: "column",
-                flex: "0 1 100%",
-                paddingRight: "40px",
+                alignItems: "center",
+                marginBottom: "2rem",
               }}
             >
-              <label>{t("contactName")}</label>
-              <input
-                type="text"
-                name="senderName"
-                value={senderName}
-                onChange={handleName}
-                required
+              <i className="fa fa-phone"></i>
+              <span
                 style={{
-                  border: "none",
-                  cursor: "pointer",
-                  padding: "15px",
-                  fontSize: "1rem",
-                  fontWeight: "500",
-                  color: "black",
-                  background: "transparent",
-                  borderBottom: "1px solid rgba(255, 255, 255, .4)",
-                  transition: "all 0.3s ease-in-out",
-                  marginBottom: "3rem",
+                  fontSize: "1.3rem",
+                  fontWeight: "300",
+                  textAlign: "justify",
                 }}
-              />
+              >
+                <LocalPhoneIcon />
+                +374 10 651-631
+              </span>
             </div>
-            <div className="form-group">
-              <label>{t("contactEmail")}</label>
-              <input
-                type="email"
-                name="senderEmail"
-                value={senderEmail}
-                onChange={handleEmail}
-                required
+            <div
+              className="icon-text"
+              style={{
+                display: "flex",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                marginBottom: "2rem",
+              }}
+            >
+              <i className="fa fa-envelope"></i>
+              <span
                 style={{
-                  border: "none",
-                  cursor: "pointer",
-                  padding: "15px",
-                  fontSize: "1rem",
-                  fontWeight: "500",
-                  color: "black",
-                  background: "transparent",
-                  borderBottom: "1px solid rgba(255, 255, 255, .4)",
-                  transition: "all 0.3s ease-in-out",
-                  marginBottom: "3rem",
+                  fontSize: "1.3rem",
+                  fontWeight: "300",
+                  textAlign: "justify",
                 }}
-              />
-            </div>{" "}
-            <form className="file" style={{ justifyContent: "flex-start" }}>
-              <input
-                {...register("value_name")}
-                type="file"
-                name="picture"
+              >
+                <MailOutlineIcon />
+                info@cep.am
+              </span>
+            </div>
+            <div
+              className="icon-text"
+              style={{
+                display: "flex",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                marginBottom: "2rem",
+              }}
+            >
+              <span
                 style={{
-                  border: "none",
-                  cursor: "pointer",
-                  padding: "15px",
-                  fontSize: "1rem",
-                  fontWeight: "500",
-                  color: "black",
-                  background: "transparent",
-                  borderBottom: "1px solid rgba(255, 255, 255, .4)",
-                  transition: "all 0.3s ease-in-out",
-                  marginBottom: "3rem",
+                  fontSize: "1.3rem",
+                  fontWeight: "300",
+                  textAlign: "justify",
                 }}
-              />
-            </form>
+              >
+                <MailOutlineIcon />
+                antifraud@epiu.am
+              </span>
+            </div>
+            <div
+              className="icon-text"
+              style={{
+                display: "flex",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                marginBottom: "2rem",
+              }}
+            >
+              <i className="fa fa-map-marker"></i>
+              <span
+                style={{
+                  fontSize: "1.3rem",
+                  fontWeight: "300",
+                  textAlign: "justify",
+                }}
+              >
+                <LocationOnIcon />
+                {t("street")}
+              </span>
+            </div>
+            <div
+              className="social-media"
+              style={{
+                display: "flex",
+                width: "50%",
+                justifyContent: "space-between",
+                ":hover": {
+                  color: "black",
+                },
+              }}
+            >
+              <a
+                className="icon-circle"
+                style={{
+                  flex: "0 0 40px",
+                  color: "white",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "40px",
+                  borderRadius: "50%",
+                  transition: ".3s all ease-in-out",
+                  fontSize: "1.8rem",
+                }}
+                href="https://www.facebook.com/epiu.am/"
+                target="_blank"
+              >
+                <FiFacebook />
+              </a>
+              <a
+                className="icon-circle"
+                style={{
+                  flex: "0 0 40px",
+                  color: "white",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "40px",
+                  borderRadius: "50%",
+                  transition: ".3s all ease-in-out",
+                  fontSize: "1.8rem",
+                }}
+                href="https://www.linkedin.com/in/epiu-state-agency-441a21155/"
+                target="_blank"
+              >
+                <FiLinkedin />
+              </a>
+              <a
+                className="icon-circle"
+                style={{
+                  flex: "0 0 40px",
+                  color: "white",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "40px",
+                  borderRadius: "50%",
+                  transition: ".3s all ease-in-out",
+                  fontSize: "1.8rem",
+                }}
+                href="https://www.youtube.com/channel/UCQ62HVkKIOiqa4GtSEn6QYw"
+                target="_blank"
+              >
+                <FiYoutube />
+              </a>
+            </div>
+          </div>
+          <form
+            ref={form}
+            onSubmit={sendMail}
+            style={{ padding: "40px", width: "100%" }}
+          >
             <div className="col">
-              <div className="form-group solo">
-                <label>{t("contactMessage")}</label>
+              <div
+                className="form-group"
+                style={{
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  flexDirection: "column",
+                  flex: "0 1 100%",
+                  paddingRight: "40px",
+                }}
+              >
+                <label>{t("contactName")}</label>
                 <input
-                  name="message"
-                  value={message}
-                  onChange={handleMessage}
+                  type="text"
+                  name="senderName"
+                  value={senderName}
+                  onChange={handleName}
                   required
                   style={{
                     border: "none",
@@ -352,7 +317,70 @@ const MainContact = () => {
                     marginBottom: "3rem",
                   }}
                 />
-                {/* <textarea
+              </div>
+              <div className="form-group">
+                <label>{t("contactEmail")}</label>
+                <input
+                  type="email"
+                  name="senderEmail"
+                  value={senderEmail}
+                  onChange={handleEmail}
+                  required
+                  style={{
+                    border: "none",
+                    cursor: "pointer",
+                    padding: "15px",
+                    fontSize: "1rem",
+                    fontWeight: "500",
+                    color: "black",
+                    background: "transparent",
+                    borderBottom: "1px solid rgba(255, 255, 255, .4)",
+                    transition: "all 0.3s ease-in-out",
+                    marginBottom: "3rem",
+                  }}
+                />
+              </div>{" "}
+              <form className="file" style={{ justifyContent: "flex-start" }}>
+                <input
+                  {...register("value_name")}
+                  type="file"
+                  name="picture"
+                  style={{
+                    border: "none",
+                    cursor: "pointer",
+                    padding: "15px",
+                    fontSize: "1rem",
+                    fontWeight: "500",
+                    color: "black",
+                    background: "transparent",
+                    borderBottom: "1px solid rgba(255, 255, 255, .4)",
+                    transition: "all 0.3s ease-in-out",
+                    marginBottom: "3rem",
+                  }}
+                />
+              </form>
+              <div className="col">
+                <div className="form-group solo">
+                  <label>{t("contactMessage")}</label>
+                  <input
+                    name="message"
+                    value={message}
+                    onChange={handleMessage}
+                    required
+                    style={{
+                      border: "none",
+                      cursor: "pointer",
+                      padding: "15px",
+                      fontSize: "1rem",
+                      fontWeight: "500",
+                      color: "black",
+                      background: "transparent",
+                      borderBottom: "1px solid rgba(255, 255, 255, .4)",
+                      transition: "all 0.3s ease-in-out",
+                      marginBottom: "3rem",
+                    }}
+                  />
+                  {/* <textarea
                   name="message"
                   value={message}
                   onChange={handleMessage}
@@ -370,31 +398,32 @@ const MainContact = () => {
                     marginBottom: "3rem",
                   }}
                 ></textarea> */}
+                </div>
+              </div>
+              <div className="col">
+                <div className="form-group solo right">
+                  <button
+                    style={{
+                      width: "200px",
+                      height: "60px",
+                      cursor: "pointer",
+                      border: "none",
+                      textTransform: "uppercase",
+                      borderRadius: "5px",
+                      background: "grey",
+                    }}
+                    type="submit"
+                    id="fcf-button"
+                    className="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block"
+                  >
+                    {t("button")}
+                  </button>
+                </div>
               </div>
             </div>
-            <div className="col">
-              <div className="form-group solo right">
-                <button
-                  style={{
-                    width: "200px",
-                    height: "60px",
-                    cursor: "pointer",
-                    border: "none",
-                    textTransform: "uppercase",
-                    borderRadius: "5px",
-                    background: "grey",
-                  }}
-                  type="submit"
-                  id="fcf-button"
-                  className="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block"
-                >
-                  {t("button")}
-                </button>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
+          </form>
+        </div>
+      </Container>
     </>
   );
 };

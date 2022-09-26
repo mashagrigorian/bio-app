@@ -1,15 +1,36 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Container, Paper } from "@mui/material";
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles((theme) => ({
+  logoLg: {
+    display: "none",
+    [theme.breakpoints.up("sm")]: {
+      display: "block",
+    },
+  },
+  logoSm: {
+    display: "block",
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    },
+  },
+}));
 
 const Abilities = () => {
   const { t, i18n } = useTranslation();
+  const classes = useStyles();
 
   return (
     <>
-      <Container component={Paper} elevation={5} style={{ padding: 25 }}>
+      <Container
+        component={Paper}
+        elevation={5}
+        style={{ padding: 25, marginTop: 40 }}
+      >
         <div
-          className="abilities"
+          className={classes.logoLg}
           style={{
             height: "500vh",
             width: "100%",
@@ -17,6 +38,7 @@ const Abilities = () => {
             flexDirection: "row",
             justifyContent: "center",
             alignItems: "center",
+            marginTop: "20px",
           }}
         >
           <div
