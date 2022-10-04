@@ -70,8 +70,14 @@ const MainContact = () => {
         className={classes.logoSm}
         elevation={5}
         style={{
-          padding: 5,
-          marginTop: 30,
+          background:
+            "linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%)",
+          justifyContent: "center",
+          alignItems: "center",
+          padding: "40px",
+          marginTop: "40px",
+          backdropFilter: "blur(15px)",
+          boxShadow: "5px 5px 5px 5px rgba(118, 108, 108, 0.507)",
         }}
       >
         <link rel="icon" />
@@ -88,10 +94,8 @@ const MainContact = () => {
             margin: "auto",
             background:
               "linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%)",
-            width: "1200px",
             justifyContent: "center",
             alignItems: "center",
-            borderRadius: "15px",
             overflow: "hidden",
             padding: "10px",
             display: "flex",
@@ -108,7 +112,7 @@ const MainContact = () => {
               flex: "0 1 40%",
               padding: "40px",
               color: "white",
-              display: "flex",
+              // display: "flex",
               flexDirection: "column",
             }}
           >

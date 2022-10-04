@@ -40,8 +40,8 @@ const Team = () => {
       component={Paper}
       elevation={5}
       style={{
-        padding: 5,
-        marginTop: 30,
+        padding: "5px",
+        marginTop: "30px",
         justifyItems: "center",
         textAlign: "center",
       }}
