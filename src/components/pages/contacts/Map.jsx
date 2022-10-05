@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { GoogleApiWrapper } from "google-maps-react";
+// import { GoogleApiWrapper } from "google-maps-react";
 
 class MapContainer extends Component {
   //   const { t, i18n } = useTranslation();
@@ -40,6 +40,8 @@ class MapContainer extends Component {
   }
 }
 
-export default GoogleApiWrapper({
-  apiKey: "AIzaSyCcMy0pyCtU_V1Xq0aqGJYurT9ovci2j7g",
-})(MapContainer);
+// export default GoogleApiWrapper({
+//   apiKey: "AIzaSyCcMy0pyCtU_V1Xq0aqGJYurT9ovci2j7g",
+// })(MapContainer);
+
+export default MapContainer;

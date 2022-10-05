@@ -23,8 +23,6 @@ import PressAboutUs from "./components/pages/PressAboutUs";
 import { VideoGallery } from "./components/pages/VideoGallery";
 import Contacts from "./components/pages/contacts/Contacts";
 import Main from "./components/main/Main";
-import RingLoader from "react-spinners/RingLoader";
-import { Experimental_CssVarsProvider as CssVarsProvider } from "@mui/material/styles";
 import Project1 from "./components/pages/projects/currentProjects/Project1";
 import Project2 from "./components/pages/projects/currentProjects/Project2";
 import Project3 from "./components/pages/projects/currentProjects/Project3";
@@ -58,7 +56,7 @@ function App() {
                 justifyItems: "center",
               }}
             >
-              <RingLoader size={60} color={"#123abc"} loading={loading} />
+                <div>Loading...</div>
             </div>
           ) : (
             <Suspense fallback={null}>

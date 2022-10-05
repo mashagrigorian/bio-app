@@ -7,7 +7,7 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { Container } from "@mui/material";
-import { makeStyles } from "@material-ui/core";
+import { makeStyles } from 'tss-react/mui'
 
 const useStyles = makeStyles((theme) => ({
   logoLg: {

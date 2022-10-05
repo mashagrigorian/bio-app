@@ -13,7 +13,7 @@ import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import images from "./teamPhotos";
 import HeadInfoPopover from "./HeadInfoPopover";
-import { makeStyles } from "@material-ui/core";
+import { makeStyles } from 'tss-react/mui'
 
 const useStyles = makeStyles((theme) => ({
   logoLg: {
