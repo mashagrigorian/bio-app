@@ -66,7 +66,12 @@ const Team = () => {
                     margin="20px"
                     spacing={2}
                 >
-                    <Typography>
+                    <div style={{
+                        display: "grid",
+                        alignItems: "center",
+                        justifyItems: "center",
+                        gap: "5px"
+                    }}>
                         <Avatar src={images.ArmenYesoyan} sx={avatarStyles}/>
                         <Typography align="center">
                             <span className="name" style={{fontSize: "20px"}}>
@@ -87,8 +92,13 @@ const Team = () => {
                         >
                             <HeadInfoPopover/>
                         </div>
-                    </Typography>
-                    <Typography>
+                    </div>
+                    <div style={{
+                        display: "grid",
+                        alignItems: "center",
+                        justifyItems: "center",
+                        gap: "5px"
+                    }}>
                         <Avatar
                             src={images.ArmenKhojoyan}
                             sx={avatarStyles}
@@ -112,7 +122,7 @@ const Team = () => {
                                 <HeadInfoPopover/>
                             </div>
                         </Typography>
-                    </Typography>
+                    </div>
                 </Stack>
             </div>
             <div>
@@ -148,10 +158,21 @@ const Team = () => {
                                                 src={memberInfo.img}
                                                 sx={avatarStyles}
                                             />
-                                            <span className="name"
-                                                  style={{fontSize: "20px"}}>{memberInfo.name}{" "}</span>
-                                            <div className="position"
-                                                 style={{textAlign: "center"}}>{memberInfo.position}</div>
+                                            <Typography
+                                                sx={{
+                                                    fontSize: {
+                                                        xs: 12,
+                                                        md: 20
+                                                    }
+                                                }}>{memberInfo.name}</Typography>
+
+                                            <Typography
+                                                sx={{
+                                                    textAlign: "center",
+                                                    fontSize: {
+                                                        xs: 8
+                                                    }
+                                                }}>{memberInfo.position}</Typography>
                                         </div>
                                     );
                                 })}
