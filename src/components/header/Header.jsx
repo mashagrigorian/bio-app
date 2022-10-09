@@ -132,7 +132,6 @@ const Header = (props) => {
                 </Box>
               </Grid>
             </Hidden>
-
             <Hidden lgUp>
               <IconButton onClick={openDrawer}>
                 <MenuIcon />
