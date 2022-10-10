@@ -144,7 +144,6 @@ const Team = () => {
                 alignItems: "center",
                 justifyContent: "center",
                 gap: "5px",
-                textAlign: "justify",
                 textAlign: "center",
                 xs: 12,
                 md: 20,

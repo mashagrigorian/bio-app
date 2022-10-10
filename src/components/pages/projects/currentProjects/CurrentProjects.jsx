@@ -114,73 +114,74 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 import ListSubheader from "@mui/material/ListSubheader";
-import IconButton from "@mui/material/IconButton";
-import InfoIcon from "@mui/icons-material/Info";
-import { useTranslation } from "react-i18next";
+import {useTranslation} from "react-i18next";
 import projects from "./currentProjectsImages";
 
 function TitlebarImageList() {
-  const { t, i18n } = useTranslation();
+    const {t, i18n} = useTranslation();
 
-  return (
-    <ImageList>
-      <ImageListItem key="Subheader" cols={2}>
-        <ListSubheader component="div" style={{ textAlign: "center" }}>
-          {t("currentProjects")}
-        </ListSubheader>
-      </ImageListItem>
-      {itemData.map((item) => (
-        <ImageListItem key={item.img}>
-          <img
-            src={`${item.img}?w=248&fit=crop&auto=format`}
-            srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-            alt={item.title}
-          />
-          <ImageListItemBar title={item.title} subtitle={item.author} />
-        </ImageListItem>
-      ))}
-    </ImageList>
-  );
+    return (
+        <ImageList>
+            <ImageListItem key="Subheader" cols={2}>
+                <ListSubheader component="div" style={{textAlign: "center"}}>
+                    {t("currentProjects")}
+                </ListSubheader>
+            </ImageListItem>
+            {itemData.map((item) => (
+                <ImageListItem key={item.img} style={{
+                    position: 'relative'
+                }}>
+                  <div style={{position :"absolute",right : 20,top :20,background :'green'}}>Random text Mash jan</div>
+                    <img
+                        src={`${item.img}?w=248&fit=crop&auto=format`}
+                        srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                        alt={item.title}
+                    />
+                    <ImageListItemBar title={item.title} subtitle={item.author}/>
+                </ImageListItem>
+            ))}
+        </ImageList>
+    );
 }
 
 const itemData = [
-  {
-    img: projects.project1,
-    title: "funding2",
-    author: "@bkristastuchio",
-    // rows: 2,
-    // cols: 2,
-    // featured: true,
-  },
-  {
-    img: projects.project2,
-    title: "Burger",
-    author: "@rollelflex_graphy726",
-  },
-  {
-    img: projects.project3,
-    title: "Camera",
-    author: "@helloimnik",
-  },
-  {
-    img: projects.project4,
-    title: "Coffee",
-    author: "@nolanissac",
-    cols: 2,
-  },
-  {
-    img: projects.project5,
-    title: "Hats",
-    author: "@hjrc33",
-    cols: 2,
-  },
-  {
-    img: projects.project6,
-    title: "Honey",
-    author: "@arwinneil",
-    rows: 2,
-    cols: 2,
-  },
+    {
+        img: projects.project1,
+        title: "funding2",
+        author: "@bkristastuchio",
+        // rows: 2,
+        // cols: 2,
+        // featured: true,
+    },
+    {
+        img: projects.project2,
+        title: "Burger",
+        author: "@rollelflex_graphy726",
+    },
+    {
+        img: projects.project3,
+        title: "Camera",
+        author: "@helloimnik",
+    },
+    {
+        img: projects.project4,
+        title: "Coffee",
+        author: "@nolanissac",
+        cols: 2,
+    },
+    {
+        img: projects.project5,
+        title: "Hats",
+        author: "@hjrc33",
+        cols: 2,
+    },
+    {
+        img: projects.project6,
+        title: "Honey",
+        author: "@arwinneil",
+        rows: 2,
+        cols: 2,
+    },
 ];
 
 export default TitlebarImageList;
