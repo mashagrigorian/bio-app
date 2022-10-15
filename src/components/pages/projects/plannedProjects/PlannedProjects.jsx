@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "@mui/material";
+import {Container, Paper} from "@mui/material";
 import { useTranslation } from "react-i18next";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -10,7 +10,7 @@ const PlannedProjects = () => {
   const { t, i18n } = useTranslation();
 
   return (
-    <Container style={{ padding: 25, marginTop: 40 }}>
+    <Container style={{ padding: 25, marginTop: 40 }} component={Paper} elevation={5}>
       <Box sx={{ width: "100%", maxWidth: "100%" }}>
         <Typography variant="h6" gutterBottom>
           <div className="title">{t("titleGreenFinance")}</div>

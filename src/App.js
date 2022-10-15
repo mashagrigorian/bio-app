@@ -73,7 +73,7 @@ function App() {
                                         <Header/>
                                     </div>
 
-                                    <div style={{marginTop: "5%"}}>
+                                    <div style={{marginTop: "10%"}}>
                                         <Routes>
                                             <Route path="/" element={<Main/>}/>
                                             <Route path="/about/history" element={<About/>}/>
@@ -108,30 +108,7 @@ function App() {
                                                 path="/projects/current-projects/:id"
                                                 element={<ProjectDedicatedPage/>}
                                             />
-                                            {/*<Route*/}
-                                            {/*    path="/projects/current-projects/project1"*/}
-                                            {/*    element={<Project1/>}*/}
-                                            {/*/>*/}
-                                            {/*<Route*/}
-                                            {/*    path="/projects/current-projects/project2"*/}
-                                            {/*    element={<Project2/>}*/}
-                                            {/*/>*/}
-                                            {/*<Route*/}
-                                            {/*    path="/projects/current-projects/project3"*/}
-                                            {/*    element={<Project3/>}*/}
-                                            {/*/>*/}
-                                            {/*<Route*/}
-                                            {/*    path="/projects/current-projects/project4"*/}
-                                            {/*    element={<Project4/>}*/}
-                                            {/*/>*/}
-                                            {/*<Route*/}
-                                            {/*    path="/projects/current-projects/project5"*/}
-                                            {/*    element={<Project5/>}*/}
-                                            {/*/>*/}
-                                            {/*<Route*/}
-                                            {/*    path="/projects/current-projects/project6"*/}
-                                            {/*    element={<Project6/>}*/}
-                                            {/*/>*/}
+
                                             <Route
                                                 path="/projects/planned-projects"
                                                 element={<PlannedProjects/>}

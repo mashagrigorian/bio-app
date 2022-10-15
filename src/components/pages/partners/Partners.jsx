@@ -66,7 +66,6 @@ const Partners = () => {
         <div
           className="container"
           style={{
-            margin: "50px 0",
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
             alignItems: "center",
