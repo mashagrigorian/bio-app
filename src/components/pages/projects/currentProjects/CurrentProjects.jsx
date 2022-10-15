@@ -116,6 +116,7 @@ import ImageListItemBar from "@mui/material/ImageListItemBar";
 import ListSubheader from "@mui/material/ListSubheader";
 import {useTranslation} from "react-i18next";
 import projects from "./currentProjectsImages";
+import {Link} from "react-router-dom";
 
 function TitlebarImageList() {
     const {t, i18n} = useTranslation();
@@ -128,27 +129,44 @@ function TitlebarImageList() {
                 </ListSubheader>
             </ImageListItem>
             {itemData.map((item) => (
-                <ImageListItem key={item.img} style={{
-                    position: 'relative'
-                }}>
-                  <div style={{position :"absolute",right : 20,top :20,background :'green'}}>Random text Mash jan</div>
-                    <img
-                        src={`${item.img}?w=248&fit=crop&auto=format`}
-                        srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                        alt={item.title}
-                    />
-                    <ImageListItemBar title={item.title} subtitle={item.author}/>
-                </ImageListItem>
+                <Link to={"/projects/current-projects/" + item.key}>
+                    <ImageListItem key={item.img} style={{
+                        position: 'relative'
+                    }}>
+                        {/*<div>{t(`currentProject.${item.key}.title`)}</div>*/}
+                        <div style={{position: "absolute", left: 20, top: 20, background: 'green'}}>{item.status}
+                        </div>
+                        <div style={{
+                            position: "absolute",
+                            right: 20,
+                            top: 20,
+                            background: 'green'
+                        }}>{item.tags?.map((tag) => {
+                            return <div>{tag}</div>
+                        })}
+                        </div>
+
+                        <img
+                            src={`${item.img}?w=248&fit=crop&auto=format`}
+                            srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                            alt={item.title}
+                        />
+                        <ImageListItemBar title={item.title} subtitle={item.author}/>
+                    </ImageListItem>
+                </Link>
             ))}
         </ImageList>
     );
 }
 
-const itemData = [
+export const itemData = [
     {
+        key: "project1",
         img: projects.project1,
         title: "funding2",
         author: "@bkristastuchio",
+        status: 'ongoing',
+        tags: ['item1', 'item2']
         // rows: 2,
         // cols: 2,
         // featured: true,
