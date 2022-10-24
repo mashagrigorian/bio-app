@@ -23,11 +23,11 @@ const ItemStyles = styled.div`
   }
 `;
 
-export default function ContactInfoItem({ icon = <MdPlace /> }) {
+export default function ContactInfoItem({ icon = <MdPlace />, text = "" }) {
   return (
     <ItemStyles>
       <div className="icon">{icon}</div>
-      {/* <div className="info">{text}</div> */}
+      <div className="info">{text}</div>
     </ItemStyles>
   );
 }

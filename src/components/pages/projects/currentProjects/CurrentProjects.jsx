@@ -14,7 +14,7 @@ function CurrentProjects() {
     <ImageList>
       <ImageListItem key="Subheader" cols={2}>
         <ListSubheader component="div" style={{ textAlign: "center" }}>
-          {t("currentProjects")}
+          <h2>{t("currentProjects")}</h2>
         </ListSubheader>
       </ImageListItem>
       {itemData.map((item) => (
@@ -30,7 +30,8 @@ function CurrentProjects() {
                 position: "absolute",
                 left: 8,
                 top: 30,
-                background: "green",
+                background: "#E8E8E8",
+                color: "black",
               }}
             >
               <div>{t(`allCurrentProject.${item.key}.funding`)}</div>
@@ -40,7 +41,8 @@ function CurrentProjects() {
                 position: "absolute",
                 right: 10,
                 top: 70,
-                background: "green",
+                background: "#E8E8E8",
+                color: "black",
               }}
             >
               <div>{t(`allCurrentProject.${item.key}.projectTag`)}</div>
@@ -59,9 +61,10 @@ function CurrentProjects() {
             <div
               style={{
                 position: "absolute",
-                left: 8,
+                left: 2,
                 bottom: 30,
-                background: "green",
+                background: "	#E8E8E8",
+                color: "black",
               }}
             >
               <div>{t(`allCurrentProject.${item.key}.currentProject`)}</div>

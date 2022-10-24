@@ -33,7 +33,6 @@ const Project = (props) => {
         ></div>
         <div>
           <h4>{t("projectTags")}</h4>
-          {/* {t("allCurrentProject.project1.currentProject")} */}
           {itemData.filter((project) => {
             <div>{t(`allCurrentProject.${project.key}.projectTag`)}</div>;
           })}
