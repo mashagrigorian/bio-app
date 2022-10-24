@@ -1,5 +1,5 @@
 import React from "react";
-import {Container, Paper} from "@mui/material";
+import { Container, Paper } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -10,7 +10,11 @@ const PlannedProjects = () => {
   const { t, i18n } = useTranslation();
 
   return (
-    <Container style={{ padding: 25, marginTop: 40 }} component={Paper} elevation={5}>
+    <Container
+      style={{ padding: 25, marginTop: 40 }}
+      component={Paper}
+      elevation={5}
+    >
       <Box sx={{ width: "100%", maxWidth: "100%" }}>
         <Typography variant="h6" gutterBottom>
           <div className="title">{t("titleGreenFinance")}</div>
@@ -145,68 +149,3 @@ const PlannedProjects = () => {
 };
 
 export default PlannedProjects;
-
-// const plannedProjectsInfo = [
-//   {
-//     title: "titleGreenFinance",
-//     description: "greenFinance",
-//   },
-//   {
-//     title: "titleWasteManagement",
-//     description1: "wasteManagement1",
-//     description2: "wasteManagement2",
-//     description3: "wasteManagement3",
-//     description4: "wasteManagement4",
-//   },
-//   {
-//     title: "titleTransport",
-//     description1: "transport1",
-//     description2: "transport2",
-//   },
-//   {
-//     title: "titleElectricMobility",
-//     description1: "electricMobility1",
-//     description2: "electricMobility2",
-//   },
-//   {
-//     title: "titleGreenBonds",
-//     description: "greenBonds",
-//   },
-//   {
-//     title: "titleGreenRecovery",
-//     description: "greenRecovery",
-//   },
-//   {
-//     title: "titleGreenManagement",
-//     description: "greenManagement",
-//   },
-//   {
-//     title: "titleBiodiversity",
-//     description: "biodiversityPlannedProject",
-//   },
-//   {
-//     title: "titleAdaption",
-//     description: "adaption",
-//   },
-//   {
-//     title: "titleEcoEducation",
-//     description1: "ecoEducation1",
-//     description2: "ecoEducation2",
-//   },
-// ];
-
-// <div className="planned-projects">
-//   {plannedProjectsInfo.map((info) => {
-//     return (
-//       <div title={info.title}>
-//         {/* <div
-//           description={info.description}
-//           description1={info.description1}
-//           description2={info.description2}
-//           description3={info.description3}
-//           description4={info.description4}
-//         ></div> */}
-//       </div>
-//     );
-//   })}
-// </div>

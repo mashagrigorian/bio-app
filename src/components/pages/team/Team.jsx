@@ -11,7 +11,7 @@ import {
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
-import images from "./teamPhotos";
+import images from "./TeamPhotos";
 import HeadInfoPopover from "./HeadInfoPopover";
 import { makeStyles } from "tss-react/mui";
 

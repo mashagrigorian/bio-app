@@ -1,9 +1,7 @@
 import { Container, Stack } from "@mui/material";
 import React, { Component } from "react";
-// import { GoogleApiWrapper } from "google-maps-react";
 
 class MapContainer extends Component {
-  //   const { t, i18n } = useTranslation();
   render() {
     return (
       <>
@@ -56,9 +54,5 @@ class MapContainer extends Component {
     );
   }
 }
-
-// export default GoogleApiWrapper({
-//   apiKey: "AIzaSyCcMy0pyCtU_V1Xq0aqGJYurT9ovci2j7g",
-// })(MapContainer);
 
 export default MapContainer;

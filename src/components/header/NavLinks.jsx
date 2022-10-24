@@ -99,7 +99,6 @@ const NavLinks = ({
                   >
                     {t(item?.label)}
                   </Typography>
-                  // </>
                 );
               })}
             </List>

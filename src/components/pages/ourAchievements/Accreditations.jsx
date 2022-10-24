@@ -16,6 +16,7 @@ const Accreditations = () => {
           gridTemplateRows: "1fr 1fr",
           justifyItems: "center",
           textAlign: "center",
+          columnGap: "60px",
         }}
       >
         <div
@@ -37,8 +38,6 @@ const Accreditations = () => {
           style={{
             display: "block",
             marginTop: "100px",
-            // maxWWidth: "100px",
-            // maxHeight: "100px",
           }}
         >
           <a
@@ -57,15 +56,7 @@ const Accreditations = () => {
               }),
             }}
           />
-          <Grid
-            item
-            sx={{ pt: 1 }}
-            // container
-            // direction="row"
-            // justifyContent="center"
-            // alignItems="center"
-            // display="flex"
-          >
+          <Grid item sx={{ pt: 1 }}>
             <Divider
               orientation="vertical"
               style={{ height: "100%", width: "1px" }}

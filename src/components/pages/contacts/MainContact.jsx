@@ -1,13 +1,14 @@
 import React, { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import emailsJs from "@emailjs/browser";
-import { FiFacebook, FiLinkedin, FiYoutube } from "react-icons/fi";
+// import { FiFacebook, FiLinkedin, FiYoutube } from "react-icons/fi";
 import { useForm } from "react-hook-form";
-import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import { Container, Stack } from "@mui/material";
+// import MailOutlineIcon from "@mui/icons-material/MailOutline";
+// import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+// import LocationOnIcon from "@mui/icons-material/LocationOn";
+// import { Container, Stack } from "@mui/material";
 import { makeStyles } from "tss-react/mui";
+import ContactSection from "./ContactSection";
 
 const useStyles = makeStyles((theme) => ({
   logoLg: {
@@ -66,7 +67,8 @@ const MainContact = () => {
   };
   return (
     <>
-      <Container
+      <ContactSection />
+      {/* <Container
         className={classes.logoSm}
         elevation={5}
         style={{
@@ -87,16 +89,7 @@ const MainContact = () => {
               }}
             >
               <link rel="icon" />
-              <h2
-              // className="titleText"
-              // style={{
-              //   textAlign: "center",
-              //   color: "black",
-              //   fontSize: "2rem",
-              // }}
-              >
-                {t("contactWithUs")}
-              </h2>
+              <h2>{t("contactWithUs")}</h2>
               <br />
               <div
                 className="contact-container"
@@ -116,14 +109,11 @@ const MainContact = () => {
                 <div
                   className="contact-info"
                   style={{
-                    // borderRadius: "15px",
                     background:
                       "linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%)",
                     flex: "0 1 40%",
                     padding: "20px",
                     color: "white",
-                    // display: "flex",
-                    // flexDirection: "column",
                   }}
                 >
                   <h4
@@ -427,7 +417,7 @@ const MainContact = () => {
         </div>
       </Container>
 
-      {/* </Grid> */}
+     */}
     </>
   );
 };
