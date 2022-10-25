@@ -35,7 +35,7 @@ const FormStyles = styled.div`
     display: inline-block;
     outline: none;
     border: none;
-    padding: 1rem 2rem;
+    padding: 1rem 0.5rem;
     border-radius: 8px;
     cursor: pointer;
   }
