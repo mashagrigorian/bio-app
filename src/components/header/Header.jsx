@@ -141,8 +141,7 @@ const Header = (props) => {
         </Toolbar>
         <SwipeableDrawer
           open={open}
-          anchor="right
-        "
+          anchor="right"
           onOpen={openDrawer}
           onClose={closeDrawer}
         >

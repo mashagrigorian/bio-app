@@ -21,7 +21,12 @@ const HeadInfoPopover = () => {
 
   return (
     <div>
-      <Button aria-describedby={id} variant="contained" onClick={handleClick}>
+      <Button
+        style={{ backgroundColor: "#138B43", fontSize: "12px" }}
+        aria-describedby={id}
+        variant="contained"
+        onClick={handleClick}
+      >
         {t("viewBio")}
       </Button>
       <Popover

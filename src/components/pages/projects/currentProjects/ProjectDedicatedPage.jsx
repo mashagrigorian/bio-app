@@ -12,6 +12,31 @@ const Project = (props) => {
     return i.key === id;
   });
 
+  const Areas = (props) => {
+    const hasAreas = props.hasAreas;
+    console.log(
+      `allCurrentProject.${data.key}.allCurrentProject.${data.key.areas}`
+    );
+    if (hasAreas) {
+      return <h5>{t(`allCurrentProject.${data.key}.areas`)}</h5>;
+    }
+    return null;
+  };
+
+  // const Areas = (props) => {
+  //   if (`allCurrentProject.${data.key}`.hasOwnProperty("areas")) {
+  //     return <h5>{t(`allCurrentProject.${data.key}.areas`)}</h5>;
+  //   }
+  //   return undefined;
+  // };
+
+  // const Areas = (areas) => {
+  //   if (areas in `allCurrentProject.${data.key}`) {
+  //     return <h5>{t(`allCurrentProject.${data.key}.areas`)}</h5>;
+  //   }
+  //   return undefined;
+  // };
+
   return (
     <>
       <Container
@@ -20,35 +45,47 @@ const Project = (props) => {
         style={{
           padding: 25,
           marginTop: 40,
-          lineHeight: "400%",
+          lineHeight: "80px",
         }}
       >
-        <div
-          style={{
-            position: "absolute",
-            left: 8,
-            top: 30,
-            background: "green",
-          }}
-        ></div>
         <div>
-          <h4>{t("projectTags")}</h4>
-          {itemData.filter((project) => {
-            <div>{t(`allCurrentProject.${project.key}.projectTag`)}</div>;
-          })}
+          <h3>{t(`allCurrentProject.${data.key}.currentProject`)}</h3>
 
-          <h4>{t("projectFunding")}</h4>
+          <h3>{t("projectTags")}</h3>
 
-          <h4>{t("projectBudget")}</h4>
+          <h4>{t(`allCurrentProject.${data.key}.projectTag`)}</h4>
 
-          <h4>{t("projectDates")}</h4>
+          <h3>{t("projectFunding")}</h3>
 
-          <h4>{t("projectAreas")}</h4>
+          <h4>{t(`allCurrentProject.${data.key}.funding`)}</h4>
 
-          <h4>{t("projectObjective")}</h4>
+          <h3>{t("projectBudget")}</h3>
 
-          <h4>{t("projectActivities")}</h4>
+          <h4>{t(`allCurrentProject.${data.key}.budget`)}</h4>
 
+          <h3>{t("projectDates")}</h3>
+
+          <h4>{t(`allCurrentProject.${data.key}.dates`)}</h4>
+
+          {/* <h3>{t("projectAreas")}</h3> */}
+
+          <h4>
+            <Areas />
+          </h4>
+
+          <h3>{t("projectObjective")}</h3>
+
+          <h4>{t(`allCurrentProject.${data.key}.objective`)}</h4>
+
+          <h3>{t("projectActivities")}</h3>
+
+          <div
+            dangerouslySetInnerHTML={{
+              __html: t(`allCurrentProject.${data.key}.projectActivities`, {
+                interpolation: { escapeValue: false },
+              }),
+            }}
+          />
           <h4>{t("projectDocuments")}</h4>
         </div>
       </Container>

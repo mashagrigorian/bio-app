@@ -46,6 +46,7 @@ export default function ContactForm() {
   const [senderName, setSenderName] = useState("");
   const [senderEmail, setSenderEmail] = useState("");
   const [message, setMessage] = useState("");
+
   const form = useRef();
 
   const handleName = (e) => {
@@ -109,12 +110,9 @@ export default function ContactForm() {
             <label htmlFor="message">
               {t("placeholderMessage")}
               <textarea
-                // type="text"
                 name="message"
                 value={message}
                 onChange={handleMessage}
-
-                // onChange={(e) => setMessage(e.target.value)}
               />
             </label>
           </div>

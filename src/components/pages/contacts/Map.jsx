@@ -24,7 +24,6 @@ class MapContainer extends Component {
                   margin: "40px 0px",
                 }}
               >
-                {/* <h3>{t("ourAddress")}</h3> */}
                 <iframe
                   style={{
                     width: "80%",
@@ -37,15 +36,6 @@ class MapContainer extends Component {
                   marginheight="0"
                   marginwidth="0"
                 ></iframe>
-                {/* <Map
-          google={this.props.google}
-          style={{ width: "30%", height: "30%" }}
-          zoom={10}
-          initialCenter={{
-            lat: 49.19531,
-            lng: -122.86467,
-          }}
-        /> */}
               </div>
             </Stack>
           </div>

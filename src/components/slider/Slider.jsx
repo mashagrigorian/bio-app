@@ -69,14 +69,6 @@ const Slider = () => {
             key={index}
             onClick={() => moveDot(index + 1)}
             className={slideIndex === index + 1 ? "dot active" : "dot"}
-            // style={{
-            //   width: "20px",
-            //   height: "20px",
-            //   borderRadius: "50%",
-            //   border: "3px solid #f1f1f1",
-            //   margin: "0 5px",
-            //   background: "#f1f1f1",
-            // }}
           ></div>
         ))}
       </div>

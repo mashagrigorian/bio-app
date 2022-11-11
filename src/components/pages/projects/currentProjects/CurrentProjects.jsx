@@ -11,10 +11,18 @@ function CurrentProjects() {
   const { t, i18n } = useTranslation();
 
   return (
-    <ImageList>
-      <ImageListItem key="Subheader" cols={2}>
+    <ImageList
+      gap={12}
+      sx={{
+        mb: 8,
+        gridTemplateColumns: "repeat(auto-fill, minmax(600px, 2fr))!important",
+      }}
+    >
+      <ImageListItem key="Subheader">
         <ListSubheader component="div" style={{ textAlign: "center" }}>
-          <h2>{t("currentProjects")}</h2>
+          <h1 style={{ marginTop: "80px", fontStyle: "italic" }}>
+            {t("currentProjects")}
+          </h1>
         </ListSubheader>
       </ImageListItem>
       {itemData.map((item) => (
@@ -30,7 +38,8 @@ function CurrentProjects() {
                 position: "absolute",
                 left: 8,
                 top: 30,
-                background: "#E8E8E8",
+                background: "white",
+                opacity: "0.70",
                 color: "black",
               }}
             >
@@ -41,7 +50,8 @@ function CurrentProjects() {
                 position: "absolute",
                 right: 10,
                 top: 70,
-                background: "#E8E8E8",
+                background: "white",
+                opacity: "0.70",
                 color: "black",
               }}
             >
@@ -63,7 +73,8 @@ function CurrentProjects() {
                 position: "absolute",
                 left: 2,
                 bottom: 30,
-                background: "	#E8E8E8",
+                background: "white",
+                opacity: "0.70",
                 color: "black",
               }}
             >
