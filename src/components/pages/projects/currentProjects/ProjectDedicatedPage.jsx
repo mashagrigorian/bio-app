@@ -12,30 +12,33 @@ const Project = (props) => {
     return i.key === id;
   });
 
-  const Areas = (props) => {
-    const hasAreas = props.hasAreas;
-    console.log(
-      `allCurrentProject.${data.key}.allCurrentProject.${data.key.areas}`
-    );
-    if (hasAreas) {
-      return <h5>{t(`allCurrentProject.${data.key}.areas`)}</h5>;
+  const ShowProjectAreas = () => {
+    if (
+      !t(`allCurrentProject.${data.key}.areas`).includes("allCurrentProject")
+    ) {
+      return (
+        <div>
+          <h3>{t("projectAreas")}</h3>
+          <h4>{t(`allCurrentProject.${data.key}.areas`)}</h4>
+        </div>
+      );
     }
-    return null;
   };
 
-  // const Areas = (props) => {
-  //   if (`allCurrentProject.${data.key}`.hasOwnProperty("areas")) {
-  //     return <h5>{t(`allCurrentProject.${data.key}.areas`)}</h5>;
-  //   }
-  //   return undefined;
-  // };
-
-  // const Areas = (areas) => {
-  //   if (areas in `allCurrentProject.${data.key}`) {
-  //     return <h5>{t(`allCurrentProject.${data.key}.areas`)}</h5>;
-  //   }
-  //   return undefined;
-  // };
+  const ShowStartDate = (props) => {
+    if (
+      !t(`allCurrentProject.${data.key}.startDate`).includes(
+        "allCurrentProject"
+      )
+    ) {
+      return (
+        <div>
+          <h3>{t("projectStartDate")}</h3>
+          <h4>{t(`allCurrentProject.${data.key}.startDate`)}</h4>
+        </div>
+      );
+    }
+  };
 
   return (
     <>
@@ -67,11 +70,8 @@ const Project = (props) => {
 
           <h4>{t(`allCurrentProject.${data.key}.dates`)}</h4>
 
-          {/* <h3>{t("projectAreas")}</h3> */}
-
-          <h4>
-            <Areas />
-          </h4>
+          <ShowStartDate />
+          <ShowProjectAreas />
 
           <h3>{t("projectObjective")}</h3>
 
