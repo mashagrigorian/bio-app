@@ -71,7 +71,6 @@ const LanguageButton = ({ isDrawerReady }) => {
                   },
                 }}
                 onClick={() => i18n.changeLanguage(item.lang)}
-                debugger
               >
                 {item.label}
               </ListItem>

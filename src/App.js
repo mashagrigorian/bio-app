@@ -23,7 +23,7 @@ import PressAboutUs from "./components/pages/PressAboutUs";
 import { VideoGallery } from "./components/pages/VideoGallery";
 import Contacts from "./components/pages/contacts/Contacts";
 import Main from "./components/main/Main";
-import ProjectDedicatedPage from "./components/pages/projects/currentProjects/ProjectDedicatedPage";
+import ProjectPage from "./components/pages/projects/currentProjects/ProjectPage";
 
 export const ThemeContext = createContext(null);
 
@@ -93,7 +93,7 @@ function App() {
                       />
                       <Route
                         path="/projects/current-projects/:id"
-                        element={<ProjectDedicatedPage />}
+                        element={<ProjectPage />}
                       />
 
                       <Route

@@ -1,11 +1,15 @@
 import React from "react";
+import i18n from "./i18n";
 
 const Languages = () => {
-  const handleChange = (option) => {
-    localStorage.setItem("lang", option.target.value);
-    window.location.reload();
+  const handleChange = (lng) => {
+    let saveLanguage = JSON.stringify(lng);
+    i18n.changeLanguage(lng);
+
+    localStorage.setItem("lng", saveLanguage);
   };
-  const language = localStorage.getItem("lang") || "en";
+
+  let currentLanguage = JSON.parse(localStorage.getItem("lng"));
 
   return (
     <nav className="container">
@@ -14,7 +18,7 @@ const Languages = () => {
           <select
             className="custom-select"
             onChange={handleChange}
-            value={language}
+            value={currentLanguage}
             style={{
               backgroundColor: aquamarine,
               display: flex,

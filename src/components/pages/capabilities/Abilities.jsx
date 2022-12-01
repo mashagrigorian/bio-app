@@ -1,7 +1,8 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Container, Paper } from "@mui/material";
-import { makeStyles } from 'tss-react/mui'
+import { makeStyles } from "tss-react/mui";
+import photos from "./AbilitiesPhotos";
 
 const useStyles = makeStyles((theme) => ({
   logoLg: {
@@ -67,7 +68,7 @@ const Abilities = () => {
                 <br />
                 <img
                   className="our-abilities-images"
-                  src="https://cdn-icons-png.flaticon.com/512/6502/6502964.png"
+                  src={photos.mineralResources}
                 />
               </li>
               <li>
@@ -77,7 +78,7 @@ const Abilities = () => {
                 <br />
                 <img
                   className="our-abilities-images"
-                  src="https://cdn3.iconfinder.com/data/icons/science-116/64/Biology-natural-science-organism-physical-512.png"
+                  src={photos.landResources}
                 />
               </li>
               <li>
@@ -87,7 +88,7 @@ const Abilities = () => {
                 <br />
                 <img
                   className="our-abilities-images"
-                  src="https://cdn-icons-png.flaticon.com/512/1073/1073086.png"
+                  src={photos.waterResources}
                 />
               </li>
               <li>
@@ -95,10 +96,7 @@ const Abilities = () => {
                   <b>{t("atmosphere")}</b>
                 </span>
                 <br />
-                <img
-                  className="our-abilities-images"
-                  src="https://cdn-icons-png.flaticon.com/512/1741/1741986.png"
-                />
+                <img className="our-abilities-images" src={photos.atmosphere} />
               </li>
               <li>
                 <span>
@@ -107,7 +105,7 @@ const Abilities = () => {
                 <br />
                 <img
                   className="our-abilities-images"
-                  src="https://cdn-icons-png.flaticon.com/512/1233/1233855.png"
+                  src={photos.biodiversity}
                 />
               </li>
               <li>
@@ -117,7 +115,7 @@ const Abilities = () => {
                 <br />
                 <img
                   className="our-abilities-images"
-                  src="https://cdn-icons-png.flaticon.com/512/2201/2201544.png"
+                  src={photos.protectedAreas}
                 />
               </li>
               <li>
@@ -127,7 +125,7 @@ const Abilities = () => {
                 <br />
                 <img
                   className="our-abilities-images"
-                  src="https://cdn-icons-png.flaticon.com/512/4462/4462955.png"
+                  src={photos.naturalResources}
                 />
               </li>
               <li>
@@ -137,7 +135,7 @@ const Abilities = () => {
                 <br />
                 <img
                   className="our-abilities-images"
-                  src="https://lozanoisla.com/logo.png"
+                  src={photos.environment}
                 />
               </li>
             </ul>
