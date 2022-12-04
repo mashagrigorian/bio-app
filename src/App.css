@@ -32,6 +32,18 @@
   clip-path: circle();
 }
 
+.abilities-images li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.abilities-images span {
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
 .abilities {
   margin: auto;
   max-width: 50%; 

@@ -14,12 +14,20 @@ const CurrentProjects = () => {
       <Container
         component={Paper}
         elevation={10}
-        style={{ padding: 25, marginTop: 60 }}
+        style={{
+          padding: 25,
+          marginTop: 60,
+        }}
       >
         <ImageList
           gap={20}
           sx={{
             mb: 8,
+          }}
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
           }}
         >
           {itemData.map((item) => (

@@ -63,9 +63,12 @@ const Abilities = () => {
             >
               <li>
                 <span>
-                  <b> {t("mineral-resources")}</b>
+                  <b style={{ marginBottom: "5px" }}>
+                    {" "}
+                    {t("mineral-resources")}
+                  </b>
                 </span>
-                <br />
+
                 <img
                   className="our-abilities-images"
                   src={photos.mineralResources}
@@ -73,9 +76,8 @@ const Abilities = () => {
               </li>
               <li>
                 <span>
-                  <b>{t("land-resources")}</b>
+                  <b style={{ marginBottom: "5px" }}>{t("land-resources")}</b>
                 </span>
-                <br />
                 <img
                   className="our-abilities-images"
                   src={photos.landResources}
@@ -83,9 +85,8 @@ const Abilities = () => {
               </li>
               <li>
                 <span>
-                  <b>{t("water-resources")}</b>
+                  <b style={{ marginBottom: "5px" }}>{t("water-resources")}</b>
                 </span>
-                <br />
                 <img
                   className="our-abilities-images"
                   src={photos.waterResources}
@@ -93,16 +94,14 @@ const Abilities = () => {
               </li>
               <li>
                 <span>
-                  <b>{t("atmosphere")}</b>
+                  <b style={{ marginBottom: "5px" }}>{t("atmosphere")}</b>
                 </span>
-                <br />
                 <img className="our-abilities-images" src={photos.atmosphere} />
               </li>
               <li>
                 <span>
-                  <b>{t("biodiversity")}</b>
+                  <b style={{ marginBottom: "5px" }}>{t("biodiversity")}</b>
                 </span>
-                <br />
                 <img
                   className="our-abilities-images"
                   src={photos.biodiversity}
@@ -110,9 +109,8 @@ const Abilities = () => {
               </li>
               <li>
                 <span>
-                  <b>{t("protected-areas")}</b>
+                  <b style={{ marginBottom: "5px" }}>{t("protected-areas")}</b>
                 </span>
-                <br />
                 <img
                   className="our-abilities-images"
                   src={photos.protectedAreas}
@@ -120,9 +118,10 @@ const Abilities = () => {
               </li>
               <li>
                 <span>
-                  <b>{t("natural-resources")}</b>
+                  <b style={{ marginBottom: "5px" }}>
+                    {t("natural-resources")}
+                  </b>
                 </span>
-                <br />
                 <img
                   className="our-abilities-images"
                   src={photos.naturalResources}
@@ -130,9 +129,8 @@ const Abilities = () => {
               </li>
               <li>
                 <span>
-                  <b> {t("environment")}</b>
+                  <b style={{ marginBottom: "5px" }}> {t("environment")}</b>
                 </span>
-                <br />
                 <img
                   className="our-abilities-images"
                   src={photos.environment}

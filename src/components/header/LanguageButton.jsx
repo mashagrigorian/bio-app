@@ -17,7 +17,14 @@ const LanguageButton = ({ isDrawerReady }) => {
     setAnchorEl(false);
   };
 
+  const handleChange = (lng) => {
+    i18n.changeLanguage(lng);
+
+    localStorage.setItem("lng", lng);
+  };
+
   const { t, i18n } = useTranslation();
+
   return (
     <Box
       sx={{ display: "flex", flexDirection: "row" }}
@@ -70,7 +77,7 @@ const LanguageButton = ({ isDrawerReady }) => {
                     fontWeight: "bold",
                   },
                 }}
-                onClick={() => i18n.changeLanguage(item.lang)}
+                onClick={() => handleChange(item.lang)}
               >
                 {item.label}
               </ListItem>
