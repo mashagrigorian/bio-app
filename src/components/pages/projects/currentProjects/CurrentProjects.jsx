@@ -38,7 +38,7 @@ const CurrentProjects = () => {
                   position: "relative",
                 }}
               >
-                <div
+                {/* <div
                   style={{
                     position: "absolute",
                     left: 7,
@@ -51,17 +51,18 @@ const CurrentProjects = () => {
                   }}
                 >
                   <div>{t(`allCurrentProject.${item.key}.funding`)}</div>
-                </div>
+                </div> */}
                 <div
                   style={{
                     position: "absolute",
                     left: 7,
-                    top: 35,
+                    top: 5,
                     background: "white",
                     opacity: "0.70",
                     color: "black",
-                    borderRadius: "3px",
                     fontWeight: "bold",
+                    borderRadius: "3px",
+                    padding: "3px 5px",
                   }}
                 >
                   <div>{t(`allCurrentProject.${item.key}.projectTag`)}</div>
@@ -85,6 +86,7 @@ const CurrentProjects = () => {
                     color: "black",
                     borderRadius: "3px",
                     fontWeight: "bold",
+                    padding: "3px 5px",
                   }}
                 >
                   <div>{t(`allCurrentProject.${item.key}.currentProject`)}</div>

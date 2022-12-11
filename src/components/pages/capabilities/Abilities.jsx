@@ -40,6 +40,7 @@ const Abilities = () => {
             justifyContent: "center",
             alignItems: "center",
             marginTop: "20px",
+            textAlign: "justify",
           }}
         >
           <div
@@ -141,6 +142,9 @@ const Abilities = () => {
         </div>
         <div className="abilities">
           <div
+            style={{
+              marginLeft: "15px",
+            }}
             dangerouslySetInnerHTML={{
               __html: t("abilities", {
                 interpolation: { escapeValue: false },

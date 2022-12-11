@@ -59,7 +59,9 @@ function App() {
                   <div>
                     <Header />
                   </div>
-
+                  {/* <div>
+                    <Header />
+                  </div> */}
                   <div style={{ marginTop: "10%" }}>
                     <Routes>
                       <Route path="/" element={<Main />} />

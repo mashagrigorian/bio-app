@@ -74,106 +74,108 @@ const Header = (props) => {
   }, []);
 
   return (
-    <ThemeProvider theme={theme}>
-      <AppBar
-        sx={[
-          {
-            background: "white",
-            minHeight: { lg: "40px" },
-            padding: "10px 0",
-            fontSize: "15px",
-          },
-          expanded && {
-            height: { lg: "150px" },
-          },
-        ]}
-      >
-        <Toolbar>
-          <Grid
-            sx={{ minHeight: "inherit" }}
-            container
-            justifyContent={"space-between"}
-          >
-            <Grid item>
-              <div className="logo">
-                <a href="/">
-                  <img
-                    src="/assets/logo.png"
-                    alt=""
-                    style={{
-                      width: "50px",
-                      height: "50px",
-                      left: "5%",
-                      top: "3px",
-                    }}
-                  />
-                </a>
-              </div>
-            </Grid>
-            <Hidden lgDown>
-              <Grid item sx={{ pt: 1 }}>
-                <Grid container>
-                  {NavigationData.map((item, index) => {
-                    return (
-                      <NavLinks
-                        key={index}
-                        expand={expandHeight}
-                        title={item.title}
-                        links={item.links}
-                        type={item.type}
-                      />
-                    );
-                  })}
-                </Grid>
-              </Grid>
-              <Grid item>
-                <Box sx={{ display: "flex", justifyContent: "flex-start" }}>
-                  <LanguageButton isDrawerReady={open} />
-                </Box>
-              </Grid>
-            </Hidden>
-            <Hidden lgUp>
-              <IconButton onClick={openDrawer}>
-                <MenuIcon />
-              </IconButton>
-            </Hidden>
-          </Grid>
-        </Toolbar>
-        <SwipeableDrawer
-          open={open}
-          anchor="right"
-          onOpen={openDrawer}
-          onClose={closeDrawer}
+    <>
+      <ThemeProvider theme={theme}>
+        <AppBar
+          sx={[
+            {
+              background: "white",
+              minHeight: { lg: "40px" },
+              padding: "10px 0",
+              fontSize: "15px",
+            },
+            expanded && {
+              height: { lg: "150px" },
+            },
+          ]}
         >
-          <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-            <Box sx={{ display: "flex", justifyContent: "flex-start" }}>
-              <LanguageButton isDrawerReady={open} />
+          <Toolbar>
+            <Grid
+              sx={{ minHeight: "inherit" }}
+              container
+              justifyContent={"space-between"}
+            >
+              <Grid item>
+                <div className="logo">
+                  <a href="/">
+                    <img
+                      src="/assets/logo.png"
+                      alt=""
+                      style={{
+                        width: "50px",
+                        height: "50px",
+                        left: "5%",
+                        top: "3px",
+                      }}
+                    />
+                  </a>
+                </div>
+              </Grid>
+              <Hidden lgDown>
+                <Grid item sx={{ pt: 1 }}>
+                  <Grid container>
+                    {NavigationData.map((item, index) => {
+                      return (
+                        <NavLinks
+                          key={index}
+                          expand={expandHeight}
+                          title={item.title}
+                          links={item.links}
+                          type={item.type}
+                        />
+                      );
+                    })}
+                  </Grid>
+                </Grid>
+                <Grid item>
+                  <Box sx={{ display: "flex", justifyContent: "flex-start" }}>
+                    <LanguageButton isDrawerReady={open} />
+                  </Box>
+                </Grid>
+              </Hidden>
+              <Hidden lgUp>
+                <IconButton onClick={openDrawer}>
+                  <MenuIcon />
+                </IconButton>
+              </Hidden>
+            </Grid>
+          </Toolbar>
+          <SwipeableDrawer
+            open={open}
+            anchor="right"
+            onOpen={openDrawer}
+            onClose={closeDrawer}
+          >
+            <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+              <Box sx={{ display: "flex", justifyContent: "flex-start" }}>
+                <LanguageButton isDrawerReady={open} />
+              </Box>
+              <IconButton onClick={closeDrawer}>
+                <ArrowRight />
+              </IconButton>
             </Box>
-            <IconButton onClick={closeDrawer}>
-              <ArrowRight />
-            </IconButton>
-          </Box>
-          <Divider />
-          <Box sx={{ display: "flex", flexDirection: "column" }}>
-            {NavigationData.map((item, index) => {
-              return (
-                <>
-                  <NavLinks
-                    key={index}
-                    expand={expandHeight}
-                    title={item.title}
-                    links={item.links}
-                    type={item.type}
-                    isDrawerReady={open}
-                  />
-                  <Divider />
-                </>
-              );
-            })}
-          </Box>
-        </SwipeableDrawer>
-      </AppBar>
-    </ThemeProvider>
+            <Divider />
+            <Box sx={{ display: "flex", flexDirection: "column" }}>
+              {NavigationData.map((item, index) => {
+                return (
+                  <>
+                    <NavLinks
+                      key={index}
+                      expand={expandHeight}
+                      title={item.title}
+                      links={item.links}
+                      type={item.type}
+                      isDrawerReady={open}
+                    />
+                    <Divider />
+                  </>
+                );
+              })}
+            </Box>
+          </SwipeableDrawer>
+        </AppBar>
+      </ThemeProvider>
+    </>
   );
 };
 

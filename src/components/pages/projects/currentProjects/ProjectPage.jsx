@@ -1,12 +1,31 @@
 import { Container, Paper } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router";
 import { itemData } from "./ItemData";
+import gsap from "gsap";
 
 const Project = (props) => {
   const { id } = useParams();
   const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const divs = document.querySelectorAll(".project-info");
+    gsap.set(divs[1], { x: 100, opacity: 1 });
+
+    gsap
+      .timeline({ defaults: { duration: 3 } })
+      .add("three")
+      .to(divs[0], { y: 0, x: 25, opacity: 1 }, "three")
+      .to(divs[1], { y: 0, x: 0, opacity: 0.05 }, "three")
+      .to(divs[2], { y: 0, x: 25, opacity: 0.05 }, "three")
+      .to(divs[3], { y: 0, x: 0, opacity: 0.05 }, "three")
+      .to(divs[4], { y: 0, x: 25, opacity: 0.07 }, "three")
+      .to(divs[5], { y: 0, x: 25, opacity: 0.07 }, "three")
+      .to(divs[6], { y: 0, x: 0, opacity: 0.07 }, "three")
+      .to(divs[7], { y: 0, x: 25, opacity: 1.02 }, "three")
+      .to(divs[8], { y: 0, x: 0, opacity: 1.02 }, "three");
+  });
 
   const data = itemData.find((i) => {
     return i.key === id;
@@ -48,15 +67,12 @@ const Project = (props) => {
         style={{
           padding: 25,
           marginTop: 40,
-          lineHeight: "80px",
+          lineHeight: "4em",
+          background: "#a5d6a7",
         }}
       >
-        <div>
+        <div className="project-info">
           <h3>{t(`allCurrentProject.${data.key}.currentProject`)}</h3>
-
-          <h3>{t("projectTags")}</h3>
-
-          <h4>{t(`allCurrentProject.${data.key}.projectTag`)}</h4>
 
           <h3>{t("projectFunding")}</h3>
 
@@ -75,18 +91,21 @@ const Project = (props) => {
 
           <h3>{t("projectObjective")}</h3>
 
-          <h4>{t(`allCurrentProject.${data.key}.objective`)}</h4>
+          <h4 style={{ lineHeight: "40px" }}>
+            {t(`allCurrentProject.${data.key}.objective`)}
+          </h4>
 
           <h3>{t("projectActivities")}</h3>
 
           <div
+            style={{ paddingLeft: "40px", lineHeight: "40px" }}
             dangerouslySetInnerHTML={{
               __html: t(`allCurrentProject.${data.key}.projectActivities`, {
                 interpolation: { escapeValue: false },
               }),
             }}
           />
-          <h4>{t("projectDocuments")}</h4>
+          <h3>{t("projectDocuments")}</h3>
         </div>
       </Container>
     </>

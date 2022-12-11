@@ -183,12 +183,13 @@
     "projectDocuments": "Project Documents:",
     "projectDocumentsDescription": "/Տարաֆորմատ ֆայլեր կցելու հնարավորություն/",
     "projectStartDate": "Start of Implementation:",
+    "topHeaderInfo": "MINISTRY OF ENVIRONMENT'ENVIRONMENTAL PROJECT IMPLEMENTATION UNIT' STATE AGENCY",
 
     "allCurrentProject": {
       "project1": {
         "currentProject": "STRENGTHENING LAND BASED ADAPTATION CAPACITY IN COMMUNITIES ADJACENT TO PROTECTED AREAS IN ARMENIA",
         "projectTag": "Climate Change Adaptation, AF Project",   
-        "funding": "ADAPTATION FUND",    
+        "funding": "Adaptation Fund",    
         "budget": "1.202.880,0 thousands AMD",    
         "dates": "2019-2023",    
         "areas": "Ararat, Tavush, Lori regions",    

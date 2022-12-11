@@ -23,7 +23,9 @@ const Accreditations = () => {
           className="logo-style"
           style={{
             display: "block",
-            marginTop: "80px",
+            marginTop: "70px",
+            height: "auto",
+            maxWidth: "100%",
           }}
         >
           <a
@@ -38,13 +40,14 @@ const Accreditations = () => {
           style={{
             display: "block",
             marginTop: "100px",
+            width: "100%",
           }}
         >
           <a
             target="_blank"
             href="https://www.adaptation-fund.org/ie/environmental-project-implementation-unit-epiu/"
           >
-            <img src={adaptionFundLogo} />
+            <img style={{ width: "100%" }} src={adaptionFundLogo} />
           </a>
         </div>
 

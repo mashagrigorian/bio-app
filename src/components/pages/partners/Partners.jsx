@@ -94,10 +94,10 @@ const Partners = () => {
                     alt={t(info.key)}
                     style={{
                       display: "block",
-                      maxWidth: "200px",
-                      maxHeight: "70px",
-                      width: "auto",
-                      height: "auto",
+                      maxWidth: "400px",
+                      maxHeight: "150px",
+                      width: "100%",
+                      height: "100vh",
                     }}
                   />
                   <b> {t(info.key)}</b>
