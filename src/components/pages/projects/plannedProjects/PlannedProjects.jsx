@@ -11,7 +11,7 @@ const PlannedProjects = () => {
 
   return (
     <Container
-      style={{ padding: 25, marginTop: 40 }}
+      style={{ padding: 25, marginTop: "10%" }}
       component={Paper}
       elevation={5}
     >

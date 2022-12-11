@@ -17,7 +17,7 @@ export default function CompletedProjects() {
 
   if (i18n.language !== "arm") {
     return (
-      <Container>
+      <Container style={{ marginTop: "12%" }}>
         {projects.map((projectName) => {
           return (
             <Accordion

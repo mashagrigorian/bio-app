@@ -9,7 +9,7 @@ const Priorities = () => {
     <Container
       component={Paper}
       elevation={5}
-      style={{ padding: 25, marginTop: 40 }}
+      style={{ padding: 25, marginTop: "10%" }}
     >
       <div
         style={{

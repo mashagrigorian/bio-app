@@ -72,6 +72,7 @@ const Partners = () => {
             justifyItems: "center",
             gap: "25px",
             height: "600px",
+            marginTop: "12%",
           }}
         >
           {partnersInfo.map((info) => {

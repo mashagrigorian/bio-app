@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Container, Grid, Paper } from "@mui/material";
-import { makeStyles } from 'tss-react/mui'
+import { makeStyles } from "tss-react/mui";
 
 const useStyles = makeStyles((theme) => ({
   logoLg: {
@@ -26,7 +26,7 @@ const About = () => {
       className={classes.logoLg}
       component={Paper}
       elevation={5}
-      style={{ padding: 25 }}
+      style={{ padding: 25, marginTop: "7%" }}
     >
       <img
         src="https://cdn.unenvironment.org/s3fs-public/styles/article_billboard_image/public/2019-08/countryside-2326787_1920.jpg?itok=45Cf7I6D"

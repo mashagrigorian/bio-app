@@ -65,10 +65,10 @@ const Project = (props) => {
         component={Paper}
         elevation={5}
         style={{
-          padding: 25,
-          marginTop: 40,
-          lineHeight: "4em",
-          background: "#a5d6a7",
+          padding: 15,
+          marginTop: "10%",
+          lineHeight: "3em",
+          background: "rgba(255, 255, 128, .5)",
         }}
       >
         <div className="project-info">

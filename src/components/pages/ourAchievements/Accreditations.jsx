@@ -17,6 +17,7 @@ const Accreditations = () => {
           justifyItems: "center",
           textAlign: "center",
           columnGap: "60px",
+          marginTop: "10%",
         }}
       >
         <div
