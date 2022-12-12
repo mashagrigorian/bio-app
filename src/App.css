@@ -90,14 +90,6 @@ body {
   margin: auto;
 }
 
-h3 {
-  text-decoration: underline;
-}
-
-h4 {
-  padding-left: 40px;
-}
-
 .flex {
   display: flex;
   justify-content: space-between;
