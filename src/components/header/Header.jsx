@@ -16,8 +16,9 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import NavLinks from "./NavLinks";
-import NavigationData from "./Navigation.js";
+import NavigationData from "./Navigation.jsx";
 import { ArrowRight } from "@mui/icons-material";
+import TopHeader from "./TopHeader";
 
 const ElevationScroll = (props) => {
   const { children, window } = props;
@@ -85,17 +86,18 @@ const Header = (props) => {
               fontSize: "15px",
             },
             expanded && {
-              height: { lg: "150px" },
+              height: { lg: "350px" },
             },
           ]}
         >
+          <TopHeader />
           <Toolbar>
             <Grid
               sx={{ minHeight: "inherit" }}
               container
               justifyContent={"space-between"}
             >
-              <Grid item>
+              {/* <Grid item>
                 <div className="logo">
                   <a href="/">
                     <img
@@ -110,7 +112,7 @@ const Header = (props) => {
                     />
                   </a>
                 </div>
-              </Grid>
+              </Grid> */}
               <Hidden lgDown>
                 <Grid item sx={{ pt: 1 }}>
                   <Grid container>

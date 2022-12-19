@@ -68,9 +68,9 @@ const Partners = () => {
           style={{
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
-            alignItems: "center",
-            justifyItems: "center",
-            gap: "25px",
+            // alignItems: "space-around",
+            justifyItems: "space-around",
+            gap: "40px",
             height: "600px",
             marginTop: "12%",
           }}
