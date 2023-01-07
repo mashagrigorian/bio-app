@@ -17,7 +17,7 @@ export default function CompletedProjects() {
 
   if (i18n.language !== "arm") {
     return (
-      <Container style={{ marginTop: "12%" }}>
+      <Container>
         {projects.map((projectName) => {
           return (
             <Accordion
@@ -33,8 +33,7 @@ export default function CompletedProjects() {
   }
 
   return (
-    <div>
-      <div style={{ margin: 100 }}>
+      <Container>
         {projects.map((projectName) => {
           return (
             <Accordion key={projectName}>
@@ -53,7 +52,6 @@ export default function CompletedProjects() {
             </Accordion>
           );
         })}
-      </div>
-    </div>
+      </Container>
   );
 }

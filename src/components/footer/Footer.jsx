@@ -6,7 +6,7 @@ const Footer = () => {
   const { t, i18n } = useTranslation();
 
   return (
-    <Box px={{ xs: 3, sm: 10 }} py={{ xs: 5, sm: 10 }}>
+    <Box px={{ xs: 3, sm: 10 }} py={{ xs: 5, sm: 5 }}>
       <Container
         width="100%"
         z-index="1"
@@ -25,7 +25,6 @@ const Footer = () => {
           justifyContent={"space-around"}
           alignItems={"center"}
           sx={{ padding: "10px" }}
-          marginTop={"200px"}
         >
           <Grid
             item

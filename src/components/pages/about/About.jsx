@@ -26,7 +26,7 @@ const About = () => {
       className={classes.logoLg}
       component={Paper}
       elevation={5}
-      style={{ padding: 25, marginTop: "7%" }}
+      sx={{pb:3}}
     >
       <img
         src="https://cdn.unenvironment.org/s3fs-public/styles/article_billboard_image/public/2019-08/countryside-2326787_1920.jpg?itok=45Cf7I6D"

@@ -1,140 +1,118 @@
-import React, { useEffect } from "react";
-import { useTranslation } from "react-i18next";
+import React from "react";
+import {useTranslation} from "react-i18next";
 import logos from "./PartnerLogos";
-import gsap from "gsap";
-import { Divider, Grid } from "@mui/material";
+import {Divider, Grid} from "@mui/material";
 
 const Partners = () => {
-  const { t, i18n } = useTranslation();
+    const {t, i18n} = useTranslation();
 
-  useEffect(() => {
-    const divs = document.querySelectorAll(".partners-info");
-    // gsap.set(divs[1], { x: 100, opacity: 1 });
+    const partnersInfo = [
+        {
+            href: "https://www.adaptation-fund.org/",
+            key: "adaptionFund",
+        },
+        {
+            href: "https://www.thegef.org/",
+            key: "globalEnvironmentFacility",
+        },
+        {
+            href: "https://www.greenclimate.fund/",
+            key: "greenClimate",
+        },
+        {
+            href: "https://www.unep.org/",
+            key: "unitedNationsEnvProg",
+        },
+        {
+            href: "https://www.undp.org/",
+            key: "unitedNationsDevProg",
+        },
+        {
+            href: "https://www.unido.org/",
+            key: "unitedNationsInduDevOrg",
+        },
+        {
+            href: "https://www.worldbank.org/en/home",
+            key: "theWorldBank",
+        },
+        {
+            href: "https://www.osce.org/",
+            key: "orgForSec",
+        },
+    ];
 
-    // gsap
-    //   .timeline({ defaults: { duration: 3 } })
-    //   .add("three")
-    //   .to(divs[0], { y: 0, x: 200, opacity: 1 }, "three")
-    //   .to(divs[1], { y: 0, x: 0, opacity: 0.05 }, "three")
-    //   .to(divs[2], { y: 0, x: 200, opacity: 0.05 }, "three")
-    //   .to(divs[3], { y: 0, x: 0, opacity: 0.05 }, "three")
-    //   .to(divs[4], { y: 0, x: 200, opacity: 0.07 }, "three")
-    //   .to(divs[5], { y: 0, x: 200, opacity: 0.07 }, "three")
-    //   .to(divs[6], { y: 0, x: 0, opacity: 0.07 }, "three")
-    //   .to(divs[7], { y: 0, x: 200, opacity: 1.02 }, "three")
-    //   .to(divs[8], { y: 0, x: 0, opacity: 1.02 }, "three");
-  });
-
-  const partnersInfo = [
-    {
-      href: "https://www.adaptation-fund.org/",
-      key: "adaptionFund",
-    },
-    {
-      href: "https://www.thegef.org/",
-      key: "globalEnvironmentFacility",
-    },
-    {
-      href: "https://www.greenclimate.fund/",
-      key: "greenClimate",
-    },
-    {
-      href: "https://www.unep.org/",
-      key: "unitedNationsEnvProg",
-    },
-    {
-      href: "https://www.undp.org/",
-      key: "unitedNationsDevProg",
-    },
-    {
-      href: "https://www.unido.org/",
-      key: "unitedNationsInduDevOrg",
-    },
-    {
-      href: "https://www.worldbank.org/en/home",
-      key: "theWorldBank",
-    },
-    {
-      href: "https://www.osce.org/",
-      key: "orgForSec",
-    },
-  ];
-
-  return (
-    <div className="content">
-      <div className="partners-info">
-        <div
-          className="container"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            // alignItems: "space-around",
-            justifyItems: "space-around",
-            gap: "40px",
-            height: "600px",
-            marginTop: "12%",
-          }}
-        >
-          {partnersInfo.map((info) => {
-            return (
-              <div key={info.key}>
-                <a
-                  href={info.href}
-                  className="partnerInfoWrapper"
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    textDecoration: "none",
-                    color: "black",
-                  }}
-                >
-                  <img
-                    className="image"
-                    src={logos[info.key]}
-                    alt={t(info.key)}
+    return (
+        <div className="content">
+            <div className="partners-info">
+                <div
+                    className="container"
                     style={{
-                      display: "block",
-                      maxWidth: "400px",
-                      maxHeight: "150px",
-                      width: "100%",
-                      height: "100vh",
+                        display: "grid",
+                        gridTemplateColumns: "1fr 1fr",
+                        justifyItems: "space-around",
+                        gap: "40px",
                     }}
-                  />
-                  <b> {t(info.key)}</b>
-                </a>
-              </div>
-            );
-          })}
+                >
+                    {partnersInfo.map((info) => {
+                        return (
+                            <div key={info.key}>
+                                <a
+                                    href={info.href}
+                                    className="partnerInfoWrapper"
+                                    style={{
+                                        display: "flex",
+                                        flexDirection: "column",
+                                        alignItems: "center",
+                                        textDecoration: "none",
+                                        color: "black",
+                                    }}
+                                >
+                                    <img
+                                        className="image"
+                                        src={logos[info.key]}
+                                        alt={t(info.key)}
+                                        style={{
+                                            display: "block",
+                                            maxWidth: "400px",
+                                            maxHeight: "150px",
+                                            width: "100%",
+                                            height: "100vh",
+                                        }}
+                                    />
+                                    <b style={{textAlign: 'center'}}> {t(info.key)}</b>
+                                </a>
+                            </div>
+                        );
+                    })}
+                </div>
+                <Grid container spacing={10}>
+                    <Grid item xs={2} sm={10}>
+                        <Grid
+                            item
+                            container
+                            direction="row"
+                            justifyContent="center"
+                            alignItems="center"
+                            display="flex"
+                        >
+                            <Divider
+                                orientation="vertical"
+                                style={{height: "100%", width: "1px"}}
+                            />
+                        </Grid>
+                        <Grid
+                            item
+                            xs={2}
+                            container
+                            direction="row"
+                            justifyContent="right"
+                            alignItems="center"
+                        ></Grid>
+                    </Grid>
+                </Grid>
+            </div>
         </div>
-        <Grid container spacing={10}>
-          <Grid item xs={2} sm={10}>
-            <Grid
-              item
-              container
-              direction="row"
-              justifyContent="center"
-              alignItems="center"
-              display="flex"
-            >
-              <Divider
-                orientation="vertical"
-                style={{ height: "100%", width: "1px" }}
-              />
-            </Grid>
-            <Grid
-              item
-              xs={2}
-              container
-              direction="row"
-              justifyContent="right"
-              alignItems="center"
-            ></Grid>
-          </Grid>
-        </Grid>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Partners;

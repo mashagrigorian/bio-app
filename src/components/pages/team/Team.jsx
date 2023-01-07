@@ -48,7 +48,6 @@ const Team = () => {
       elevation={5}
       style={{
         padding: "10px 5px",
-        marginTop: "10%",
         justifyItems: "center",
         textAlign: "center",
       }}

@@ -11,9 +11,9 @@ const PlannedProjects = () => {
 
   return (
     <Container
-      style={{ padding: 25, marginTop: "10%" }}
       component={Paper}
       elevation={5}
+      sx={{pt:3,pb:3}}
     >
       <Box sx={{ width: "100%", maxWidth: "100%" }}>
         <Typography variant="h6" gutterBottom>

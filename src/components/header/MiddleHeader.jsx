@@ -1,65 +1,62 @@
 import * as React from "react";
-import { styled } from "@mui/material/styles";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
+import styled from "styled-components";
 import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
+import {useTranslation} from "react-i18next";
 import Typography from "@mui/material/Typography";
-import MenuIcon from "@mui/icons-material/Menu";
-import SearchIcon from "@mui/icons-material/Search";
-import MoreIcon from "@mui/icons-material/MoreVert";
-import { Grid } from "@mui/material";
 
-const StyledToolbar = styled(Toolbar)(({ theme }) => ({
-  alignItems: "flex-start",
-  paddingTop: theme.spacing(1),
-  paddingBottom: theme.spacing(2),
-  // Override media queries injected by theme.mixins.toolbar
-  "@media all": {
-    minHeight: 128,
-  },
-}));
+
+const FlagWrapper = styled.div`
+  position: relative;
+  padding-left: 10px;
+
+  &:after {
+    content: "";
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, red 0 33%, #00f 33% 66%, orange 66% 100%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+  }
+
+`;
 
 export default function ProminentAppBar() {
-  return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar
-        position="static"
-        style={{ backgroundColor: "white", color: "black" }}
-      >
+
+    const {t, i18n} = useTranslation();
+
+    return (
         <div
-          className="coat-of-arms"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr 1fr",
-            alignItems: "center",
-            justifyItems: "center",
-            padding: "10px",
-          }}
+            style={{
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr 1fr",
+                alignItems: "center",
+                justifyItems: "center",
+                padding: "10px",
+                borderBottom:"1px solid lightgray"
+            }}
         >
-          <div>
-            {" "}
-            <img src="http://mnp.am/images/arm.png" alt="" title="" />
-          </div>
-          <div>
-            <div className="header-title" style={{ color: " black" }}>
-              Header title
+            <FlagWrapper>
+                <img src="/assets/gerb.png" alt="" title=""/>
+            </FlagWrapper>
+            <div>
+                <div className="header-title" style={{color: " black"}}>
+                    <Typography variant={'h6'} sx={{fontSize:"16px"}}>{t('headerTitle')}</Typography>
+                </div>
             </div>
-          </div>
-          <div>
-            <a href="/">
-              <img
-                src="/assets/logo.png"
-                alt=""
-                style={{
-                  width: "100px",
-                  height: "100px",
-                }}
-              />
-            </a>
-          </div>
+            <div>
+                <a href="/">
+                    <img
+                        src="/assets/logo.png"
+                        alt=""
+                        style={{
+                            width: "100px",
+                            height: "100px",
+                        }}
+                    />
+                </a>
+            </div>
         </div>
-      </AppBar>
-    </Box>
-  );
+    );
 }

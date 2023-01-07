@@ -9,7 +9,6 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import { useTranslation } from "react-i18next";
 
 const ContactSectionStyle = styled.div`
-  padding: 6rem 0;
   .contactSection__wrapper {
     display: flex;
     gap: 5rem;
