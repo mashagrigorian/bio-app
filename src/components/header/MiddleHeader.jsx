@@ -1,6 +1,5 @@
 import * as React from "react";
 import styled from "styled-components";
-import Toolbar from "@mui/material/Toolbar";
 import {useTranslation} from "react-i18next";
 import Typography from "@mui/material/Typography";
 
@@ -34,7 +33,7 @@ export default function ProminentAppBar() {
                 alignItems: "center",
                 justifyItems: "center",
                 padding: "10px",
-                borderBottom:"1px solid lightgray"
+                borderBottom: "1px solid lightgray"
             }}
         >
             <FlagWrapper>
@@ -42,7 +41,15 @@ export default function ProminentAppBar() {
             </FlagWrapper>
             <div>
                 <div className="header-title" style={{color: " black"}}>
-                    <Typography variant={'h6'} sx={{fontSize:"16px"}}>{t('headerTitle')}</Typography>
+                    <Typography variant={'h6'} sx={{
+                        fontSize: "16px",
+                        textAlign: "center",
+                        fontWeight: 700
+                    }} dangerouslySetInnerHTML={{
+                        __html: t("headerTitle", {
+                            interpolation: {escapeValue: false},
+                        }),
+                    }}/>
                 </div>
             </div>
             <div>
