@@ -12,7 +12,6 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import images from "./TeamPhotos";
-import HeadInfoPopover from "./HeadInfoPopover";
 import { makeStyles } from "tss-react/mui";
 
 const useStyles = makeStyles((theme) => ({
@@ -100,9 +99,7 @@ const Team = () => {
                 gap: "5px",
                 textAlign: "justify",
               }}
-            >
-              <HeadInfoPopover />
-            </div>
+            ></div>
           </div>
           <div
             style={{
@@ -147,9 +144,7 @@ const Team = () => {
                 xs: 12,
                 md: 20,
               }}
-            >
-              <HeadInfoPopover />
-            </div>
+            ></div>
           </div>
         </Stack>
       </div>
