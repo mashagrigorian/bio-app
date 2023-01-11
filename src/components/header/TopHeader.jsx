@@ -29,7 +29,7 @@ export default function ButtonAppBar() {
                     sx={{flexGrow: 1}}
                     style={{padding: "1px", fontSize: "15px", textAlign: "right"}}
                 >
-                    {t("hotline")} +374 10 651-631, info@cep.am antifraud@epiu.am
+                    {t("hotline")} +374 10 651-631, info@cep.am
                 </Typography>
 
                 <Hidden lgDown>
