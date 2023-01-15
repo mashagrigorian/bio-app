@@ -18,12 +18,13 @@ import Beneficiaries from "./components/pages/Beneficiaries";
 import ProgramsProcurement from "./components/pages/ProgramsProcurement";
 import OfficeNeeds from "./components/pages/OfficeNeeds";
 import Announcements from "./components/pages/Announcements";
-import News from "./components/pages/News";
+import News from "./components/pages/news/News";
 import PressAboutUs from "./components/pages/PressAboutUs";
 import {VideoGallery} from "./components/pages/VideoGallery";
 import Contacts from "./components/pages/contacts/Contacts";
 import Main from "./components/main/Main";
 import ProjectPage from "./components/pages/projects/currentProjects/ProjectPage";
+import SingleNews from "./components/pages/news/SingleNews";
 
 export const ThemeContext = createContext(null);
 
@@ -114,6 +115,7 @@ function App() {
                                                 element={<Announcements/>}
                                             />
                                             <Route path="/news/news" element={<News/>}/>
+                                            <Route path="/news/news/:id" element={<SingleNews/>}/>
                                             <Route
                                                 path="/news/the-press-about-us"
                                                 element={<PressAboutUs/>}

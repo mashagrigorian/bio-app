@@ -15,7 +15,7 @@ export default function CompletedProjects() {
     (_, i) => `implemented-project-${i + 1}`
   );
 
-  if (i18n.language !== "arm") {
+  if (i18n.language !== "hy") {
     return (
       <Container>
         {projects.map((projectName) => {

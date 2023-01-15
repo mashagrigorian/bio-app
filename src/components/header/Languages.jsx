@@ -1,5 +1,5 @@
 export default [
-  { lang: "arm", label: "Armenian" },
-  { lang: "rus", label: "Russian" },
-  { lang: "eng", label: "English" },
+  { lang: "hy", label: "Armenian" },
+  { lang: "ru", label: "Russian" },
+  { lang: "en", label: "English" },
 ];
