@@ -1,17 +1,10 @@
 import { Container, Paper } from "@mui/material";
 import React, { useEffect } from "react";
-import { useTranslation } from "react-i18next";
-import { useParams } from "react-router";
-import { itemData } from "../../../components/pages/projects/currentProjects/ItemData";
-import Typography from "@mui/material/Typography";
 import gsap from "gsap";
 
-const SingleNews = (props) => {
-  const { id } = useParams();
-  const { t, i18n } = useTranslation();
-
+const SingleNews = () => {
   useEffect(() => {
-    const divs = document.querySelectorAll(".project-info");
+    const divs = document.querySelectorAll(".single-news");
     gsap.set(divs[1], { x: 100, opacity: 1 });
 
     gsap
@@ -28,42 +21,6 @@ const SingleNews = (props) => {
       .to(divs[8], { y: 0, x: 0, opacity: 1.02 }, "three");
   });
 
-  const data = itemData.find((i) => {
-    return i.key === id;
-  });
-
-  const ShowProjectAreas = () => {
-    if (
-      !t(`allCurrentProject.${data.key}.areas`).includes("allCurrentProject")
-    ) {
-      return (
-        <div>
-          <h3 className="infoLabel">{t("projectAreas")}</h3>
-          <h4 className="infoValue">
-            {t(`allCurrentProject.${data.key}.areas`)}
-          </h4>
-        </div>
-      );
-    }
-  };
-
-  const ShowStartDate = (props) => {
-    if (
-      !t(`allCurrentProject.${data.key}.startDate`).includes(
-        "allCurrentProject"
-      )
-    ) {
-      return (
-        <div>
-          <h3 className="infoLabel">{t("projectStartDate")}</h3>
-          <h4 className="infoValue">
-            {t(`allCurrentProject.${data.key}.startDate`)}
-          </h4>
-        </div>
-      );
-    }
-  };
-
   return (
     <>
       <Container
@@ -74,7 +31,7 @@ const SingleNews = (props) => {
           lineHeight: "3em",
         }}
       >
-        <div className="project-info">
+        <div className="single-news">
           <h1 style={{ color: "rgb(19, 139, 67)" }}>Lorem Ipsum</h1>
           <h3
             style={{
