@@ -1,27 +1,10 @@
 import { Container, Paper } from "@mui/material";
 import React, { useEffect } from "react";
 import gsap from "gsap";
-import SingleNewsSlider from "./SingleNewsSlider";
+import SingleNewsImageSlider from "./SingleNewsImageSlider";
+import SingleNewsVideoSlider from "./SingleNewsVideoSlider";
 
 const SingleNews = () => {
-  // useEffect(() => {
-  //   const divs = document.querySelectorAll(".single-news");
-  //   gsap.set(divs[1], { x: 100, opacity: 1 });
-
-  //   gsap
-  //     .timeline({ defaults: { duration: 3 } })
-  //     .add("three")
-  //     .to(divs[0], { y: 0, x: 25, opacity: 1 }, "three")
-  //     .to(divs[1], { y: 0, x: 0, opacity: 0.05 }, "three")
-  //     .to(divs[2], { y: 0, x: 25, opacity: 0.05 }, "three")
-  //     .to(divs[3], { y: 0, x: 0, opacity: 0.05 }, "three")
-  //     .to(divs[4], { y: 0, x: 25, opacity: 0.07 }, "three")
-  //     .to(divs[5], { y: 0, x: 25, opacity: 0.07 }, "three")
-  //     .to(divs[6], { y: 0, x: 0, opacity: 0.07 }, "three")
-  //     .to(divs[7], { y: 0, x: 25, opacity: 1.02 }, "three")
-  //     .to(divs[8], { y: 0, x: 0, opacity: 1.02 }, "three");
-  // });
-
   return (
     <>
       <Container
@@ -60,7 +43,8 @@ const SingleNews = () => {
             Rackham.
           </h3>
         </div>
-        <SingleNewsSlider />
+        <SingleNewsImageSlider />
+        <SingleNewsVideoSlider />
       </Container>
     </>
   );
