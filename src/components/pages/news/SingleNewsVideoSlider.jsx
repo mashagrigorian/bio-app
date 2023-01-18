@@ -44,9 +44,12 @@ const SingleNewsVideoSlider = () => {
             key={obj.id}
             className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
           >
-            <img
-              src={process.env.PUBLIC_URL + `/videos/video${index + 1}.mp4`}
-            />
+            <video width="100%" height="100%" controls>
+              <source
+                src={process.env.PUBLIC_URL + `/videos/video${index + 1}.mp4`}
+                type="video/mp4"
+              />
+            </video>
           </div>
         );
       })}
