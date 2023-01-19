@@ -60,8 +60,6 @@ function App() {
                 >
                   <Header />
                   <div style={{ marginTop: "320px" }}>
-
-                      <SingleNewsImageSlider/>
                     <Routes>
                       <Route path="/" element={<Main />} />
                       <Route path="/about/history" element={<About />} />
