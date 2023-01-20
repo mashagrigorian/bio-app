@@ -19,6 +19,7 @@
     "axios": "^0.27.2",
     "bootstrap": "^5.1.3",
     "emailjs": "^4.0.0",
+    "embla-carousel-react": "^7.0.6",
     "flat-color-icons": "^1.1.0",
     "graphql": "^16.6.0",
     "gsap": "^3.10.4",

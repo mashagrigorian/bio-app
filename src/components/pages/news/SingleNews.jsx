@@ -1,6 +1,5 @@
 import { Container, Paper } from "@mui/material";
-import React, { useEffect } from "react";
-import gsap from "gsap";
+import React from "react";
 import SingleNewsImageSlider from "./SingleNewsImageSlider";
 import SingleNewsVideoSlider from "./SingleNewsVideoSlider";
 

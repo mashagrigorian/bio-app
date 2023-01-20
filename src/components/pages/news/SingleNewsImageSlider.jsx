@@ -1,28 +1,17 @@
 import React from "react";
-import { Carousel } from "react-responsive-carousel";
+import Carousel from "./Carousel";
 import "./singleNewsImageSlider.css";
 
-const SingleNewsImageSlider = () => {
-  return (
-    <>
-      <Carousel className="main-slide">
-        <div>
-          <img
-            width="1170px"
-            src={process.env.PUBLIC_URL + `/singleNewsSliderPhotos/photo1.jpg`}
-          />
-          <p className="legend">Legend 1</p>
-        </div>
-        <div>
-          <img
-            width="1170px"
-            src={process.env.PUBLIC_URL + `/singleNewsSliderPhotos/photo2.jpg`}
-          />
-          <p className="legend">Legend 2</p>
-        </div>
-      </Carousel>
-    </>
-  );
-};
+const OPTIONS = {};
+const SLIDE_COUNT = 5;
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+
+const SingleNewsImageSlider = () => (
+  <main className="sandbox">
+    <section className="sandbox__carousel">
+      <Carousel slides={SLIDES} options={OPTIONS} />
+    </section>
+  </main>
+);
 
 export default SingleNewsImageSlider;
