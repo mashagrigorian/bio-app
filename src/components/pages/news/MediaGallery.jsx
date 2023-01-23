@@ -1,3 +1,4 @@
+import { Popper } from "@mui/material";
 import React from "react";
 import photos from "./MediaGalleryPhotos";
 
@@ -52,6 +53,9 @@ const MediaGallery = () => {
             <div key={info.key}>
               <img
                 className="image"
+                data-sizes="auto"
+                // data-src={popoverCategory}
+                alt="Puntospoint"
                 src={photos[info.key]}
                 style={{
                   maxHeight: "500px",

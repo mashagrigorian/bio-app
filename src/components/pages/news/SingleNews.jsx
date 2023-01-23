@@ -1,6 +1,6 @@
 import { Container, Paper } from "@mui/material";
 import React from "react";
-import SingleNewsImageSlider from "./SingleNewsImageSlider";
+import CarouselImages from "./Carousel";
 import SingleNewsVideoSlider from "./SingleNewsVideoSlider";
 
 const SingleNews = () => {
@@ -42,7 +42,8 @@ const SingleNews = () => {
             Rackham.
           </h3>
         </div>
-        <SingleNewsImageSlider />
+        {/* <SingleNewsImageSlider /> */}
+        <CarouselImages />
         <SingleNewsVideoSlider />
       </Container>
     </>

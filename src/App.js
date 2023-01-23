@@ -25,7 +25,6 @@ import Contacts from "./components/pages/contacts/Contacts";
 import Main from "./components/main/Main";
 import ProjectPage from "./components/pages/projects/currentProjects/ProjectPage";
 import SingleNews from "./components/pages/news/SingleNews";
-import SingleNewsImageSlider from "./components/pages/news/SingleNewsImageSlider";
 
 export const ThemeContext = createContext(null);
 
