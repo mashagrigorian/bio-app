@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import "./slider.css";
 import ButtonSlider from "./ButtonSlider";
 import dataSlider from "./dataSlider";
-import { Box } from "@mui/material";
 
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(1);

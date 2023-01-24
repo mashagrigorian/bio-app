@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-import "./singleNewsSlider.css";
 import ButtonSlider from "../../slider/ButtonSlider";
 import SingleNewsDataSlider from "./SingleNewsDataSlider";
 

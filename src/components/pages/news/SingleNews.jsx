@@ -42,7 +42,6 @@ const SingleNews = () => {
             Rackham.
           </h3>
         </div>
-        {/* <SingleNewsImageSlider /> */}
         <CarouselImages />
         <SingleNewsVideoSlider />
       </Container>

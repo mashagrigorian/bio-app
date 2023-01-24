@@ -1,6 +1,5 @@
 import React from "react";
 import Carousel from "react-material-ui-carousel";
-import Item from "./Item";
 import imageSlider from "./imageSlider.json";
 
 function CarouselImages() {
@@ -8,7 +7,7 @@ function CarouselImages() {
     <Carousel>
       {imageSlider.map((item, index) => {
         return (
-          <div key={item.id} style={{ width: "100%" }}>
+          <div key={item.id}>
             <img
               src={
                 process.env.PUBLIC_URL + `/imageSlider/photo${index + 1}.jpg`
