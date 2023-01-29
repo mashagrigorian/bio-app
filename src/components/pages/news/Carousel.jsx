@@ -4,11 +4,13 @@ import imageSlider from "./imageSlider.json";
 
 function CarouselImages() {
   return (
-    <Carousel>
+    <Carousel height={500} navButtonsAlwaysVisible={true}>
       {imageSlider.map((item, index) => {
         return (
           <div key={item.id}>
             <img
+                width={"100%"}
+                height={"100%"}
               src={
                 process.env.PUBLIC_URL + `/imageSlider/photo${index + 1}.jpg`
               }
