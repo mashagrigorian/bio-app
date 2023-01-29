@@ -1,8 +1,13 @@
-import { Popper } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import photos from "./MediaGalleryPhotos";
+import { Button, Popover, Typography } from "@material-ui/core";
 
 const MediaGallery = () => {
+  const [anchor, setAnchor] = useState(null);
+
+  const openPopover = (event) => {
+    setAnchor(event.currentTarget);
+  };
   const photo = [
     {
       id: 1,
@@ -39,35 +44,58 @@ const MediaGallery = () => {
   ];
 
   return (
-    <div>
-      <div
-        className="container"
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr 1fr",
-          gap: "10px",
-        }}
-      >
-        {photo.map((info) => {
-          return (
-            <div key={info.key}>
-              <img
-                className="image"
-                data-sizes="auto"
-                // data-src={popoverCategory}
-                alt="Puntospoint"
-                src={photos[info.key]}
-                style={{
-                  maxHeight: "500px",
-                  width: "100%",
-                  height: "100vh",
-                }}
-              />
-            </div>
-          );
-        })}
+    <>
+      <div>
+        <div
+          className="container"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr 1fr",
+            gap: "10px",
+          }}
+        >
+          {photo.map((info) => {
+            return (
+              <div key={info.key}>
+                <img
+                  className="image"
+                  data-sizes="auto"
+                  src={photos[info.key]}
+                  style={{
+                    maxHeight: "500px",
+                    width: "100%",
+                    height: "100vh",
+                  }}
+                />
+                <Button
+                  // style={{ marginTop: 300 }}
+                  variant="contained"
+                  color="secondary"
+                  onClick={openPopover}
+                >
+                  Click
+                </Button>
+                <Popover
+                  open={Boolean(anchor)}
+                  anchorEl={anchor}
+                  anchorOrigin={{
+                    vertical: "center",
+                    horizontal: "center",
+                  }}
+                  transformOrigin={{
+                    vertical: "bottom",
+                    horizontal: "center",
+                  }}
+                  onClose={() => setAnchor(null)}
+                >
+                  <Typography variant="h6">Hello</Typography>
+                </Popover>
+              </div>
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
