@@ -8,6 +8,13 @@ const MediaGallery = () => {
   const openPopover = (event) => {
     setAnchor(event.currentTarget);
   };
+
+  const handleClick = (event) => {
+    // 👇️ refers to the image element
+    console.log(event.target);
+
+    console.log("Image clicked");
+  };
   const photo = [
     {
       id: 1,
@@ -59,6 +66,7 @@ const MediaGallery = () => {
               <div key={info.key}>
                 <img
                   className="image"
+                  onClick={handleClick}
                   data-sizes="auto"
                   src={photos[info.key]}
                   style={{
@@ -67,8 +75,7 @@ const MediaGallery = () => {
                     height: "100vh",
                   }}
                 />
-                <Button
-                  // style={{ marginTop: 300 }}
+                {/* <Button
                   variant="contained"
                   color="secondary"
                   onClick={openPopover}
@@ -89,7 +96,7 @@ const MediaGallery = () => {
                   onClose={() => setAnchor(null)}
                 >
                   <Typography variant="h6">Hello</Typography>
-                </Popover>
+                </Popover> */}
               </div>
             );
           })}
