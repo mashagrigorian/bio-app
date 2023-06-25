@@ -70,7 +70,7 @@ const Project = (props) => {
                     padding: 15,
                     marginTop: "10%",
                     lineHeight: "3em",
-                    background: "rgba(255, 255, 128, .5)",
+                    background: "#FBFBE4",
                 }}
             >
                 <div className="project-info">

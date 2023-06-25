@@ -42,7 +42,7 @@ const LanguageButton = ({isDrawerReady, color = ""}) => {
                             filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
                             display: "flex",
                             flexDirection: "column",
-                            justifyContent: "flex-start",
+                            justify: "flex-start",
                             width: "100%",
                             color: "rgb(60, 168, 71)",
                             "&:before": {

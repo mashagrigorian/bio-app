@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import logos from "./PartnerLogos";
+import logo from "./PartnerLogos";
 import { Divider, Grid } from "@mui/material";
 
 const Partners = () => {
@@ -9,35 +9,35 @@ const Partners = () => {
   const partnersInfo = [
     {
       href: "https://www.adaptation-fund.org/",
-      key: "adaptionFund",
+      key: "logo",
     },
     {
       href: "https://www.thegef.org/",
-      key: "globalEnvironmentFacility",
+      key: "logo",
     },
     {
       href: "https://www.greenclimate.fund/",
-      key: "greenClimate",
+      key: "logo",
     },
     {
       href: "https://www.unep.org/",
-      key: "unitedNationsEnvProg",
+      key: "logo",
     },
     {
       href: "https://www.undp.org/",
-      key: "unitedNationsDevProg",
+      key: "logo",
     },
     {
       href: "https://www.unido.org/",
-      key: "unitedNationsInduDevOrg",
+      key: "logo",
     },
     {
       href: "https://www.worldbank.org/en/home",
-      key: "theWorldBank",
+      key: "logo",
     },
     {
       href: "https://www.osce.org/",
-      key: "orgForSec",
+      key: "logo",
     },
   ];
 
@@ -69,7 +69,7 @@ const Partners = () => {
                 >
                   <img
                     className="image"
-                    src={logos[info.key]}
+                    src={logo[info.key]}
                     alt={t(info.key)}
                     style={{
                       display: "block",
@@ -91,7 +91,7 @@ const Partners = () => {
               item
               container
               direction="row"
-              justifyContent="center"
+              justify="center"
               alignItems="center"
               display="flex"
             >
@@ -105,7 +105,7 @@ const Partners = () => {
               xs={2}
               container
               direction="row"
-              justifyContent="right"
+              justify="right"
               alignItems="center"
             ></Grid>
           </Grid>

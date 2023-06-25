@@ -51,14 +51,14 @@ const Footer = () => {
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: "4px" }}>
               <i className="fa fa-phone"></i>
-              <span>+374 10 651-631</span>
+              <span>+374 10 999-999</span>
             </Box>
           </Grid>
 
           <Grid item xs={12} md={3}>
             <Box sx={{ display: "flex", alignItems: "center", gap: "4px" }}>
               <i className="fa fa-envelope"></i>
-              <span>info@cep.am antifraud@epiu.am</span>
+              <span>info@99.am</span>
             </Box>
             <div
               className="social-media"
@@ -71,22 +71,16 @@ const Footer = () => {
             >
               <a
                 className="icon-circle"
-                href="https://www.facebook.com/epiu.am/"
-                target="_blank"
               >
                 <FiFacebook />
               </a>
               <a
                 className="icon-circle"
-                href="https://www.linkedin.com/in/epiu-state-agency-441a21155/"
-                target="_blank"
               >
                 <FiLinkedin />
               </a>
               <a
                 className="icon-circle"
-                href="https://www.youtube.com/channel/UCQ62HVkKIOiqa4GtSEn6QYw"
-                target="_blank"
               >
                 <FiYoutube />
               </a>

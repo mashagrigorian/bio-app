@@ -37,7 +37,7 @@ const Abilities = () => {
             width: "100%",
             display: "contents",
             flexDirection: "row",
-            justifyContent: "center",
+            justify: "center",
             alignItems: "center",
             marginTop: "20px",
             textAlign: "justify",

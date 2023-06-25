@@ -13,7 +13,7 @@ const CurrentProjects = () => {
             <ImageList
                 gap={100}
                 style={{
-                    display: 'flex',
+                    display: "flex",
                     flexWrap: "wrap",
                     justifyContent: "center",
                 }}

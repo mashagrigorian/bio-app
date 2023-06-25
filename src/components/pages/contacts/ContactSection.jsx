@@ -10,9 +10,10 @@ import { useTranslation } from "react-i18next";
 
 const ContactSectionStyle = styled.div`
   .contactSection__wrapper {
+    color: white;
     display: flex;
-    gap: 5rem;
-    margin-top: 4rem;
+    gap: 2px;
+    margin-top: 2rem;
     justify-content: space-between;
     position: relative;
   }
@@ -39,7 +40,7 @@ const ContactSectionStyle = styled.div`
       max-width: 100%;
     }
     .right {
-      padding: 4rem 2rem 2rem 2rem;
+      padding: 10px;
     }
   }
 `;
@@ -52,11 +53,8 @@ export default function ContactSection() {
         <SectionTitle />
         <div className="contactSection__wrapper">
           <div className="left">
-            <ContactInfoItem icon={<LocalPhoneIcon />} text="+374 10 651-631" />
-            <ContactInfoItem
-              icon={<MailOutlineIcon />}
-              text="info@cep.am, antifraud@epiu.am"
-            />
+            <ContactInfoItem icon={<LocalPhoneIcon />} text="+374 10 999-999" />
+            <ContactInfoItem icon={<MailOutlineIcon />} text="info@99.am" />
             <ContactInfoItem icon={<LocationOnIcon />} text={t("street")} />
           </div>
           <div className="right">

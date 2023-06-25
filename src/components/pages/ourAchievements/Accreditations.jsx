@@ -1,5 +1,5 @@
 import React from "react";
-import adaptionFundLogo from "./logos/adaptionFond.png";
+import adaptionFundLogo from "./logos/adaptationFund.png";
 import greenClimateLogo from "./logos/greenClimate.png";
 import { useTranslation } from "react-i18next";
 import { Container, Divider, Grid } from "@mui/material";
@@ -17,7 +17,7 @@ const Accreditations = () => {
           justifyItems: "center",
           textAlign: "center",
           columnGap: "60px",
-          rowGap: "20px",
+          rowGap: "20px",          
         }}
       >
         <div className="logo-style">
@@ -25,20 +25,20 @@ const Accreditations = () => {
             target="_blank"
             href="https://www.greenclimate.fund/countries/armenia"
           >
-            <img src={greenClimateLogo} />
+            <img style={{ width: "150px" }} src={greenClimateLogo} />
           </a>
         </div>
         <div
           className="logo-style"
           style={{
-            width: "100%",
+            width: "200px",
           }}
         >
           <a
             target="_blank"
             href="https://www.adaptation-fund.org/ie/environmental-project-implementation-unit-epiu/"
           >
-            <img style={{ width: "100%" }} src={adaptionFundLogo} />
+            <img style={{ width: "200px" }} src={adaptionFundLogo} />
           </a>
         </div>
 

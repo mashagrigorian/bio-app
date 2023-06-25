@@ -69,7 +69,7 @@ const NavLinks = ({
                 {
                   display: "flex",
                   flexDirection: "column",
-                  justifyContent: "flex-start",
+                  justify: "flex-start",
                   width: "100%",
                   color: "rgb(60, 168, 71)",
                 },
