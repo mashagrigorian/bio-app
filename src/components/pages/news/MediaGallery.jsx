@@ -75,28 +75,6 @@ const MediaGallery = () => {
                     height: "100vh",
                   }}
                 />
-                {/* <Button
-                  variant="contained"
-                  color="secondary"
-                  onClick={openPopover}
-                >
-                  Click
-                </Button>
-                <Popover
-                  open={Boolean(anchor)}
-                  anchorEl={anchor}
-                  anchorOrigin={{
-                    vertical: "center",
-                    horizontal: "center",
-                  }}
-                  transformOrigin={{
-                    vertical: "bottom",
-                    horizontal: "center",
-                  }}
-                  onClose={() => setAnchor(null)}
-                >
-                  <Typography variant="h6">Hello</Typography>
-                </Popover> */}
               </div>
             );
           })}

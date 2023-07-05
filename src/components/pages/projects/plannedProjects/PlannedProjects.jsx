@@ -10,11 +10,7 @@ const PlannedProjects = () => {
   const { t, i18n } = useTranslation();
 
   return (
-    <Container
-      component={Paper}
-      elevation={5}
-      sx={{pt:3,pb:3}}
-    >
+    <Container component={Paper} elevation={5} sx={{ pt: 3, pb: 3 }}>
       <Box sx={{ width: "100%", maxWidth: "100%" }}>
         <Typography variant="h6" gutterBottom>
           <div className="title">{t("titleGreenFinance")}</div>
@@ -24,7 +20,6 @@ const PlannedProjects = () => {
           {t("greenFinance")}
         </Typography>
       </Box>
-      <br></br>
       <Box sx={{ width: "100%", maxWidth: "100%" }}>
         <Typography variant="h6" gutterBottom>
           <div className="title">{t("titleWasteManagement")}</div>
@@ -32,24 +27,14 @@ const PlannedProjects = () => {
         </Typography>
         <Typography variant="subtitle1" gutterBottom>
           {t("wasteManagement1")}
-          <br />
-          <br />
           <img src={icons.bin} alt="" className="image" />
-          <br />
           {t("wasteManagement2")}
-          <br />
-          <br />
           <img src={icons.projects} alt="" className="image" />
-          <br />
           {t("wasteManagement3")}
-          <br />
-          <br />
           <img src={icons.nature} alt="" className="image" />
-          <br />
           {t("wasteManagement4")}
         </Typography>
       </Box>
-      <br />
       <Box sx={{ width: "100%", maxWidth: "100%" }}>
         <Typography variant="h6" gutterBottom>
           <div className="title">{t("titleTransport")}</div>
@@ -57,14 +42,10 @@ const PlannedProjects = () => {
         </Typography>
         <Typography variant="subtitle1" gutterBottom>
           {t("transport1")}
-          <br />
-          <br />
           <img src={icons.traffic} alt="" className="image" />
-          <br />
           {t("transport2")}
         </Typography>
       </Box>
-      <br />
       <Box sx={{ width: "100%", maxWidth: "100%" }}>
         <Typography variant="h6" gutterBottom>
           <div className="title">{t("titleElectricMobility")}</div>
@@ -72,14 +53,10 @@ const PlannedProjects = () => {
         </Typography>
         <Typography variant="subtitle1" gutterBottom>
           {t("electricMobility1")}
-          <br />
-          <br />
           <img src={icons.carCharge} alt="" className="image" />
-          <br />
           {t("electricMobility2")}
         </Typography>
       </Box>
-      <br />
       <Box sx={{ width: "100%", maxWidth: "100%" }}>
         <Typography variant="h6" gutterBottom>
           <div className="title"> {t("titleGreenBonds")}</div>
@@ -89,7 +66,6 @@ const PlannedProjects = () => {
           {t("greenBonds")}
         </Typography>
       </Box>
-      <br />
       <Box sx={{ width: "100%", maxWidth: "100%" }}>
         <Typography variant="h6" gutterBottom>
           <div className="title"> {t("titleGreenRecovery")}</div>
@@ -99,7 +75,6 @@ const PlannedProjects = () => {
           {t("greenRecovery")}
         </Typography>
       </Box>
-      <br />
       <Box sx={{ width: "100%", maxWidth: "100%" }}>
         <Typography variant="h6" gutterBottom>
           <div className="title"> {t("titleGreenManagement")}</div>
@@ -109,7 +84,6 @@ const PlannedProjects = () => {
           {t("greenManagement")}
         </Typography>
       </Box>
-      <br />
       <Box sx={{ width: "100%", maxWidth: "100%" }}>
         <Typography variant="h6" gutterBottom>
           <div className="title">{t("titleBiodiversity")}</div>
@@ -119,7 +93,6 @@ const PlannedProjects = () => {
           {t("biodiversityPlannedProject")}
         </Typography>
       </Box>
-      <br />
       <Box sx={{ width: "100%", maxWidth: "100%" }}>
         <Typography variant="h6" gutterBottom>
           <div className="title">{t("titleAdaption")}</div>
@@ -129,7 +102,6 @@ const PlannedProjects = () => {
           {t("adaption")}
         </Typography>
       </Box>
-      <br />
       <Box sx={{ width: "100%", maxWidth: "100%" }}>
         <Typography variant="h6" gutterBottom>
           <div className="title"> {t("titleEcoEducation")}</div>
@@ -137,10 +109,7 @@ const PlannedProjects = () => {
         </Typography>
         <Typography variant="subtitle1" gutterBottom>
           {t("ecoEducation1")}
-          <br />
-          <br />
           <img src={icons.building} alt="" className="image" />
-          <br />
           {t("ecoEducation2")}
         </Typography>
       </Box>

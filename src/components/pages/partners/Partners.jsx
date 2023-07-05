@@ -8,35 +8,9 @@ const Partners = () => {
 
   const partnersInfo = [
     {
-      href: "https://www.adaptation-fund.org/",
       key: "logo",
     },
     {
-      href: "https://www.thegef.org/",
-      key: "logo",
-    },
-    {
-      href: "https://www.greenclimate.fund/",
-      key: "logo",
-    },
-    {
-      href: "https://www.unep.org/",
-      key: "logo",
-    },
-    {
-      href: "https://www.undp.org/",
-      key: "logo",
-    },
-    {
-      href: "https://www.unido.org/",
-      key: "logo",
-    },
-    {
-      href: "https://www.worldbank.org/en/home",
-      key: "logo",
-    },
-    {
-      href: "https://www.osce.org/",
       key: "logo",
     },
   ];

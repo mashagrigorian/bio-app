@@ -19,7 +19,6 @@ export default [
     title: "ourAchievements",
     links: [
       { href: "/achievements/accreditations", label: "accreditations" },
-      { href: "/achievements/capacity-assessment", label: "ourCapacities" },
     ],
   },
   {
@@ -33,22 +32,8 @@ export default [
   },
   {
     type: "multiple",
-    title: "results",
-    links: [{ href: "/results/beneficiaries", label: "projectStakeholders" }],
-  },
-  {
-    type: "multiple",
-    title: "procurements",
-    links: [{ href: "/procurement/announcements", label: "announcements" }],
-  },
-  {
-    type: "multiple",
     title: "news",
-    links: [
-      { href: "/news/news", label: "allNews" },
-      { href: "/news/the-press-about-us", label: "pressAboutUs" },
-      { href: "/news/media-gallery", label: "mediaGallery" },
-    ],
+    links: [{ href: "/news/media-gallery", label: "mediaGallery" }],
   },
   {
     type: "single",

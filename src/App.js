@@ -10,16 +10,11 @@ import Priorities from "./components/pages/priorities/Priorities";
 import Team from "./components/pages/team/Team";
 import Partners from "./components/pages/partners/Partners";
 import Accreditations from "./components/pages/ourAchievements/Accreditations";
-import CapacityAssessment from "./components/pages/CapacityAssessment";
 import CompletedProjects from "./components/pages/projects/CompletedProjects";
 import CurrentProjects from "./components/pages/projects/currentProjects/CurrentProjects";
 import PlannedProjects from "./components/pages/projects/plannedProjects/PlannedProjects";
-import Beneficiaries from "./components/pages/Beneficiaries";
 import ProgramsProcurement from "./components/pages/ProgramsProcurement";
 import OfficeNeeds from "./components/pages/OfficeNeeds";
-import Announcements from "./components/pages/Announcements";
-import News from "./components/pages/news/News";
-import PressAboutUs from "./components/pages/PressAboutUs";
 import MediaGallery from "./components/pages/news/MediaGallery";
 import Contacts from "./components/pages/contacts/Contacts";
 import Main from "./components/main/Main";
@@ -77,10 +72,6 @@ function App() {
                         element={<Accreditations />}
                       />
                       <Route
-                        path="/achievements/capacity-assessment"
-                        element={<CapacityAssessment />}
-                      />
-                      <Route
                         path="/projects/completed-projects"
                         element={<CompletedProjects />}
                       />
@@ -99,10 +90,6 @@ function App() {
                         element={<PlannedProjects />}
                       />
                       <Route
-                        path="/results/beneficiaries"
-                        element={<Beneficiaries />}
-                      />
-                      <Route
                         path="/procurement/procurement-under-the-programs"
                         element={<ProgramsProcurement />}
                       />
@@ -110,16 +97,7 @@ function App() {
                         path="/procurement/procurement-for-the-office-needs"
                         element={<OfficeNeeds />}
                       />
-                      <Route
-                        path="/procurement/announcements"
-                        element={<Announcements />}
-                      />
-                      <Route path="/news/news" element={<News />} />
                       <Route path="/news/news/:id" element={<SingleNews />} />
-                      <Route
-                        path="/news/the-press-about-us"
-                        element={<PressAboutUs />}
-                      />
                       <Route
                         path="/news/media-gallery"
                         element={<MediaGallery />}

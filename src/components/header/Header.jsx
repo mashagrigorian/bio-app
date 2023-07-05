@@ -86,7 +86,7 @@ const Header = (props) => {
               fontSize: "15px",
             },
             expanded && {
-              height: { lg: "350px" },
+              height: { lg: "330px" },
             },
           ]}
         >
